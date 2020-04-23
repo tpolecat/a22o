@@ -15,13 +15,23 @@ trait Combinator {
       def mutParse(mutState: MutState): A = a
     }
 
-  def fail(message: String): Parser[Nothing] =
-    new Parser[Nothing] {
-      def mutParse(mutState: MutState): Nothing = {
+  def fail[A](message: String): Parser[A] =
+    new Parser[A] {
+      def mutParse(mutState: MutState): A = {
         mutState.error = message
         dummy
       }
     }
+
+  def ensure(n: Int): Parser[Unit] =
+   new Parser[Unit] {
+     def mutParse(mutState: MutState): Unit =
+      if (mutState.remaining >= n) ()
+      else {
+        mutState.error = "ensure: insufficient input"
+        dummy
+      }
+   }
 
   def zipWith[A, B, C](pa: Parser[A], pb: => Parser[B], f: (A, B) => C): Parser[C] =
     new Parser[C] {
@@ -39,10 +49,10 @@ trait Combinator {
     zipWith[A, B, A ~ B](pa, pb, (_, _))
 
   def discardRight[A, B](pa: Parser[A], pb: => Parser[B]): Parser[A] =
-      zipWith[A, B, A](pa, pb, (a, _) => a)
+    zipWith[A, B, A](pa, pb, (a, _) => a)
 
   def discardLeft[A, B](pa: Parser[A], pb: => Parser[B]): Parser[B] =
-      zipWith[A, B, B](pa, pb, (_, b) => b)
+    zipWith[A, B, B](pa, pb, (_, b) => b)
 
   def or[A](pa: Parser[A], pb: => Parser[A]): Parser[A] =
     new Parser[A] {
@@ -82,8 +92,13 @@ trait Combinator {
           val o = mutState.offset
           val a = pa.mutParse(mutState)
           if (mutState.isOk) {
+            if (mutState.offset == o) {
+              mutState.error = "many: nontermination detected."
+              dummy
+            } else {
             list += a
             go
+            }
           } else {
             mutState.offset = o
             mutState.error  = null
@@ -101,7 +116,10 @@ trait Combinator {
           val o = mutState.offset
           pa.mutParse(mutState)
           if (mutState.isOk) {
-            go()
+            if (mutState.offset == o) {
+              mutState.error = "skipMany: nontermination detected."
+              dummy
+            } else go()
           } else {
             mutState.offset = o
             mutState.error  = null
@@ -122,8 +140,13 @@ trait Combinator {
             val o = mutState.offset
             val a = pa.mutParse(mutState)
             if (mutState.isOk) {
+              if (mutState.offset == o) {
+                mutState.error = "many1: nontermination detected."
+                dummy
+              } else {
               tail += a
               go
+              }
             } else {
               mutState.offset = o
               mutState.error  = null
@@ -144,7 +167,10 @@ trait Combinator {
             val o = mutState.offset
             pa.mutParse(mutState)
             if (mutState.isOk) {
-              go()
+              if (mutState.offset == o) {
+                mutState.error = "skipMany1: nontermination detected."
+                dummy
+              } else go()
             } else {
               mutState.offset = o
               mutState.error  = null
@@ -153,6 +179,32 @@ trait Combinator {
           }
           go()
         } else dummy
+      }
+    }
+
+  def skip(n: Int): Parser[Unit] =
+    new Parser[Unit] {
+      def mutParse(mutState: MutState): Unit =
+        if (n < 0) {
+          mutState.error = "skip: negative length"
+          dummy
+        } else if (mutState.remaining >= n) {
+          mutState.offset += n
+          ()
+        } else {
+          mutState.error = "skip: insufficient input"
+          dummy
+        }
+    }
+
+  /** Parser that yields the same result as `p`, but consumes no input. */
+  def peek[A](p: Parser[A]): Parser[A] =
+    new Parser[A] {
+      def mutParse(mutState: MutState): A = {
+        val o = mutState.offset
+        val a = p.mutParse(mutState)
+        mutState.offset = o
+        a
       }
     }
 

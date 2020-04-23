@@ -8,4 +8,8 @@ Like [**atto**](https://github.com/tpolecat/atto), but fast.
 
 - It does not perform incremental parsing: `parser.parse("foo")` yields an immediate answer.
 - Strictness issues that made it difficult to construct recursive parsers in **atto** have been fixed.
+- **a22o** detects nontermination and fails parsing in some cases, such as `many(ok(42))`.
+
+
+
 

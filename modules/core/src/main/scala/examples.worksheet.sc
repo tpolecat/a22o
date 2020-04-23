@@ -74,3 +74,28 @@ int.parse("+")
 int.parse("-")
 int.parse("+suffix")
 int.parse("-suffix")
+
+many(ok("hi")).parse("foo")
+many(letter).parse("foo")
+many1(ok("hi")).parse("foo")
+many1(letter).parse("foo")
+skipMany(letter).parse("foo123")
+skipMany(ok("hi")).parse("foo")
+
+fail("foo").parse("")
+
+take(3).parse("abcdef")
+take(6).parse("abcdef")
+take(7).parse("abcdef")
+take(-1).parse("abcdef")
+
+string("foo").parse("foobar")
+string("fox").parse("foobar")
+(digit ~> string("foo")).parse("3foobar")
+
+stringOf(_.isDigit).parse("abc")
+stringOf(_.isDigit).parse("765abc")
+stringOf1(_.isDigit).parse("abc")
+stringOf1(_.isDigit).parse("765abc")
+
+(skip(3) ~> int).parse("abc123")
