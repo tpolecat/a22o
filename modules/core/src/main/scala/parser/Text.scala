@@ -41,7 +41,7 @@ trait Text {
     accept(_ == c, s"character '$c'")
 
   def token[A](pa: Parser[A]): Parser[A] =
-    discardRight(pa, skipMany(whitespace))
+    pa <~ skipMany(whitespace)
 
   def bracketed[A](open: Char, pa: Parser[A], close: Char): Parser[A] =
     char(open).token ~> pa.token <~ char(close)
@@ -51,6 +51,7 @@ trait Text {
 
   def take(n: Int): Parser[String] =
     new Parser[String] {
+      override def void = skip(n)
       def mutParse(mutState: MutState): String =
         if (n < 0) {
           mutState.error = "take: negative length"
@@ -67,6 +68,7 @@ trait Text {
 
   def string(s: String): Parser[String] =
     new Parser[String] {
+      override def void = skip(s.length)
       def mutParse(mutState: MutState): String =
         if (mutState.input.startsWith(s, mutState.offset)) {
           mutState.offset += s.length
@@ -80,6 +82,19 @@ trait Text {
   /** Consumes characters while `p` holds true. */
   def stringOf(p: Char => Boolean): Parser[String] =
     new Parser[String] {
+
+      override def void: Parser[Unit] =
+        new Parser[Unit] {
+          override val void = this
+          def mutParse(mutState: MutState): Unit = {
+            var i = mutState.offset
+            while (i < mutState.input.length && p(mutState.input(i)))
+              i += 1
+            mutState.offset = i
+            ()
+          }
+        }
+
       def mutParse(mutState: MutState): String = {
         var i = mutState.offset
         while (i < mutState.input.length && p(mutState.input(i)))
@@ -88,10 +103,29 @@ trait Text {
         mutState.offset = i
         s
       }
+
     }
 
   def stringOf1(p: Char => Boolean): Parser[String] =
     new Parser[String] {
+
+      override def void: Parser[Unit] =
+        new Parser[Unit] {
+          override val void = this
+          def mutParse(mutState: MutState): Unit = {
+            var i = mutState.offset
+            while (i < mutState.input.length && p(mutState.input(i)))
+              i += 1
+            if (i == mutState.offset) {
+              mutState.error = "stringOf1: no match"
+              dummy
+            } else {
+              mutState.offset = i
+              ()
+            }
+          }
+        }
+
       def mutParse(mutState: MutState): String = {
         var i = mutState.offset
         while (i < mutState.input.length && p(mutState.input(i)))
@@ -105,6 +139,7 @@ trait Text {
           s
         }
       }
+
     }
 
 }

@@ -20,8 +20,13 @@ abstract class Parser[+A] private[a22o] { outer =>
     )
   }
 
+  // Implementations may wish to override to prevent allocating values which are then discarded.
+  def void: Parser[Unit] =
+    map(_ => ())
+
   def map[B](f: A => B): Parser[B] =
     new Parser[B] {
+      override def void = outer.void // throw away the map
       def mutParse(mutState: MutState): B = {
         val a = outer.mutParse(mutState)
         if (mutState.isOk) f(a)
@@ -62,6 +67,7 @@ abstract class Parser[+A] private[a22o] { outer =>
   def ~[B](pb: => Parser[B]): Parser[A ~ B]         = parser.combinator.pair(this, pb)
   def |[B >: A](pb: => Parser[B]): Parser[B]        = parser.combinator.or(this, pb)
   def ||[B](pb: => Parser[B]): Parser[Either[A, B]] = parser.combinator.either(this, pb)
+  def opt: Parser[Option[A]]                        = parser.combinator.opt(this)
   def many: Parser[List[A]]                         = parser.combinator.many(this)
   def many1: Parser[NonEmptyList[A]]                = parser.combinator.many1(this)
   def skipMany: Parser[Unit]                        = parser.combinator.skipMany(this)
@@ -87,7 +93,7 @@ object Parser {
     implicit ma: Monoid[A]
   ): Monoid[Parser[A]] =
     new Monoid[Parser[A]] {
-      def combine(p0: Parser[A], p1: Parser[A]): Parser[A] = zipWith[A, A, A](p0, p1, ma.combine)
+      def combine(p0: Parser[A], p1: Parser[A]): Parser[A] = zipWith(p0, p1)(ma.combine)
       def empty: Parser[A] = ok(ma.empty)
     }
 
