@@ -26,14 +26,14 @@ trait Numeric {
         // Ok so we accumulate by counting down from zero, which lets us accommodate Int.MinValue
         // which would overflow if we counted up. This leads to more complication at the bottom but
         // I think it makes sense.
-        var index = mutState.offset
+        var index = 0
         var accum = 0
         var signed = false // can we rely on untupling?
 
         // If the first char is '-' then it's negative. '+' is also allowed.
         val neg: Boolean =
-          (index < mutState.input.length) && {
-            (mutState.input(index) : @switch) match {
+          (index < mutState.remaining) && {
+            (mutState.charAt(index) : @switch) match {
               case '+' => index += 1; signed = true; false
               case '-' => index += 1; signed = true; true
               case _   => false
@@ -41,11 +41,11 @@ trait Numeric {
           }
 
         // There must be at least one digit
-        if (index < mutState.input.length) {
-          val c = mutState.input(index)
+        if (index < mutState.remaining) {
+          val c = mutState.charAt(index)
           val n = Character.digit(c, radix)
           if (n < 0) {
-            mutState.error = if (signed) "Expected digit." else "Expected sign or digit."
+            mutState.setError(if (signed) "Expected digit." else "Expected sign or digit.")
             return dummy // !!!
           } else {
             accum *= radix
@@ -53,14 +53,14 @@ trait Numeric {
             index += 1
           }
         } else {
-          mutState.error = if (signed) "Expected digit." else "Expected sign or digit."
+          mutState.setError(if (signed) "Expected digit." else "Expected sign or digit.")
           return dummy // !!!
         }
 
         // And there can be many remaining digits
         var done = false
-        while (index < mutState.input.length && !done) {
-          val c = mutState.input(index)
+        while (index < mutState.remaining && !done) {
+          val c = mutState.charAt(index)
           val n = Character.digit(c, radix)
           if (n < 0) {
             done = true
@@ -70,7 +70,7 @@ trait Numeric {
             // still leaves the case of Int.MinValue which can't be negated, so we have to check
             // one last time below to be sure the sign and `neg` agree.
             if (temp > 0) {
-              mutState.error = "Integer over/underflow."
+              mutState.setError("Integer over/underflow.")
               return dummy // !!!
             }
             accum  = temp
@@ -84,10 +84,10 @@ trait Numeric {
         // but overflows otherwise. This is kind of janky, maybe we can fold it into the logic
         // above somehow.
         if (ret == 0 || (neg && ret < 0) || ret > 0) {
-          mutState.offset = index
+          mutState.advance(index)
           ret
         } else {
-          mutState.error = "Integer over/underflow."
+          mutState.setError("Integer over/underflow.")
           dummy
         }
 

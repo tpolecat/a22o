@@ -5,6 +5,8 @@
 package a22o
 package parser
 
+import java.util.Arrays
+
 trait Text {
   import combinator._
 
@@ -17,17 +19,16 @@ trait Text {
       val eofError = s"expected $name, found end of input"
       def mutParse(mutState: MutState): Char = {
         if (mutState.remaining >= 1) {
-          val c = mutState.input(mutState.offset)
+          val c = mutState.charAt(0)
           if (p(c)) {
-            mutState.offset += 1
+            mutState.advance(1)
             c
-          }
-          else {
-            mutState.error = predicateError
+          } else {
+            mutState.setError(predicateError)
             dummy
           }
         } else {
-          mutState.error = eofError
+          mutState.setError(eofError)
           dummy
         }
       }
@@ -38,7 +39,14 @@ trait Text {
   val whitespace = accept(_.isWhitespace, "whitespace")
 
   def char(c: Char): Parser[Char] =
-    accept(_ == c, s"character '$c'")
+    accept(_ == c, s"char '$c'")
+
+  // Seq lets us pass a string or sequence
+  def charIn(cs: Seq[Char]): Parser[Char] = {
+    // we can do a binary search
+    val csʹ = cs.sorted[Char].toArray[Char]
+    accept(Arrays.binarySearch(csʹ, _) >= 0, s"charIn ${cs.map(c => s"'$c'").mkString("{", ", ", "}")}")
+  }
 
   def token[A](pa: Parser[A]): Parser[A] =
     pa <~ skipMany(whitespace)
@@ -54,14 +62,13 @@ trait Text {
       override def void = skip(n)
       def mutParse(mutState: MutState): String =
         if (n < 0) {
-          mutState.error = "take: negative length"
+          mutState.setError("take: negative length")
           dummy
         } else if (mutState.remaining >= n) {
-          val s = mutState.input.substring(mutState.offset, mutState.offset + n)
-          mutState.offset += n
+          val s = mutState.consume(n)
           s
         } else {
-          mutState.error = "take: insufficient input"
+          mutState.setError("take: insufficient input")
           dummy
         }
     }
@@ -70,76 +77,106 @@ trait Text {
     new Parser[String] {
       override def void = skip(s.length)
       def mutParse(mutState: MutState): String =
-        if (mutState.input.startsWith(s, mutState.offset)) {
-          mutState.offset += s.length
+        if (mutState.startsWith(s)) {
+          mutState.advance(s.length)
           s
         } else {
-          mutState.error = "string: no match"
+          mutState.setError("string: no match")
           dummy
         }
     }
 
+
+  def stringOf(cs: Seq[Char]): Parser[String] = {
+    val csʹ = cs.sorted[Char].toArray[Char]
+    takeWhile(c => Arrays.binarySearch(csʹ, c) >= 0)
+  }
+
+  def stringOf1(cs: Seq[Char]): Parser[String] = {
+    val csʹ = cs.sorted[Char].toArray[Char]
+    takeWhile1(c => Arrays.binarySearch(csʹ, c) >= 0)
+  }
+
   /** Consumes characters while `p` holds true. */
-  def stringOf(p: Char => Boolean): Parser[String] =
+  def takeWhile(p: Char => Boolean): Parser[String] =
     new Parser[String] {
 
       override def void: Parser[Unit] =
         new Parser[Unit] {
           override val void = this
           def mutParse(mutState: MutState): Unit = {
-            var i = mutState.offset
-            while (i < mutState.input.length && p(mutState.input(i)))
+            var i = 0
+            while (i < mutState.remaining && p(mutState.charAt(i)))
               i += 1
-            mutState.offset = i
+            mutState.advance(i)
             ()
           }
         }
 
       def mutParse(mutState: MutState): String = {
-        var i = mutState.offset
-        while (i < mutState.input.length && p(mutState.input(i)))
+        var i = 0
+        while (i < mutState.remaining && p(mutState.charAt(i)))
           i += 1
-        val s = mutState.input.substring(mutState.offset, i)
-        mutState.offset = i
-        s
-      }
+        mutState.consume(i)
+     }
 
     }
 
-  def stringOf1(p: Char => Boolean): Parser[String] =
+  def takeWhile1(p: Char => Boolean): Parser[String] =
     new Parser[String] {
 
       override def void: Parser[Unit] =
         new Parser[Unit] {
           override val void = this
           def mutParse(mutState: MutState): Unit = {
-            var i = mutState.offset
-            while (i < mutState.input.length && p(mutState.input(i)))
+            var i = 0
+            while (i < mutState.remaining && p(mutState.charAt(i)))
               i += 1
-            if (i == mutState.offset) {
-              mutState.error = "stringOf1: no match"
+            if (i == 0) {
+              mutState.setError("stringOf1: no match")
               dummy
             } else {
-              mutState.offset = i
+              mutState.advance(i)
               ()
             }
           }
         }
 
       def mutParse(mutState: MutState): String = {
-        var i = mutState.offset
-        while (i < mutState.input.length && p(mutState.input(i)))
+        var i = 0
+        while (i < mutState.remaining && p(mutState.charAt(i)))
           i += 1
-        if (i == mutState.offset) {
-          mutState.error = "stringOf1: no match"
+        if (i == 9) {
+          mutState.setError("stringOf1: no match")
           dummy
         } else {
-          val s = mutState.input.substring(mutState.offset, i)
-          mutState.offset = i
-          s
+          mutState.consume(i)
         }
       }
 
     }
+
+    /** Optimization of `(p1 ~ p2).map(_ + _)` that performs only one String allocation. */
+    def concat(p1: Parser[String], p2: => Parser[String]): Parser[String] =
+      new Parser[String] {
+        lazy val p1ʹ = p1.void
+        lazy val p2ʹ = p2.void
+        def mutParse(mutState: MutState): String = {
+          val p0 = mutState.getPoint
+          p1ʹ.mutParse(mutState)
+          if (mutState.isOk) {
+            p2ʹ.mutParse(mutState)
+            if (mutState.isOk) {
+              val p1 = mutState.getPoint
+              mutState.setPoint(p0)
+              mutState.consume(p1 - p0) // only do the substring operation once
+            } else {
+              dummy
+            }
+          } else {
+            dummy
+          }
+        }
+      }
 
 }
