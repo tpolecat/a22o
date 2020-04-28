@@ -49,8 +49,8 @@ lazy val a22o = project
   .in(file("."))
   .enablePlugins(AutomateHeaderPlugin)
   .settings(commonSettings)
-  .dependsOn(core)
-  .aggregate(core)
+  .dependsOn(core, bench, allocation)
+  .aggregate(core, bench, allocation)
 
 lazy val core = project
   .in(file("modules/core"))
@@ -60,14 +60,41 @@ lazy val core = project
     name := "a22o-core",
     description := "Like atto, but faster.",
     libraryDependencies ++= Seq(
-      "org.typelevel" %% "cats-core" % "2.1.1"
+      "org.typelevel" %% "cats-core" % "2.1.1",
     ),
     publish / skip := false
   )
 
-  lazy val bench = project
-    .in(file("modules/bench"))
-    .enablePlugins(AutomateHeaderPlugin)
-    .enablePlugins(JmhPlugin)
-    .dependsOn(core)
-    .settings(commonSettings)
+lazy val bench = project
+  .in(file("modules/bench"))
+  .enablePlugins(AutomateHeaderPlugin)
+  .enablePlugins(JmhPlugin)
+  .dependsOn(core)
+  .settings(commonSettings)
+
+
+val allocationInstrumentationModule = "com.google.code.java-allocation-instrumenter" % "java-allocation-instrumenter" % "3.1.0"
+val allocationInstrumentationJarfile = taskKey[File]("Path to the allocation instrumentation jarfile.")
+lazy val allocation = project
+  .in(file("modules/allocation"))
+  .enablePlugins(AutomateHeaderPlugin)
+  .dependsOn(core)
+  .settings(commonSettings)
+  .settings(
+    allocationInstrumentationJarfile := {
+      val zz = (dependencyClasspath in Test).value.find { (af: Attributed[File]) =>
+        af.metadata.get(moduleID.key) match {
+          case None => false
+          case Some(mid) => mid == allocationInstrumentationModule % "default"
+        }
+      }
+      zz.fold(sys.error("Can't find allocation instrumentation jarfile."))(_.data)
+    },
+    libraryDependencies ++= Seq(
+      allocationInstrumentationModule % "test"
+    ),
+    Test / parallelExecution := false,
+    Test / fork := true,
+    Test / javaOptions ++= Seq(s"-javaagent:${allocationInstrumentationJarfile.value}"),
+  )
+

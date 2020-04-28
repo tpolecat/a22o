@@ -13,7 +13,7 @@ trait Text {
   val anyChar: Parser[Char] =
     accept(_ => true, "any character")
 
-  def accept(p: Char => Boolean, name: String): Parser[Char] =
+  def accept(p: Char => Boolean, name: String = "<predicate>"): Parser[Char] =
     new Parser[Char] {
       val predicateError = s"expected $name"
       val eofError = s"expected $name, found end of input"
@@ -161,6 +161,7 @@ trait Text {
       new Parser[String] {
         lazy val p1ʹ = p1.void
         lazy val p2ʹ = p2.void
+        override def void: Parser[Unit] = p1ʹ ~> p2ʹ
         def mutParse(mutState: MutState): String = {
           val p0 = mutState.getPoint
           p1ʹ.mutParse(mutState)

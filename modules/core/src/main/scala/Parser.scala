@@ -20,6 +20,14 @@ abstract class Parser[+A] private[a22o] { outer =>
     )
   }
 
+  // TODO: make this private to the allocation tester, we would want to use .void for this if it
+  // were intended for use by end-users
+  final def accept(input: String): Boolean = {
+    val s = new MutState(input)
+    mutParse(s)
+    s.isOk
+  }
+
   // Implementations may wish to override to prevent allocating values which are then discarded.
   def void: Parser[Unit] =
     map(_ => ())

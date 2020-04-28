@@ -1,6 +1,7 @@
-package a22o
+package test
 package parser
 
+import a22o.parser.Numeric
 import munit.ScalaCheckSuite
 import org.scalacheck.Prop._
 
@@ -30,20 +31,20 @@ class IntegerSuite extends ScalaCheckSuite with Numeric {
         case (_, Right(m)) => assert(n == m)
         case (_, Left(s))  =>
           assert(n < Int.MinValue.toLong || n > Int.MaxValue.toLong)
-          assert(s == "Parse error at position 0: Integer over/underflow.")
+          assert(s == "Integer over/underflow.")
       }
     }
   }
 
   test("empty string") {
-    assertEquals(int.parse("")._2, Left("Parse error at position 0: Expected sign or digit."))
+    assertEquals(int.parse("")._2, Left("Expected sign or digit."))
   }
 
   test("just a sign") {
-    assertEquals(int.parse("+")._2, Left("Parse error at position 0: Expected digit."))
-    assertEquals(int.parse("-")._2, Left("Parse error at position 0: Expected digit."))
-    assertEquals(int.parse("+suffix")._2, Left("Parse error at position 0: Expected digit."))
-    assertEquals(int.parse("-suffix")._2, Left("Parse error at position 0: Expected digit."))
+    assertEquals(int.parse("+")._2, Left("Expected digit."))
+    assertEquals(int.parse("-")._2, Left("Expected digit."))
+    assertEquals(int.parse("+suffix")._2, Left("Expected digit."))
+    assertEquals(int.parse("-suffix")._2, Left("Expected digit."))
   }
 
   test("boundary cases") {
