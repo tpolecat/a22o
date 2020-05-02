@@ -13,7 +13,7 @@ object Trivial {
     import _root_.a22o.parser.all._
 
     @State(Scope.Benchmark)
-    val letterOrDigit: Parser[Char] = letter | digit
+    val letterOrDigit: Parser[Char] = (letter | digit).merge
 
   }
 

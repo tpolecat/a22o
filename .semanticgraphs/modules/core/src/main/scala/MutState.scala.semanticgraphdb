@@ -1,0 +1,739 @@
+
+*modules/core/src/main/scala/MutState.scala˝
+a22o/MutState#Point#TYPEN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala ("
+
+isImplicitfalse"K
+uriD/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala"
+endCharacter12"
+endLine8"
+accessPublicAccess()"
+displayNamePoint"
+startCharacter7"
+isLocalfalse"
+packagea22o"
+isFinalfalse"
+	startLine8"
+isVarfalse"
+symbola22o/MutState#Point#"
+
+isAbstractfalse"
+kindTYPE*Point2
+
+scala/Int#TYPE_UPPER_BOUND2
+
+scala/Int#TYPE_LOWER_BOUND2g
+
+scala/Int#	REFERENCEN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala (ø
+a22o/MutState#setError().METHODN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala ("
+
+isImplicitfalse"K
+uriD/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala"
+endCharacter22"
+endLine15"
+accessPublicAccess()"
+displayNamesetError"
+startCharacter14"
+isLocalfalse"
+packagea22o"
+isFinalfalse"
+	startLine15"
+isVarfalse"#
+symbola22o/MutState#setError()."
+
+isAbstractfalse"
+kindMETHOD*setError26
+"a22o/MutState#setError().(message)METHOD_PARAMETER2
+scala/Unit#RETURN_TYPE2
+scala/inline#	ANNOTATED2w
+a22o/MutState#`error_=`().	REFERENCEN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala0 (52h
+scala/Unit#	REFERENCEN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala) (-2
+"a22o/MutState#setError().(message)	REFERENCEN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala8 (?≤
+a22o/MutState#advance().METHODN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala ("
+
+isImplicitfalse"K
+uriD/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala"
+endCharacter21"
+endLine22"
+accessPublicAccess()"
+displayNameadvance"
+startCharacter14"
+isLocalfalse"
+packagea22o"
+isFinalfalse"
+	startLine22"
+isVarfalse""
+symbola22o/MutState#advance()."
+
+isAbstractfalse"
+kindMETHOD*advance2/
+a22o/MutState#advance().(n)METHOD_PARAMETER2
+scala/Unit#RETURN_TYPE2
+scala/inline#	ANNOTATED2x
+a22o/MutState#advance().(n)	REFERENCEN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala' ((2u
+a22o/MutState#`pos_=`().	REFERENCEN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala  (#2o
+scala/Int#`+`(+4).	REFERENCEN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala$ (&Ø	
+a22o/MutState#startsWith().METHODN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala ("
+
+isImplicitfalse"K
+uriD/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala"
+endCharacter24"
+endLine25"
+accessPublicAccess()"
+displayName
+startsWith"
+startCharacter14"
+isLocalfalse"
+packagea22o"
+isFinalfalse"
+	startLine25"
+isVarfalse"%
+symbola22o/MutState#startsWith()."
+
+isAbstractfalse"
+kindMETHOD*
+startsWith22
+a22o/MutState#startsWith().(s)METHOD_PARAMETER2
+scala/Boolean#RETURN_TYPE2
+scala/inline#	ANNOTATED2{
+java/lang/String#startsWith().	REFERENCEN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala5 (?2{
+a22o/MutState#startsWith().(s)	REFERENCEN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala@ (A2q
+a22o/MutState#input.	REFERENCEN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala/ (42k
+scala/Boolean#	REFERENCEN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala% (,2q
+a22o/MutState#pos().	REFERENCEN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scalaC (Fﬂ
+a22o/MutState#charAt().(n)	PARAMETERN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala ("
+
+isImplicitfalse"K
+uriD/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala"
+endCharacter22"
+endLine21"
+accessEmpty"
+displayNamen"
+startCharacter21"
+isLocalfalse"
+packagea22o"
+isFinalfalse"
+	startLine21"
+isVarfalse"$
+symbola22o/MutState#charAt().(n)"
+
+isAbstractfalse"
+kind	PARAMETER*n2
+
+scala/Int#
+VALUE_TYPE2g
+
+scala/Int#	REFERENCEN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala (Õ	
+Klocal0:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scalaLOCALN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala. (/"
+
+isImplicitfalse"K
+uriD/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala"
+endCharacter47"
+endLine23"
+accessEmpty"
+displayNames"
+startCharacter46"
+isLocaltrue"	
+package"
+isFinalfalse"
+	startLine23"
+isVarfalse"
+symbollocal0"
+
+isAbstractfalse"
+kindLOCAL*s2
+java/lang/String#
+VALUE_TYPE2q
+a22o/MutState#input.	REFERENCEN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala2 (72q
+a22o/MutState#pos().	REFERENCEN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scalaG (J2x
+a22o/MutState#consume().(n)	REFERENCEN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scalaM (N2o
+scala/Int#`+`(+4).	REFERENCEN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scalaK (L2q
+a22o/MutState#pos().	REFERENCEN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scalaB (E2|
+java/lang/String#substring(+1).	REFERENCEN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala8 (Aí
+a22o/MutState#getPoint().METHODN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala ("
+
+isImplicitfalse"K
+uriD/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala"
+endCharacter22"
+endLine13"
+accessPublicAccess()"
+displayNamegetPoint"
+startCharacter14"
+isLocalfalse"
+packagea22o"
+isFinalfalse"
+	startLine13"
+isVarfalse"#
+symbola22o/MutState#getPoint()."
+
+isAbstractfalse"
+kindMETHOD*getPoint2#
+a22o/MutState#Point#RETURN_TYPE2
+scala/inline#	ANNOTATED2q
+a22o/MutState#Point#	REFERENCEN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala (2q
+a22o/MutState#pos().	REFERENCEN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala  (#˚
+a22o/MutState#CLASSN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala (""
+
+isImplicitfalse"K
+uriD/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala"
+endCharacter34"
+endLine6"$
+accessPrivateWithinAccess(a22o/)"
+displayNameMutState"
+startCharacter26"
+isLocalfalse"
+packagea22o"
+isFinaltrue"
+	startLine6"
+isVarfalse"
+symbola22o/MutState#"
+
+isAbstractfalse"
+kindCLASS*MutState2#
+a22o/MutState#input.DECLARATION2(
+a22o/MutState#`<init>`().DECLARATION2#
+a22o/MutState#Point#DECLARATION2#
+a22o/MutState#pos().DECLARATION2'
+a22o/MutState#`pos_=`().DECLARATION2%
+a22o/MutState#error().DECLARATION2)
+a22o/MutState#`error_=`().DECLARATION2(
+a22o/MutState#getPoint().DECLARATION2(
+a22o/MutState#setPoint().DECLARATION2(
+a22o/MutState#setError().DECLARATION2(
+a22o/MutState#getError().DECLARATION2)
+a22o/MutState#isErrored().DECLARATION2$
+a22o/MutState#isOk().DECLARATION2)
+a22o/MutState#remaining().DECLARATION2%
+a22o/MutState#reset().DECLARATION2&
+a22o/MutState#charAt().DECLARATION2'
+a22o/MutState#advance().DECLARATION2'
+a22o/MutState#consume().DECLARATION2.
+a22o/MutState#remainingInput().DECLARATION2*
+a22o/MutState#startsWith().DECLARATION2r
+a22o/MutState#pos().
+DEFINITIONN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala
+ 
+(2t
+a22o/MutState#error().
+DEFINITIONN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala (É
+a22o/MutState#isErrored().METHODN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala ("
+
+isImplicitfalse"K
+uriD/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala"
+endCharacter23"
+endLine17"
+accessPublicAccess()"
+displayName	isErrored"
+startCharacter14"
+isLocalfalse"
+packagea22o"
+isFinalfalse"
+	startLine17"
+isVarfalse"$
+symbola22o/MutState#isErrored()."
+
+isAbstractfalse"
+kindMETHOD*	isErrored2
+scala/Boolean#RETURN_TYPE2
+scala/inline#	ANNOTATED2k
+scala/Boolean#	REFERENCEN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala ( 2s
+a22o/MutState#error().	REFERENCEN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala# ((2u
+java/lang/Object#`!=`().	REFERENCEN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala) (+è
+"a22o/MutState#setError().(message)	PARAMETERN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala ("
+
+isImplicitfalse"K
+uriD/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala"
+endCharacter30"
+endLine15"
+accessEmpty"
+displayNamemessage"
+startCharacter23"
+isLocalfalse"
+packagea22o"
+isFinalfalse"
+	startLine15"
+isVarfalse",
+symbol"a22o/MutState#setError().(message)"
+
+isAbstractfalse"
+kind	PARAMETER*message2"
+scala/Predef.String#
+VALUE_TYPE2q
+scala/Predef.String#	REFERENCEN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala  (&˚
+a22o/MutState#startsWith().(s)	PARAMETERN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala ("
+
+isImplicitfalse"K
+uriD/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala"
+endCharacter26"
+endLine25"
+accessEmpty"
+displayNames"
+startCharacter25"
+isLocalfalse"
+packagea22o"
+isFinalfalse"
+	startLine25"
+isVarfalse"(
+symbola22o/MutState#startsWith().(s)"
+
+isAbstractfalse"
+kind	PARAMETER*s2"
+scala/Predef.String#
+VALUE_TYPE2q
+scala/Predef.String#	REFERENCEN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala ("π
+a22o/MutState#setPoint().METHODN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala ("
+
+isImplicitfalse"K
+uriD/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala"
+endCharacter22"
+endLine14"
+accessPublicAccess()"
+displayNamesetPoint"
+startCharacter14"
+isLocalfalse"
+packagea22o"
+isFinalfalse"
+	startLine14"
+isVarfalse"#
+symbola22o/MutState#setPoint()."
+
+isAbstractfalse"
+kindMETHOD*setPoint24
+ a22o/MutState#setPoint().(point)METHOD_PARAMETER2
+scala/Unit#RETURN_TYPE2
+scala/inline#	ANNOTATED2u
+a22o/MutState#`pos_=`().	REFERENCEN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala- (02}
+ a22o/MutState#setPoint().(point)	REFERENCEN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala3 (82h
+scala/Unit#	REFERENCEN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala& (*á
+ a22o/MutState#setPoint().(point)	PARAMETERN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala ("
+
+isImplicitfalse"K
+uriD/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala"
+endCharacter28"
+endLine14"
+accessEmpty"
+displayNamepoint"
+startCharacter23"
+isLocalfalse"
+packagea22o"
+isFinalfalse"
+	startLine14"
+isVarfalse"*
+symbol a22o/MutState#setPoint().(point)"
+
+isAbstractfalse"
+kind	PARAMETER*point2"
+a22o/MutState#Point#
+VALUE_TYPE2q
+a22o/MutState#Point#	REFERENCEN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala (#Å
+a22o/MutState#reset().(point)	PARAMETERN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala ("
+
+isImplicitfalse"K
+uriD/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala"
+endCharacter25"
+endLine20"
+accessEmpty"
+displayNamepoint"
+startCharacter20"
+isLocalfalse"
+packagea22o"
+isFinalfalse"
+	startLine20"
+isVarfalse"'
+symbola22o/MutState#reset().(point)"
+
+isAbstractfalse"
+kind	PARAMETER*point2"
+a22o/MutState#Point#
+VALUE_TYPE2q
+a22o/MutState#Point#	REFERENCEN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala ( ﬂ
+a22o/MutState#remaining().METHODN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala ("
+
+isImplicitfalse"K
+uriD/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala"
+endCharacter23"
+endLine19"
+accessPublicAccess()"
+displayName	remaining"
+startCharacter14"
+isLocalfalse"
+packagea22o"
+isFinalfalse"
+	startLine19"
+isVarfalse"$
+symbola22o/MutState#remaining()."
+
+isAbstractfalse"
+kindMETHOD*	remaining2
+
+scala/Int#RETURN_TYPE2
+scala/inline#	ANNOTATED2o
+scala/Int#`-`(+3).	REFERENCEN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala, (-2w
+java/lang/String#length().	REFERENCEN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala% (+2q
+a22o/MutState#input.	REFERENCEN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala ($2g
+
+scala/Int#	REFERENCEN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala (2q
+a22o/MutState#pos().	REFERENCEN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala. (1î
+a22o/MutState#getError().METHODN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala ("
+
+isImplicitfalse"K
+uriD/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala"
+endCharacter22"
+endLine16"
+accessPublicAccess()"
+displayNamegetError"
+startCharacter14"
+isLocalfalse"
+packagea22o"
+isFinalfalse"
+	startLine16"
+isVarfalse"#
+symbola22o/MutState#getError()."
+
+isAbstractfalse"
+kindMETHOD*getError2#
+scala/Predef.String#RETURN_TYPE2
+scala/inline#	ANNOTATED2s
+a22o/MutState#error().	REFERENCEN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala! (&2q
+scala/Predef.String#	REFERENCEN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala (Ö
+a22o/MutState#consume().METHODN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala ("
+
+isImplicitfalse"K
+uriD/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala"
+endCharacter21"
+endLine23"
+accessPublicAccess()"
+displayNameconsume"
+startCharacter14"
+isLocalfalse"
+packagea22o"
+isFinalfalse"
+	startLine23"
+isVarfalse""
+symbola22o/MutState#consume()."
+
+isAbstractfalse"
+kindMETHOD*consume2/
+a22o/MutState#consume().(n)METHOD_PARAMETER2#
+scala/Predef.String#RETURN_TYPE2
+scala/inline#	ANNOTATED2o
+scala/Int#`+`(+4).	REFERENCEN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scalaU (W2q
+scala/Predef.String#	REFERENCEN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala (%2u
+a22o/MutState#`pos_=`().	REFERENCEN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scalaQ (T2®
+Klocal0:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala	REFERENCEN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala[ (\2©
+Klocal0:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala
+DEFINITIONN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala. (/2x
+a22o/MutState#consume().(n)	REFERENCEN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scalaX (Y˛	
+a22o/MutState#charAt().METHODN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala ("
+
+isImplicitfalse"K
+uriD/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala"
+endCharacter20"
+endLine21"
+accessPublicAccess()"
+displayNamecharAt"
+startCharacter14"
+isLocalfalse"
+packagea22o"
+isFinalfalse"
+	startLine21"
+isVarfalse"!
+symbola22o/MutState#charAt()."
+
+isAbstractfalse"
+kindMETHOD*charAt2.
+a22o/MutState#charAt().(n)METHOD_PARAMETER2
+scala/Char#RETURN_TYPE2
+scala/inline#	ANNOTATED2q
+a22o/MutState#pos().	REFERENCEN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala2 (52h
+scala/Char#	REFERENCEN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala ("2w
+a22o/MutState#charAt().(n)	REFERENCEN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala8 (92w
+java/lang/String#charAt().	REFERENCEN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala+ (12q
+a22o/MutState#input.	REFERENCEN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala% (*2o
+scala/Int#`+`(+4).	REFERENCEN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala6 (7•
+a22o/MutState#`<init>`().CONSTRUCTORN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala" (""
+
+isImplicitfalse"K
+uriD/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala"
+endCharacter34"
+endLine6"
+accessPublicAccess()"
+displayName<init>"
+startCharacter34"
+isLocalfalse"
+packagea22o"
+isFinalfalse"
+	startLine6"
+isVarfalse"#
+symbola22o/MutState#`<init>`()."
+
+isAbstractfalse"
+kindCONSTRUCTOR*<init>24
+ a22o/MutState#`<init>`().(input)METHOD_PARAMETERÔ
+a22o/MutState#isOk().METHODN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala ("
+
+isImplicitfalse"K
+uriD/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala"
+endCharacter18"
+endLine18"
+accessPublicAccess()"
+displayNameisOk"
+startCharacter14"
+isLocalfalse"
+packagea22o"
+isFinalfalse"
+	startLine18"
+isVarfalse"
+symbola22o/MutState#isOk()."
+
+isAbstractfalse"
+kindMETHOD*isOk2
+scala/Boolean#RETURN_TYPE2
+scala/inline#	ANNOTATED2u
+java/lang/Object#`==`().	REFERENCEN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala$ (&2s
+a22o/MutState#error().	REFERENCEN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala (#2k
+scala/Boolean#	REFERENCEN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala (Ñ
+a22o/MutState#error().METHODN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala ("
+
+isImplicitfalse"K
+uriD/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala"
+endCharacter19"
+endLine11"
+accessPrivateAccess()"
+displayNameerror"
+startCharacter14"
+isLocalfalse"
+packagea22o"
+isFinalfalse"
+	startLine11"
+isVartrue" 
+symbola22o/MutState#error()."
+
+isAbstractfalse"
+kindMETHOD*error2#
+scala/Predef.String#RETURN_TYPE·
+a22o/MutState#consume().(n)	PARAMETERN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala ("
+
+isImplicitfalse"K
+uriD/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala"
+endCharacter23"
+endLine23"
+accessEmpty"
+displayNamen"
+startCharacter22"
+isLocalfalse"
+packagea22o"
+isFinalfalse"
+	startLine23"
+isVarfalse"%
+symbola22o/MutState#consume().(n)"
+
+isAbstractfalse"
+kind	PARAMETER*n2
+
+scala/Int#
+VALUE_TYPE2g
+
+scala/Int#	REFERENCEN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala (£
+a22o/MutState#remainingInput().METHODN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala ("
+
+isImplicitfalse"K
+uriD/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala"
+endCharacter28"
+endLine24"
+accessPublicAccess()"
+displayNameremainingInput"
+startCharacter14"
+isLocalfalse"
+packagea22o"
+isFinalfalse"
+	startLine24"
+isVarfalse")
+symbola22o/MutState#remainingInput()."
+
+isAbstractfalse"
+kindMETHOD*remainingInput2 
+java/lang/String#RETURN_TYPE2
+scala/inline#	ANNOTATED2q
+a22o/MutState#input.	REFERENCEN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala ($2q
+a22o/MutState#pos().	REFERENCEN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala/ (22z
+java/lang/String#substring().	REFERENCEN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala% (.∂
+a22o/MutState#reset().METHODN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala ("
+
+isImplicitfalse"K
+uriD/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala"
+endCharacter19"
+endLine20"
+accessPublicAccess()"
+displayNamereset"
+startCharacter14"
+isLocalfalse"
+packagea22o"
+isFinalfalse"
+	startLine20"
+isVarfalse" 
+symbola22o/MutState#reset()."
+
+isAbstractfalse"
+kindMETHOD*reset21
+a22o/MutState#reset().(point)METHOD_PARAMETER2
+scala/Unit#RETURN_TYPE2
+scala/inline#	ANNOTATED2v
+a22o/MutState#setError().	REFERENCEN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala7 (?2z
+a22o/MutState#reset().(point)	REFERENCEN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala/ (42v
+a22o/MutState#setPoint().	REFERENCEN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala& (.·
+a22o/MutState#advance().(n)	PARAMETERN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala ("
+
+isImplicitfalse"K
+uriD/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala"
+endCharacter23"
+endLine22"
+accessEmpty"
+displayNamen"
+startCharacter22"
+isLocalfalse"
+packagea22o"
+isFinalfalse"
+	startLine22"
+isVarfalse"%
+symbola22o/MutState#advance().(n)"
+
+isAbstractfalse"
+kind	PARAMETER*n2
+
+scala/Int#
+VALUE_TYPE2g
+
+scala/Int#	REFERENCEN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala (ˆ
+a22o/MutState#input.METHODN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala# (("
+
+isImplicitfalse"K
+uriD/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala"
+endCharacter40"
+endLine6"
+accessPrivateThisAccess()"
+displayNameinput"
+startCharacter35"
+isLocalfalse"
+packagea22o"
+isFinalfalse"
+	startLine6"
+isVarfalse"
+symbola22o/MutState#input."
+
+isAbstractfalse"
+kindMETHOD*input2#
+scala/Predef.String#RETURN_TYPE2q
+scala/Predef.String#	REFERENCEN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala* (0Ú
+a22o/MutState#pos().METHODN
+D/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala
+ 
+("
+
+isImplicitfalse"K
+uriD/Users/rnorris/Scala/a22o/modules/core/src/main/scala/MutState.scala"
+endCharacter17"
+endLine10"
+accessPrivateAccess()"
+displayNamepos"
+startCharacter14"
+isLocalfalse"
+packagea22o"
+isFinalfalse"
+	startLine10"
+isVartrue"
+symbola22o/MutState#pos()."
+
+isAbstractfalse"
+kindMETHOD*pos2
+
+scala/Int#RETURN_TYPE

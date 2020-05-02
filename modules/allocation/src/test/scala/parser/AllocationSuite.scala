@@ -18,11 +18,18 @@ trait AllocationSuite extends FunSuite {
     def assertNoAllocation(successCase: String, failureCase: String): Unit = {
       parseWithAllocationAssertions(pa, successCase, true)()
       parseWithAllocationAssertions(pa, failureCase, false)()
-
-      // TODO: ensure the void version of every parser doesn't allocate
       parseWithAllocationAssertions(pa.void, successCase, true)()
       parseWithAllocationAssertions(pa.void, failureCase, false)()
+    }
 
+    def assertNoAllocation0(successCase: String): Unit = {
+      parseWithAllocationAssertions(pa, successCase, true)()
+      parseWithAllocationAssertions(pa.void, successCase, true)()
+    }
+
+    def assertNoAllocation1(failureCase: String): Unit = {
+      parseWithAllocationAssertions(pa, failureCase, false)()
+      parseWithAllocationAssertions(pa.void, failureCase, false)()
     }
 
     def assertAllocation(successCase: String, failureCase: String)(alloc: (String, Int)*): Unit = {
@@ -60,6 +67,5 @@ trait AllocationSuite extends FunSuite {
     assertEquals(ok, success)
     assertEquals(map.filter { case (_, v) => v > 0 }, expected)
   }
-
 
 }

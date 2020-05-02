@@ -13,6 +13,41 @@ trait Text {
   val anyChar: Parser[Char] =
     accept(_ => true, "any character")
 
+  /** A parser that yields the length of the input text consumed by `pa`. */
+  def length(pa: Parser[_]): Parser[Int] =
+    new Parser[Int] {
+      val paʹ = pa.void
+      override def void = paʹ
+      def mutParse(mutState: MutState): Int = {
+        val p0 = mutState.getPoint
+        paʹ.mutParse(mutState)
+        if (mutState.isOk) {
+          val p1 = mutState.getPoint
+          p1 - p0
+        } else {
+          dummy
+        }
+      }
+    }
+
+  /** A parser that yields the input text consumed by `pa`. */
+  def text[A](pa: Parser[A]): Parser[String] =
+    new Parser[String] {
+      val paʹ = pa.void
+      override def void = paʹ
+      def mutParse(mutState: MutState): String = {
+        val p0 = mutState.getPoint
+        paʹ.mutParse(mutState)
+        if (mutState.isOk) {
+          val p1 = mutState.getPoint
+          mutState.setPoint(p0)
+          mutState.consume(p1 - p0)
+        } else {
+          dummy
+        }
+      }
+    }
+
   def accept(p: Char => Boolean, name: String = "<predicate>"): Parser[Char] =
     new Parser[Char] {
       val predicateError = s"expected $name"
@@ -49,13 +84,16 @@ trait Text {
   }
 
   def token[A](pa: Parser[A]): Parser[A] =
-    pa <~ skipMany(whitespace)
+    pa <~ whitespace.many.void
 
   def bracketed[A](open: Char, pa: Parser[A], close: Char): Parser[A] =
     char(open).token ~> pa.token <~ char(close)
 
   def parens[A](pa: Parser[A]): Parser[A] =
     bracketed('(', pa, ')')
+
+  def brackets[A](pa: Parser[A]): Parser[A] =
+    bracketed('[', pa, ']')
 
   def take(n: Int): Parser[String] =
     new Parser[String] {

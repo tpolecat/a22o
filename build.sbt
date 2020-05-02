@@ -41,7 +41,11 @@ lazy val commonSettings = Seq(
   testFrameworks += new TestFramework("munit.Framework"),
 
   // don't publish by default
-  publish / skip := true
+  publish / skip := true,
+
+  // resolvers += Resolver.bintrayRepo("virtuslab", "graphbuddy"),
+  // addCompilerPlugin("com.virtuslab.semanticgraphs" % "scalac-plugin" % "0.0.11" cross CrossVersion.full)
+
 
 )
 
@@ -62,7 +66,8 @@ lazy val core = project
     libraryDependencies ++= Seq(
       "org.typelevel" %% "cats-core" % "2.1.1",
     ),
-    publish / skip := false
+    publish / skip := false,
+    scalacOptions -= "-Xfatal-warnings"
   )
 
 lazy val bench = project
@@ -81,15 +86,10 @@ lazy val allocation = project
   .dependsOn(core)
   .settings(commonSettings)
   .settings(
-    allocationInstrumentationJarfile := {
-      val zz = (dependencyClasspath in Test).value.find { (af: Attributed[File]) =>
-        af.metadata.get(moduleID.key) match {
-          case None => false
-          case Some(mid) => mid == allocationInstrumentationModule % "default"
-        }
-      }
-      zz.fold(sys.error("Can't find allocation instrumentation jarfile."))(_.data)
-    },
+    allocationInstrumentationJarfile :=
+      (dependencyClasspath in Test).value
+        .find(_.metadata.get(moduleID.key) == Some(allocationInstrumentationModule % "default"))
+        .fold(sys.error("Can't find allocation instrumentation jarfile."))(_.data),
     libraryDependencies ++= Seq(
       allocationInstrumentationModule % "test"
     ),

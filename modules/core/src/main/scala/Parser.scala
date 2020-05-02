@@ -75,17 +75,22 @@ abstract class Parser[+A] private[a22o] { outer =>
     }
 
   // Syntax delegates
-  final def ~[B](pb: => Parser[B]): Parser[A ~ B]         = parser.combinator.pair(this, pb)
-  final def |[B >: A](pb: => Parser[B]): Parser[B]        = parser.combinator.or(this, pb)
-  final def ||[B](pb: => Parser[B]): Parser[Either[A, B]] = parser.combinator.either(this, pb)
+  // N.B. ~ is added via syntax in the package object
+  final def length: Parser[Int]                          = parser.text.length(this)
+  final def text: Parser[String]                          = parser.text.text(this)
   final def opt: Parser[Option[A]]                        = parser.combinator.opt(this)
-  final def many: Parser[List[A]]                         = parser.combinator.many(this)
-  final def many1: Parser[NonEmptyList[A]]                = parser.combinator.many1(this)
-  final def skipMany: Parser[Unit]                        = parser.combinator.skipMany(this)
-  final def skipMany1: Parser[Unit]                       = parser.combinator.skipMany1(this)
   final def <~[B](pb: => Parser[B]): Parser[A]            = parser.combinator.discardRight(this, pb)
   final def ~>[B](pb: => Parser[B]): Parser[B]            = parser.combinator.discardLeft(this, pb)
   final def token: Parser[A]                              = parser.text.token(this)
+
+
+  final def many: AccumBuilder[A, Unit] =
+    new AccumBuilder(this, 0, Int.MaxValue, parser.combinator.void)
+
+  final def many1: AccumBuilder[A, Unit] =
+    new AccumBuilder(this, 1, Int.MaxValue, parser.combinator.void)
+
+  // The .text combinator means we don't need this anymore
 
   final def +(pb: => Parser[String])(implicit ev: A <:< String): Parser[String] =
     parser.text.concat(map(ev), pb)
@@ -101,30 +106,36 @@ abstract class Parser[+A] private[a22o] { outer =>
 }
 
 object Parser {
-  import parser.all.{ ok, fail, zipWith, or }
+  import parser.all.{ ok, fail }
 
   implicit def monoidParser[A](
     implicit ma: Monoid[A]
   ): Monoid[Parser[A]] =
     new Monoid[Parser[A]] {
-      def combine(p0: Parser[A], p1: Parser[A]): Parser[A] = zipWith(p0, p1)(ma.combine)
+      def combine(p0: Parser[A], p1: Parser[A]): Parser[A] = (p0 ~ p1).mapN(ma.combine)
       def empty: Parser[A] = ok(ma.empty)
     }
 
   implicit val MonoidKParser: MonoidK[Parser] =
     new MonoidK[Parser] {
-      def combineK[A](x: Parser[A], y: Parser[A]): Parser[A] = or(x, y)
+      def combineK[A](x: Parser[A], y: Parser[A]): Parser[A] = (x | y).merge
       def empty[A]: Parser[A] = fail("No match.")
     }
 
   implicit val MonadErrorParser: MonadError[Parser, String] =
     new MonadError[Parser, String] {
 
+      // todo: override ap2, ap3, ... map2, map3, ... tuple2, tuple3, ... imap2, imap3, ...
+
+      override def map2[A, B, Z](fa: Parser[A], fb: Parser[B])(f: (A, B) => Z): Parser[Z] =
+        (fa ~ fb).mapN(f)
+
+      override def void[A](fa: Parser[A]): Parser[Unit] = fa.void
+      override def as[A, B](fa: Parser[A], b: B): Parser[B] = fa.as(b)
       override def pure[A](a: A): Parser[A] = ok(a)
       override def raiseError[A](e: String): Parser[A] = fail(e)
       override def map[A, B](fa: Parser[A])(f: A => B): Parser[B] = fa.map(f)
       override def flatMap[A, B](fa: Parser[A])(f: A => Parser[B]): Parser[B] = fa.flatMap(f)
-
       override def handleErrorWith[A](fa: Parser[A])(f: String => Parser[A]): Parser[A] =
         new Parser[A] {
           def mutParse(mutState: MutState): A = {

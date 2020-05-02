@@ -1,4 +1,4 @@
-import a22o.{ ~, Parser }
+import a22o._
 import a22o.parser.all._
 import cats.implicits._
 
@@ -7,26 +7,24 @@ anyChar.parse("foobar")
 digit.parse("foo")
 digit.parse("3oo")
 
-pair(digit, letter).parse("3oo")
-pair(digit, ???).parse("zoo")
+(digit ~ letter).tupled.parse("3oo")
+(digit ~ ???).tupled.parse("zoo")
 
-digit.many.parse("bc")
-digit.many.parse("1bc")
-digit.many.parse("1826354873517865bc")
+digit.many.as(List).parse("bc")
+digit.many.as(List).parse("1bc")
+digit.many.as(List).parse("1826354873517865bc")
 
+digit.many1.as(List).parse("bc")
+digit.many1.as(List).parse("1bc")
+digit.many1.as(List).parse("1826354873517865bc")
 
-digit.many1.parse("bc")
-digit.many1.parse("1bc")
-digit.many1.parse("1826354873517865bc")
-
-
-(digit || letter).parse("*")
-(digit || letter).parse("*bc")
-(digit || letter).parse("1bc")
-(digit || letter).parse("abc")
+(digit | letter).either.parse("*")
+(digit | letter).either.parse("*bc")
+(digit | letter).either.parse("1bc")
+(digit | letter).either.parse("abc")
 
 val z = for {
-  e <- digit || letter
+  e <- (digit | letter).either
   d <- digit
 } yield (e, d)
 
@@ -37,16 +35,16 @@ z.parse("1bc")
 z.parse("x1c")
 z.parse("22c")
 
-(digit | ok("blah")).parse("x2") // Any
+(digit | ok("blah")).merge.parse("x2") // Any
 
 
-val m = (digit ~ digit ~ digit).map { case a ~ b ~ c => (a, b, c) }
+val m = (digit ~ digit ~ digit).tupled
 m.parse("35")
 
-((digit <~ letter) ~ digit).parse("1a2")
-((digit ~> letter) ~ digit).parse("1a2")
+((digit <~ letter) ~ digit).tupled.parse("1a2")
+((digit ~> letter) ~ digit).tupled.parse("1a2")
 
-(token(digit) ~ digit).parse("1 2x")
+(token(digit) ~ digit).tupled.parse("1 2x")
 
 parens(digit).parse("(1)abc")
 parens(digit).parse("(  1 )abc")
@@ -62,9 +60,9 @@ int.parse((Int.MaxValue.toLong + 1L).toString)
 int.parse((Int.MinValue.toLong - 1L).toString)
 
 // TODO: sepBy, sepBy1
-lazy val expr:   Parser[Int] = (sumand ~ char('+').token ~ sumand).map { case a ~ _ ~ b => a + b } | sumand
-lazy val sumand: Parser[Int] = (factor ~ char('*').token ~ factor).map { case a ~ _ ~ b => a * b } | factor
-lazy val factor: Parser[Int] = int.token | parens(expr).token
+lazy val expr:   Parser[Int] = ((sumand ~ char('+').token ~ sumand).mapN { (a, _, b) => a + b } | sumand).merge
+lazy val sumand: Parser[Int] = ((factor ~ char('*').token ~ factor).mapN { (a, _, b) => a * b } | factor).merge
+lazy val factor: Parser[Int] = (int.token | parens(expr).token).merge
 
 expr.parse("(9 * (8 * (7 + 1))) + 3")
 
@@ -107,8 +105,6 @@ sepBy(digit, char(',')).parse(",")
 sepBy(digit, char(',')).parse("1,")
 sepBy(digit, char(',')).parse("1,2,3,4")
 
-
-
 // https://github.com/lihaoyi/fastparse/blob/master/perftests/bench1/src/perftests/JsonParse.scala
 object Js {
   sealed trait Val extends Any {
@@ -147,7 +143,7 @@ val exponent = (charIn("eE").map(_.toString) + charIn("+-").map(_.toString).opt.
 val fractional = string(".") + digits
 
 // val integral      = P( "0" | CharIn('1' to '9') ~ digits.? )
-val integral = string("0") | charIn('1' to '9').map(_.toString) + stringOf('1' to '9')
+val integral = (string("0") | charIn('1' to '9').map(_.toString) + stringOf('1' to '9')).merge
 
 integral.parse("0")
 integral.parse("01")
@@ -207,8 +203,6 @@ mat.find(3)
 mat.start
 mat.end
 mat.group
-
-
 
 
 
