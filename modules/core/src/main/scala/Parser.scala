@@ -4,40 +4,104 @@
 
 package a22o
 
-import cats._
-import cats.data._
-import scala.annotation.tailrec
+import a22o.parser.base._
+import a22o.parser.meta._
+import java.text.ParseException
+import a22o.parser.TextParser
 
-abstract class Parser[+A] private[a22o] { outer =>
+object Parser extends TextParser.Constructors
 
-  final def parse(input: String): (String, Either[String, A]) = {
-    val s = new MutState(input)
-    val a = mutParse(s)
-    val r = s.remainingInput
-    (r,
-      if (s.isErrored) Left(s.getError)
-      else Right(a)
-    )
-  }
+abstract class Parser[+A] private[a22o] (override val toString: String = "<parser>")
+  extends TextParser.Combinators[A] { outer =>
 
-  // TODO: make this private to the allocation tester, we would want to use .void for this if it
-  // were intended for use by end-users
   final def accept(input: String): Boolean = {
     val s = new MutState(input)
     mutParse(s)
     s.isOk
   }
 
-  // Implementations may wish to override to prevent allocating values which are then discarded.
-  def void: Parser[Unit] =
-    map(_ => ())
+  /**
+   * Attempt to parse the given input, returning the unconsumed remainder and either an error
+   * or the computed result.
+   * @group eliminators
+   */
+  final def parse(input: String): (String, Either[String, A]) = {
+    val s = new MutState(input)
+    val a = mutParse(s)
+    val r = s.remainingInput
+    (r, Either.cond(s.isOk, a, s.getError))
+  }
 
-  final def as[B](b: B): Parser[B] =
-    void.map(_ => b)
+  /**
+   * Attempt to parse the given input completely, returning either an error or the computed result.
+   * @group eliminators
+   */
+  final def parseAll(input: String): Either[String, A] = {
+    val s = new MutState(input)
+    val a = (this <~ endOfInput) mutParse(s)
+    Either.cond(s.isOk, a, s.getError)
+  }
 
+  /**
+   * Attempt to parse the given input, returning the unconsumed remainder and the computed result,
+   * or raising a `ParseException` on failure.
+   * @group eliminators
+   */
+  final def unsafeParse(input: String): (String, A) = {
+    val s = new MutState(input)
+    val a = mutParse(s)
+    if (s.isOk) (s.remainingInput, a)
+    else throw new ParseException(s.getError, s.getPoint)
+  }
+
+  /**
+   * Attempt to parse the given input completely, returning the computed result, or raising a
+   * `ParseException` ib failure.
+   * @group eliminators
+   */
+  final def unsafeParseAll(input: String): A = {
+    val s = new MutState(input)
+    val a = (this <~ endOfInput) mutParse(s)
+    if (s.isOk) a
+    else throw new ParseException(s.getError, s.getPoint)
+  }
+
+  /**
+   * An equivalent parser with the given name (and optionally a given name for its `void`
+   * equivalent).
+   * @group meta
+   */
+  final def named(name: String, voidName: Option[String] = None): Parser[A] =
+    new Parser[A](name) {
+      override lazy val void: Parser[Unit] = voidName.fold(outer.void)(outer.void.named(_))
+      def mutParse(mutState: MutState): A = outer.mutParse(mutState)
+    }
+
+  /**
+   * An equivalent parser that discards its result. This is equationally the same as `.map(_ => ())`
+   * but is more efficient because implementations can often avoid computing results at all.
+   * @group transformation
+   */
+  lazy val void: Parser[Unit] =
+    new Parser[Unit](s"$outer.void") {
+      override def consumed: Parser[Int] = outer.consumed
+      override lazy val void: Parser[Unit] = this
+      def mutParse(mutState: MutState): Unit = {
+        outer.mutParse(mutState)
+        if (mutState.isOk) ()
+        else dummy
+      }
+    }
+
+  /**
+   * An equivalent parser that applies `f` to its computed result. Prefer `.as` for constant
+   * functions and `.void` for the unit function as these can often avoid computing the underlying
+   * result.
+   * @group transformation
+   */
   final def map[B](f: A => B): Parser[B] =
     new Parser[B] {
-      override def void = outer.void // throw away the map
+      override lazy val void = outer.void // we can throw away the map
       def mutParse(mutState: MutState): B = {
         val a = outer.mutParse(mutState)
         if (mutState.isOk) f(a)
@@ -45,25 +109,122 @@ abstract class Parser[+A] private[a22o] { outer =>
       }
     }
 
-  final def emap[B](f: A => Either[String, B]): Parser[B] =
-    new Parser[B] {
-      def mutParse(mutState: MutState): B = {
+  /**
+   * An equivalent parser that applies secondary validation to the computed result, failing if the
+   * supplied predicate `f` returns `false`.
+   * {{{
+   * int.validate("must be positive")(_ > 0)
+   * }}}
+   * @group error handling
+   */
+  final def validate(desc: String)(f: A => Boolean): Parser[A] =
+    new Parser[A](s"$this.validate") {
+      val err = s"validate: $desc"
+      def mutParse(mutState: MutState): A = {
         val o = mutState.getPoint
         val a = outer.mutParse(mutState)
         if (mutState.isOk) {
           f(a) match {
-            case Right(a) => a
-            case Left(e)  =>
+            case true  => a
+            case false =>
               mutState.reset(o)
-              mutState.setError(e)
+              mutState.setError(err)
               dummy
           }
         } else dummy // don't call f if the parser failed
       }
     }
 
+  /**
+   * An equivalent parser that never fails, yielding `z` on error and applying `f` to the computed
+   * result on success.
+   * @group error handling
+   */
+  final def fold[B](z: => B)(f: A => B): Parser[B] =
+    new Parser[B](s"$outer.fold(...)(...)") {
+      lazy val zʹ = z
+      override lazy val void: Parser[Unit] = outer.void.fold(())(identity)
+      def mutParse(mutState: MutState): B = {
+        val a = outer.mutParse(mutState)
+        if (mutState.isOk) f(a)
+        else {
+          mutState.setError(null)
+          zʹ
+        }
+      }
+    }
+
+  /**
+   * An equivalent parser that discards its result and instead yields the input that was consumed.
+   * @group meta
+   */
+  final def inputText: Parser[String] =
+    new Parser[String](s"$outer.text") {
+      val paʹ = outer.void
+      override lazy val void = paʹ
+      def mutParse(mutState: MutState): String = {
+        val p0 = mutState.getPoint
+        paʹ.mutParse(mutState)
+        if (mutState.isOk) {
+          val p1 = mutState.getPoint
+          mutState.setPoint(p0)
+          mutState.consume(p1 - p0)
+        } else {
+          dummy
+        }
+      }
+    }
+
+  /**
+   * An equivalent parser that discards its result and instead yields the number of characters
+   * consumed. This is equationally the same as to `.text.map(_.length)` but is more efficient
+   * because it avoids a String allocation.
+   * @group meta
+   */
+  def consumed: Parser[Int] =
+    new Parser[Int](s"$outer.consumed") {
+      val paʹ = outer.void
+      override lazy val void = paʹ
+      override def consumed: Parser[Int] = this
+      def mutParse(mutState: MutState): Int = {
+        val p0 = mutState.getPoint
+        paʹ.mutParse(mutState)
+        if (mutState.isOk) {
+          val p1 = mutState.getPoint
+          p1 - p0
+        } else {
+          dummy
+        }
+      }
+    }
+
+  /**
+   * Sequence this parser with another parser, based on a predicate on the computed value.
+   * Prefer this over `flatMap` when possible, as `select` incurs no allocation overhead.
+   * @group branching
+   */
+  def select[B](f: A => Boolean, ft: => Parser[B], ff: => Parser[B]): Parser[B] =
+    new Parser[B] {
+      lazy val ftʹ = ft
+      lazy val ffʹ = ff
+      override lazy val void: Parser[Unit] = outer.select(f, ft.void, ff.void)
+      def mutParse(mutState: MutState): B = {
+        val b = outer.mutParse(mutState)
+        if (mutState.isOk) {
+          if (f(b)) ftʹ.mutParse(mutState)
+          else      ffʹ.mutParse(mutState)
+        } else dummy
+      }
+    }
+
+  /**
+   * Sequence this parser with another parser, based on the computed value. Care should be taken not
+   * to construct parsers in the body of `f` if it can be avoided. Prefer `select` when possible.
+   * @group branching
+   */
   final def flatMap[B](f: A => Parser[B]): Parser[B] =
     new Parser[B] {
+      override lazy val void = outer.flatMap(a => f(a).void)
       def mutParse(mutState: MutState): B = {
         val a = outer.mutParse(mutState)
         if (mutState.isOk) {
@@ -74,26 +235,22 @@ abstract class Parser[+A] private[a22o] { outer =>
       }
     }
 
-  // Syntax delegates
-  // N.B. ~ is added via syntax in the package object
-  final def length: Parser[Int]                          = parser.text.length(this)
-  final def text: Parser[String]                          = parser.text.text(this)
-  final def opt: Parser[Option[A]]                        = parser.combinator.opt(this)
-  final def <~[B](pb: => Parser[B]): Parser[A]            = parser.combinator.discardRight(this, pb)
-  final def ~>[B](pb: => Parser[B]): Parser[B]            = parser.combinator.discardLeft(this, pb)
-  final def token: Parser[A]                              = parser.text.token(this)
 
-
-  final def many: AccumBuilder[A, Unit] =
-    new AccumBuilder(this, 0, Int.MaxValue, parser.combinator.void)
-
-  final def many1: AccumBuilder[A, Unit] =
-    new AccumBuilder(this, 1, Int.MaxValue, parser.combinator.void)
-
-  // The .text combinator means we don't need this anymore
-
-  final def +(pb: => Parser[String])(implicit ev: A <:< String): Parser[String] =
-    parser.text.concat(map(ev), pb)
+  /**
+   * An equivalent parser that consumes no input.
+   * @group meta
+   */
+  def peek: Parser[A] =
+    new Parser[A](s"$outer.peek") {
+      override def peek: Parser[A] = this
+      override lazy val void = outer.void.peek
+      def mutParse(mutState: MutState): A = {
+        val o = mutState.getPoint
+        val a = outer.mutParse(mutState)
+        mutState.setPoint(o)
+        a
+      }
+    }
 
   // grim
   protected final val dummy: A =
@@ -103,70 +260,52 @@ abstract class Parser[+A] private[a22o] { outer =>
   // on exit, offset is advanced on success, untouched on failure
   protected[a22o] def mutParse(mutState: MutState): A
 
-}
 
-object Parser {
-  import parser.all.{ ok, fail }
+  /**
+   * @group error handling
+   */
+  def onError[B >: A](a: => B): Parser[B] =
+    this.fold(a)(identity)
 
-  implicit def monoidParser[A](
-    implicit ma: Monoid[A]
-  ): Monoid[Parser[A]] =
-    new Monoid[Parser[A]] {
-      def combine(p0: Parser[A], p1: Parser[A]): Parser[A] = (p0 ~ p1).mapN(ma.combine)
-      def empty: Parser[A] = ok(ma.empty)
-    }
+  /** @group sequencing */
+  def <~[B](pb: => Parser[B]): Parser[A] =
+    (this ~ pb.void).mapN((a, _) => a).named(s"($this <~ ...)")
 
-  implicit val MonoidKParser: MonoidK[Parser] =
-    new MonoidK[Parser] {
-      def combineK[A](x: Parser[A], y: Parser[A]): Parser[A] = (x | y).merge
-      def empty[A]: Parser[A] = fail("No match.")
-    }
+  /** @group sequencing */
+  def ~>[B](pb: => Parser[B]): Parser[B] =
+    (this.void ~ pb).mapN((_, b) => b).named(s"($this ~> ...)")
 
-  implicit val MonadErrorParser: MonadError[Parser, String] =
-    new MonadError[Parser, String] {
+  /** @group repetition */
+  def many: AccumBuilder[A, Unit] =
+    new AccumBuilder(this, 0, Int.MaxValue, unit)
 
-      // todo: override ap2, ap3, ... map2, map3, ... tuple2, tuple3, ... imap2, imap3, ...
+  /** @group repetition */
+  def many1: AccumBuilder[A, Unit] =
+    new AccumBuilder(this, 1, Int.MaxValue, unit)
 
-      override def map2[A, B, Z](fa: Parser[A], fb: Parser[B])(f: (A, B) => Z): Parser[Z] =
-        (fa ~ fb).mapN(f)
+  /** @group sequencing */
+  def ~[B](pb: => Parser[B]) =
+    new ApBuilder2[A, B](this, pb)
 
-      override def void[A](fa: Parser[A]): Parser[Unit] = fa.void
-      override def as[A, B](fa: Parser[A], b: B): Parser[B] = fa.as(b)
-      override def pure[A](a: A): Parser[A] = ok(a)
-      override def raiseError[A](e: String): Parser[A] = fail(e)
-      override def map[A, B](fa: Parser[A])(f: A => B): Parser[B] = fa.map(f)
-      override def flatMap[A, B](fa: Parser[A])(f: A => Parser[B]): Parser[B] = fa.flatMap(f)
-      override def handleErrorWith[A](fa: Parser[A])(f: String => Parser[A]): Parser[A] =
-        new Parser[A] {
-          def mutParse(mutState: MutState): A = {
-            val o = mutState.getPoint
-            val a = fa.mutParse(mutState)
-            if (mutState.isOk) a
-            else {
-              val pa = f(mutState.getError)
-              mutState.reset(o)
-              pa.mutParse(mutState)
-            }
-          }
-        }
+  /** @group alternation */
+  def |[B](pb: => Parser[B]) =
+    new AltBuilder2[A, B](this, pb)
 
-      override def tailRecM[A, B](a: A)(f: A => Parser[Either[A,B]]): Parser[B] =
-        new Parser[B] {
-          def mutParse(mutState: MutState): B = {
-            @tailrec def go(a: A): B = {
-              val pab = f(a)
-              val ab = pab.mutParse(mutState)
-              if (mutState.isOk) {
-                ab match {
-                  case Left(a)  => go(a)
-                  case Right(b) => b
-                }
-              } else dummy
-            }
-            go(a)
-          }
-        }
+  /**
+   * An equivalent parser that never fails, yielding `Some` on success and `None` on failure.
+   * @group error handling
+   */
+  def opt: Parser[Option[A]] =
+    this.fold(Option.empty[A])(Some(_)).named(s"$this.opt")
 
-    }
+  /**
+   * An equivalent parser that replaces its result with the given value. This is equationally the
+   * same as `.map(_ => a)` but is more efficient because implementations can often avoid computing
+   * results at all.
+   * @group transformation
+   */
+  def as[B](b: B): Parser[B] =
+    (this.void ~> const(b)).named(s"${this.void}.as(...)")
 
 }
+

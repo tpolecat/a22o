@@ -40,8 +40,8 @@ final class AccumBuilder[+A, B](
   def void: Parser[Unit] =
     copy(pa = pa.void).foldLeft(())((_, _) => ())
 
-  def text: Parser[String] =
-    void.text
+  def inputText: Parser[String] =
+    void.inputText
 
   // // move to cats module
   // def foldMap[B](f: A => B)(implicit ev: Monoid[B]): Parser[B] =
@@ -54,7 +54,7 @@ final class AccumBuilder[+A, B](
   // fold that lets you look at the delimiter
   def foldSep[T](z: T)(inj: A => T, ind: B => (T, A) => T): Parser[T] =
     new Parser[T] {
-      override def void: Parser[Unit] = outer.void
+      override lazy val void: Parser[Unit] = outer.void
       def mutParse(mutState: MutState): T = {
 
         var accum: T   = z

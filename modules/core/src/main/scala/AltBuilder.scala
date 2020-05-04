@@ -4,28 +4,31 @@
 
 package a22o
 
-class AltBuilder2[+A, +B](pa: Parser[A], pb: => Parser[B]) {
+class AltBuilder2[+A, +B] private[a22o] (pa: Parser[A], pb: => Parser[B]) {
 
-  // special case if there are only 2
+  /** @group eliminators */
   def either: Parser[Either[A, B]] =
     coproduct
 
+  /** @group alternation */
   def |[C](pc: => Parser[C]): AltBuilder3[A, B, C] =
     new AltBuilder3(pa, pb, pc)
 
+  /** @group eliminators */
   def coproduct: Parser[Either[A, B]] =
     foldN(
       a => Left(a),
       b => Right(b)
     )
 
+  /** @group eliminators */
   def foldN[C](fa: A => C, fb: B => C): Parser[C] =
     new Parser[C] {
 
            val paʹ = pa
       lazy val pbʹ = pb
 
-      override def void: Parser[Unit] =
+      override lazy val void: Parser[Unit] =
         new AltBuilder2(pa.void, pb.void).foldN(_ => (), _ => ())
 
       def mutParse(mutState: MutState): C = {
@@ -42,6 +45,10 @@ class AltBuilder2[+A, +B](pa: Parser[A], pb: => Parser[B]) {
 object AltBuilder2 {
 
   implicit class MergeableAltBuilder2[A](ab: AltBuilder2[A, A]) {
+    /**
+     * Merge alternatives to their least upper bound.
+     * @group eliminators
+     */
     def merge: Parser[A] =
       ab.foldN(identity, identity)
   }
@@ -64,7 +71,7 @@ class AltBuilder3[+A, +B, +C](pa: Parser[A], pb: => Parser[B], pc: => Parser[C])
       lazy val pbʹ = pb
       lazy val pcʹ = pc
 
-      override def void: Parser[Unit] =
+      override lazy val void: Parser[Unit] =
         new AltBuilder3(pa.void, pb.void, pc.void).foldN(_ => (), _ => (), _ => ())
 
       def mutParse(mutState: MutState): D = {

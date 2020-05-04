@@ -8,12 +8,16 @@ package object parser {
 
   // We declare these as members of the package object rather than direct package members to avoid
   // classfile names that differ only in case, which doesn't work on some filesystems.
-  object combinator extends Combinator
-  object numeric    extends Numeric
-  object text       extends Text
+  object base extends BaseParsers
+  object meta extends MetaParsers
+  object int  extends IntParsers
+  object char extends CharParsers
+  object text extends TextParser.Constructors
 
-  object all extends Combinator
-                with Numeric
-                with Text
+  object all extends BaseParsers
+                with CharParsers
+                with MetaParsers
+                with IntParsers
+                with TextParsers
 
 }

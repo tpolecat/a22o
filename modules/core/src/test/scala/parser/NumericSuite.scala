@@ -5,11 +5,11 @@
 package test
 package parser
 
-import a22o.parser.Numeric
+import a22o.parser.int._
 import munit.ScalaCheckSuite
 import org.scalacheck.Prop._
 
-class IntegerSuite extends ScalaCheckSuite with Numeric {
+class IntegerSuite extends ScalaCheckSuite {
 
   override def scalaCheckTestParameters =
     super.scalaCheckTestParameters

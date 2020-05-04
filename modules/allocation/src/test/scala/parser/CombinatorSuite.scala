@@ -5,17 +5,16 @@
 package allocation
 package parser
 
-import a22o.parser._
-import cats.implicits._
+import a22o._, A22o._
 
-class CombinatorSuite extends AllocationSuite with Combinator with Text {
+class CombinatorSuite extends AllocationSuite {
 
-  test("ok (none)") {
-    ok(42).assertNoAllocation0("abc")
+  test("const (none)") {
+    const(42).assertNoAllocation0("abc")
   }
 
   test("fail (none)") {
-    fail[Int]("foo").assertNoAllocation1("abc")
+    a22o.parser.base.fail[Int]("foo").assertNoAllocation1("abc")
   }
 
   test("ensure (none)") {
@@ -34,13 +33,13 @@ class CombinatorSuite extends AllocationSuite with Combinator with Text {
     )
   }
 
-  test("discardLeft (right component only)") {
-    val p = discardLeft(take(1), letter)
+  test("~> (right component only)") {
+    val p = take(1) ~> letter
     p.assertNoAllocation("abc", "x")
   }
 
-  test("discardRight (left component only)") {
-    val p = discardRight(letter, take(1))
+  test("<~ (left component only)") {
+    val p = letter <~ take(1)
     p.assertNoAllocation("abc", "x")
   }
 

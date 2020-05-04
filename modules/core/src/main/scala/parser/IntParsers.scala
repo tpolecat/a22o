@@ -7,7 +7,7 @@ package parser
 
 import scala.annotation.switch
 
-trait Numeric {
+trait IntParsers {
 
   val int: Parser[Int] =
     int(10)
@@ -15,6 +15,7 @@ trait Numeric {
   // Hey this doesn't work reliably for non-decimal radices, why? private for now
   private def int(radix: Int): Parser[Int] =
     new Parser[Int] {
+
       def mutParse(mutState: MutState): Int = {
 
         // One strategy would be to just look for leading +/- and a string of digits and then

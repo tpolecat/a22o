@@ -9,6 +9,12 @@ class ApBuilder2[+A, +B](pa: Parser[A], pb: => Parser[B]) {
   def ~[C](pc: => Parser[C]): ApBuilder3[A, B, C] =
     new ApBuilder3(pa, pb, pc)
 
+  def void: Parser[Unit] =
+    mapN((_, _) => ())
+
+  def inputText: Parser[String] =
+    void.inputText
+
   def tupled: Parser[(A, B)] =
     mapN(Tuple2.apply)
 
@@ -18,7 +24,7 @@ class ApBuilder2[+A, +B](pa: Parser[A], pb: => Parser[B]) {
            val paʹ = pa
       lazy val pbʹ = pb
 
-      override def void: Parser[Unit] =
+      override lazy val void: Parser[Unit] =
         paʹ.void ~>
         pbʹ.void
 
@@ -47,7 +53,7 @@ class ApBuilder3[+A, +B, +C](pa: Parser[A], pb: => Parser[B], pc: => Parser[C]) 
       lazy val pbʹ = pb
       lazy val pcʹ = pc
 
-      override def void: Parser[Unit] =
+      override lazy val void: Parser[Unit] =
         paʹ.void ~>
         pbʹ.void ~>
         pcʹ.void
@@ -75,7 +81,7 @@ class ApBuilder4[+A, +B, +C, +D](pa: Parser[A], pb: => Parser[B], pc: => Parser[
       lazy val pcʹ = pc
       lazy val pdʹ = pd
 
-      override def void: Parser[Unit] =
+      override lazy val void: Parser[Unit] =
         paʹ.void ~>
         pbʹ.void ~>
         pcʹ.void ~>

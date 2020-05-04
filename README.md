@@ -10,3 +10,23 @@ Like [**atto**](https://github.com/tpolecat/atto), but fast.
 Note that (unlike its predecessor) **a22o** does not do incremental parsing.
 
 
+## Primitive Constructors
+
+- `const`
+- `fail`
+
+- `remaining`
+- `available`
+- `ensure`
+
+- `take`
+- `skip`
+
+- `opt`
+
+
+
+## Combinators
+
+- `p.validate("n must be even")(_ % 2 == 0)` - unlike emap, doesn't allocate
+

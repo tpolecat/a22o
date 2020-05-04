@@ -5,10 +5,9 @@
 package allocation
 package parser
 
-import a22o.parser._
-import cats.implicits._
+import a22o._, A22o._
 
-class ParserSuite extends AllocationSuite with Text {
+class ParserSuite extends AllocationSuite {
 
   test("map (depends on argument)") {
     val p = char('a').map(c => Some(c))
@@ -20,11 +19,6 @@ class ParserSuite extends AllocationSuite with Text {
   test("map + as (none)") {
     val p = char('a').map(c => Some(c))
     p.as(None).void.assertNoAllocation("abc", "def")
-  }
-
-  test("applicative composition (none if args don't allocate)".ignore) {
-    val p = (letter, digit, whitespace, digit).mapN { (_, _, _, _) => "blah" }
-    p.assertNoAllocation("a1 4", "x")
   }
 
 }

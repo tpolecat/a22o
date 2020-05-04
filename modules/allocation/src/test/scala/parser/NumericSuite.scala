@@ -5,11 +5,9 @@
 package allocation
 package parser
 
-import a22o._
-import a22o.parser._
-import a22o.parser.all._
+import a22o._, A22o._
 
-class NumericSuite extends AllocationSuite with Numeric {
+class NumericSuite extends AllocationSuite {
 
   test("int (none)") {
     int.assertNoAllocation("123", "abc")

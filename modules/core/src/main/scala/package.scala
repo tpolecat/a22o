@@ -4,15 +4,17 @@
 
 package object a22o {
 
-  implicit class ParserOps[A](val self: Parser[A]) extends AnyVal {
+  val A22o = a22o.parser.all
 
-    final def ~[B](pb: => Parser[B]): ApBuilder2[A, B] =
-      new ApBuilder2(self, pb)
+  // implicit class ParserOps[A](val self: Parser[A]) extends AnyVal {
 
-    final def |[B](pb: => Parser[B]): AltBuilder2[A, B] =
-      new AltBuilder2(self, pb)
+  //   final def ~[B](pb: => Parser[B]): ApBuilder2[A, B] =
+  //     new ApBuilder2(self, pb)
 
-  }
+  //   final def |[B](pb: => Parser[B]): AltBuilder2[A, B] =
+  //     new AltBuilder2(self, pb)
+
+  // }
 
   // type ~[+A, +B] = (A, B)
   // object ~ {

@@ -5,9 +5,9 @@
 package allocation
 package parser
 
-import a22o.parser._
+import a22o._, A22o._
 
-class TextSuite extends AllocationSuite with Text {
+class TextSuite extends AllocationSuite {
 
   test("anyChar (none)") {
     anyChar.assertNoAllocation("abc", "")

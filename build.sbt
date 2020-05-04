@@ -28,6 +28,7 @@ lazy val commonSettings = Seq(
   Compile / doc     / scalacOptions --= Seq("-Xfatal-warnings"),
   Compile / doc     / scalacOptions ++= Seq(
     "-groups",
+    "-implicits",
     "-sourcepath", (baseDirectory in LocalRootProject).value.getAbsolutePath,
     "-doc-source-url", "https://github.com/tpolecat/a22o/blob/v" + version.value + "€{FILE_PATH}.scala",
   ),
@@ -63,9 +64,6 @@ lazy val core = project
   .settings(
     name := "a22o-core",
     description := "Like atto, but faster.",
-    libraryDependencies ++= Seq(
-      "org.typelevel" %% "cats-core" % "2.1.1",
-    ),
     publish / skip := false,
     scalacOptions -= "-Xfatal-warnings"
   )
@@ -91,7 +89,8 @@ lazy val allocation = project
         .find(_.metadata.get(moduleID.key) == Some(allocationInstrumentationModule % "default"))
         .fold(sys.error("Can't find allocation instrumentation jarfile."))(_.data),
     libraryDependencies ++= Seq(
-      allocationInstrumentationModule % "test"
+      allocationInstrumentationModule % "test",
+      "org.typelevel" %% "cats-core" % "2.1.1",
     ),
     Test / parallelExecution := false,
     Test / fork := true,
