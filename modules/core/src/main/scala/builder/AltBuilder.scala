@@ -3,6 +3,7 @@
 // For more information see LICENSE or https://opensource.org/licenses/MIT
 
 package a22o
+package builder
 
 class AltBuilder2[+A, +B] private[a22o] (pa: Parser[A], pb: => Parser[B]) {
 

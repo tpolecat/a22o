@@ -1,3200 +1,0 @@
-
-(modules/core/src/main/scala/Parser.scalaú
-Ilocal2:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaLOCALL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala (	"
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter9"
-endLine14"
-accessEmpty"
-displayNamea"
-startCharacter8"
-isLocaltrue"	
-package"
-isFinalfalse"
-	startLine14"
-isVarfalse"
-symbollocal2"
-
-isAbstractfalse"
-kindLOCAL*a2
-a22o/Parser#[A]
-VALUE_TYPE2r
-a22o/Parser#mutParse().	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala (2§
-Ilocal1:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala (Ÿ
-Ilocal1:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaLOCALL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala (	"
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter9"
-endLine13"
-accessEmpty"
-displayNames"
-startCharacter8"
-isLocaltrue"	
-package"
-isFinalfalse"
-	startLine13"
-isVarfalse"
-symbollocal1"
-
-isAbstractfalse"
-kindLOCAL*s2
-a22o/MutState#
-VALUE_TYPE2v
-a22o/Parser#parse().(input)	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala (2t
-a22o/MutState#`<init>`().	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala (2i
-a22o/MutState#	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala (å
-Jlocal15:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaLOCALL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala6 6("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter24"
-endLine54"
-accessEmpty"
-displayNamea"
-startCharacter23"
-isLocaltrue"	
-package"
-isFinalfalse"
-	startLine54"
-isVarfalse"
-symbollocal15"
-
-isAbstractfalse"
-kindLOCAL*a2$
-a22o/Parser#emap().[B]
-VALUE_TYPEû
-a22o/Parser#`~>`().[B]TYPE_PARAMETERL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaU U("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter16"
-endLine85"
-accessEmpty"
-displayNameB"
-startCharacter15"
-isLocalfalse"
-packagea22o"
-isFinalfalse"
-	startLine85"
-isVarfalse" 
-symbola22o/Parser#`~>`().[B]"
-
-isAbstractfalse"
-kindTYPE_PARAMETER*B2
-
-scala/Any#TYPE_UPPER_BOUND2"
-scala/Nothing#TYPE_LOWER_BOUND¡
-Jlocal66:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaTYPE_PARAMETERN
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaã ã( "
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter32"
-endLine139"
-accessEmpty"
-displayNameB"
-startCharacter31"
-isLocalfalse"	
-package"
-isFinalfalse"
-	startLine139"
-isVarfalse"
-symbollocal66"
-
-isAbstractfalse"
-kindTYPE_PARAMETER*B2
-
-scala/Any#TYPE_UPPER_BOUND2"
-scala/Nothing#TYPE_LOWER_BOUND◊
-a22o/Parser#parse().METHODL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala ("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter17"
-endLine12"
-accessPublicAccess()"
-displayNameparse"
-startCharacter12"
-isLocalfalse"
-packagea22o"
-isFinaltrue"
-	startLine12"
-isVarfalse"
-symbola22o/Parser#parse()."
-
-isAbstractfalse"
-kindMETHOD*parse2/
-a22o/Parser#parse().(input)METHOD_PARAMETER2
-scala/Tuple2#RETURN_TYPE2#
-scala/Predef.String#RETURN_TYPE2$
-scala/package.Either#RETURN_TYPE2#
-scala/Predef.String#RETURN_TYPE2
-a22o/Parser#[A]RETURN_TYPE2§
-Ilocal1:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala
- (2o
-scala/package.Right.	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala (2o
-scala/Predef.String#	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala2 (82n
-scala/package.Left.	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala (2§
-Ilocal2:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala (2§
-Ilocal1:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala (2j
-a22o/Parser#[A]	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala: (;2u
-a22o/MutState#isErrored().	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala (2•
-Ilocal3:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala
-DEFINITIONL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala (	2§
-Ilocal3:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala (2p
-scala/package.Either#	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala+ (12t
-a22o/MutState#getError().	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala (&2o
-scala/Predef.String#	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala# ()2•
-Ilocal2:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala
-DEFINITIONL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala (	2•
-Ilocal1:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala
-DEFINITIONL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala (	Ü
-Jlocal12:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	PARAMETERL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala1 1("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter27"
-endLine49"
-accessEmpty"
-displayNamemutState"
-startCharacter19"
-isLocalfalse"	
-package"
-isFinalfalse"
-	startLine49"
-isVarfalse"
-symbollocal12"
-
-isAbstractfalse"
-kind	PARAMETER*mutState2
-a22o/MutState#
-VALUE_TYPE2i
-a22o/MutState#	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala1 1(%ô	
-Jlocal24:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaMETHODL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalam
- m("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter15"
-endLine109"
-accessPublicAccess()"
-displayNameempty"
-startCharacter10"
-isLocalfalse"	
-package"
-isFinalfalse"
-	startLine109"
-isVarfalse"
-symbollocal24"
-
-isAbstractfalse"
-kindMETHOD*empty2
-a22o/Parser#RETURN_TYPE2-
-a22o/Parser.monoidParser().[A]RETURN_TYPE2w
-a22o/parser/Combinator#ok().	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalam m(2z
-a22o/Parser.monoidParser().(ma)	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalam  m("2v
-cats/kernel/Monoid#empty().	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalam# m((2y
-a22o/Parser.monoidParser().[A]	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalam m(2g
-a22o/Parser#	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalam m(è	
-Jlocal74:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaLOCALN
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaê ê("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter20"
-endLine144"
-accessEmpty"
-displayNameab"
-startCharacter18"
-isLocaltrue"	
-package"
-isFinalfalse"
-	startLine144"
-isVarfalse"
-symbollocal74"
-
-isAbstractfalse"
-kindLOCAL*ab2#
-scala/package.Either#
-VALUE_TYPE2X
-Jlocal67:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala
-VALUE_TYPE2X
-Jlocal66:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala
-VALUE_TYPE2ß
-Jlocal73:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	REFERENCEN
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaê ê(2ß
-Jlocal70:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	REFERENCEN
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaê$ ê(,2t
-a22o/Parser#mutParse().	REFERENCEN
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaê ê(#Ä
-Jlocal39:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaMETHODL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala{ {("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter22"
-endLine123"
-accessPublicAccess()"
-displayNamemap"
-startCharacter19"
-isLocalfalse"	
-package"
-isFinalfalse"
-	startLine123"
-isVarfalse"
-symbollocal39"
-
-isAbstractfalse"
-kindMETHOD*map2^
-Jlocal47:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaMETHOD_PARAMETER2^
-Jlocal48:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaMETHOD_PARAMETER2
-a22o/Parser#RETURN_TYPE2Y
-Jlocal49:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaRETURN_TYPE2•
-Jlocal47:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala{D {(F2g
-a22o/Parser#	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala{8 {(>2m
-a22o/Parser#map().	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala{G {(J2•
-Jlocal49:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala{? {(@2•
-Jlocal48:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala{K {(Lø
-Jlocal49:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaTYPE_PARAMETERL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala{ {("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter27"
-endLine123"
-accessEmpty"
-displayNameB"
-startCharacter26"
-isLocalfalse"	
-package"
-isFinalfalse"
-	startLine123"
-isVarfalse"
-symbollocal49"
-
-isAbstractfalse"
-kindTYPE_PARAMETER*B2
-
-scala/Any#TYPE_UPPER_BOUND2"
-scala/Nothing#TYPE_LOWER_BOUNDé
-Jlocal62:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaLOCALN
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaÅ Å("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter17"
-endLine129"
-accessEmpty"
-displayNamea"
-startCharacter16"
-isLocaltrue"	
-package"
-isFinalfalse"
-	startLine129"
-isVarfalse"
-symbollocal62"
-
-isAbstractfalse"
-kindLOCAL*a2X
-Jlocal57:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala
-VALUE_TYPE2t
-a22o/Parser#mutParse().	REFERENCEN
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaÅ Å(2ß
-Jlocal55:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	REFERENCEN
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaÅ Å(2ß
-Jlocal60:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	REFERENCEN
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaÅ  Å((∞
-a22o/Parser.monoidParser().[A]TYPE_PARAMETERL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalah h("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter29"
-endLine104"
-accessEmpty"
-displayNameA"
-startCharacter28"
-isLocalfalse"
-packagea22o"
-isFinalfalse"
-	startLine104"
-isVarfalse"(
-symbola22o/Parser.monoidParser().[A]"
-
-isAbstractfalse"
-kindTYPE_PARAMETER*A2
-
-scala/Any#TYPE_UPPER_BOUND2"
-scala/Nothing#TYPE_LOWER_BOUNDÊ
-a22o/Parser#map().METHODL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala% %("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter15"
-endLine37"
-accessPublicAccess()"
-displayNamemap"
-startCharacter12"
-isLocalfalse"
-packagea22o"
-isFinaltrue"
-	startLine37"
-isVarfalse"
-symbola22o/Parser#map()."
-
-isAbstractfalse"
-kindMETHOD*map2)
-a22o/Parser#map().(f)METHOD_PARAMETER2
-a22o/Parser#RETURN_TYPE2$
-a22o/Parser#map().[B]RETURN_TYPE2g
-a22o/Parser#	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala% %(%2p
-a22o/Parser#map().[B]	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala%& %('2p
-a22o/Parser#map().[B]	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala& &(2g
-a22o/Parser#	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala& &(2r
-a22o/Parser#`<init>`().	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala& &(å
-Jlocal18:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaMETHODL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaB
- B("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter18"
-endLine66"
-accessPublicAccess()"
-displayNamemutParse"
-startCharacter10"
-isLocalfalse"	
-package"
-isFinalfalse"
-	startLine66"
-isVarfalse"
-symbollocal18"
-
-isAbstractfalse"
-kindMETHOD*mutParse2^
-Jlocal19:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaMETHOD_PARAMETER2(
-a22o/Parser#flatMap().[B]RETURN_TYPE2m
-a22o/Parser#dummy.	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaG G(2t
-a22o/Parser#flatMap().[B]	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaB( B()2m
-a22o/Parser#dummy.	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaH H(2¶
-Jlocal20:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala
-DEFINITIONL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaC C(2¶
-Jlocal21:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala
-DEFINITIONL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaE E(2p
-a22o/MutState#isOk().	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaD D(2•
-Jlocal19:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaD D(2p
-a22o/MutState#isOk().	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaF F(2•
-Jlocal19:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaF F(2•
-Jlocal21:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaF F(–
-a22o/Parser#skipMany().METHODL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaR R("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter20"
-endLine82"
-accessPublicAccess()"
-displayNameskipMany"
-startCharacter12"
-isLocalfalse"
-packagea22o"
-isFinaltrue"
-	startLine82"
-isVarfalse"!
-symbola22o/Parser#skipMany()."
-
-isAbstractfalse"
-kindMETHOD*skipMany2
-a22o/Parser#RETURN_TYPE2
-scala/Unit#RETURN_TYPE2z
-a22o/parser/package.combinator.	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaRC R(M2}
-"a22o/parser/Combinator#skipMany().	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaRN R(V2f
-scala/Unit#	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaR R(!2g
-a22o/Parser#	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaR R(2g
-a22o/parser/	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaR< R(B∑
-Jlocal73:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaLOCALN
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaè è("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter21"
-endLine143"
-accessEmpty"
-displayNamepab"
-startCharacter18"
-isLocaltrue"	
-package"
-isFinalfalse"
-	startLine143"
-isVarfalse"
-symbollocal73"
-
-isAbstractfalse"
-kindLOCAL*pab2
-a22o/Parser#
-VALUE_TYPE2#
-scala/package.Either#
-VALUE_TYPE2X
-Jlocal67:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala
-VALUE_TYPE2X
-Jlocal66:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala
-VALUE_TYPE2ß
-Jlocal65:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	REFERENCEN
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaè è(2ß
-Jlocal72:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	REFERENCEN
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaè è(˝
-!a22o/Parser#mutParse().(mutState)	PARAMETERL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaa a('"
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter39"
-endLine97"
-accessEmpty"
-displayNamemutState"
-startCharacter31"
-isLocalfalse"
-packagea22o"
-isFinalfalse"
-	startLine97"
-isVarfalse"+
-symbol!a22o/Parser#mutParse().(mutState)"
-
-isAbstractfalse"
-kind	PARAMETER*mutState2
-a22o/MutState#
-VALUE_TYPE2i
-a22o/MutState#	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaa) a(1å
-Jlocal70:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	PARAMETERN
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaç ç("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter31"
-endLine141"
-accessEmpty"
-displayNamemutState"
-startCharacter23"
-isLocalfalse"	
-package"
-isFinalfalse"
-	startLine141"
-isVarfalse"
-symbollocal70"
-
-isAbstractfalse"
-kind	PARAMETER*mutState2
-a22o/MutState#
-VALUE_TYPE2k
-a22o/MutState#	REFERENCEN
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaç! ç()∞
-a22o/Parser#`<~`().(pb)	PARAMETERL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaT T("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter20"
-endLine84"
-accessEmpty"
-displayNamepb"
-startCharacter18"
-isLocalfalse"
-packagea22o"
-isFinalfalse"
-	startLine84"
-isVarfalse"!
-symbola22o/Parser#`<~`().(pb)"
-
-isAbstractfalse"
-kind	PARAMETER*pb2q
-a22o/Parser#`<~`().[B]	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaT  T(!2g
-a22o/Parser#	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaT T(⁄
-Ilocal4:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaLOCALL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala (	"
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter9"
-endLine25"
-accessEmpty"
-displayNames"
-startCharacter8"
-isLocaltrue"	
-package"
-isFinalfalse"
-	startLine25"
-isVarfalse"
-symbollocal4"
-
-isAbstractfalse"
-kindLOCAL*s2
-a22o/MutState#
-VALUE_TYPE2t
-a22o/MutState#`<init>`().	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala (2w
-a22o/Parser#accept().(input)	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala (2i
-a22o/MutState#	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala (Ω
-a22o/Parser#token().METHODL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaV V("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter17"
-endLine86"
-accessPublicAccess()"
-displayNametoken"
-startCharacter12"
-isLocalfalse"
-packagea22o"
-isFinaltrue"
-	startLine86"
-isVarfalse"
-symbola22o/Parser#token()."
-
-isAbstractfalse"
-kindMETHOD*token2
-a22o/Parser#RETURN_TYPE2
-a22o/Parser#[A]RETURN_TYPE2t
-a22o/parser/package.text.	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaVC V(G2t
-a22o/parser/Text#token().	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaVH V(M2g
-a22o/Parser#	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaV V(2g
-a22o/parser/	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaV< V(B2j
-a22o/Parser#[A]	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaV V(£
-a22o/Parser.MonadErrorParser.METHODL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalav v("
-
-isImplicittrue"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter31"
-endLine118"
-accessPublicAccess()"
-displayNameMonadErrorParser"
-startCharacter15"
-isLocalfalse"
-packagea22o"
-isFinalfalse"
-	startLine118"
-isVarfalse"'
-symbola22o/Parser.MonadErrorParser."
-
-isAbstractfalse"
-kindMETHOD*MonadErrorParser2
-cats/MonadError#RETURN_TYPE2
-a22o/Parser#RETURN_TYPE2#
-scala/Predef.String#RETURN_TYPE2g
-a22o/Parser#	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaw w(2o
-scala/Predef.String#	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaw w(!2k
-cats/MonadError#	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaw w(2w
-java/lang/Object#`<init>`().	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaw# w(#˙
-Jlocal55:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	PARAMETERL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala}& }(("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter40"
-endLine125"
-accessEmpty"
-displayNamefa"
-startCharacter38"
-isLocalfalse"	
-package"
-isFinalfalse"
-	startLine125"
-isVarfalse"
-symbollocal55"
-
-isAbstractfalse"
-kind	PARAMETER*fa2
-a22o/Parser#
-VALUE_TYPE2X
-Jlocal57:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala
-VALUE_TYPE2g
-a22o/Parser#	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala}* }(02•
-Jlocal57:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala}1 }(2ı
-a22o/Parser#`<init>`().CONSTRUCTORL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala
-( 
-(("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter40"
-endLine10"$
-accessPrivateWithinAccess(a22o/)"
-displayName<init>"
-startCharacter40"
-isLocalfalse"
-packagea22o"
-isFinalfalse"
-	startLine10"
-isVarfalse"!
-symbola22o/Parser#`<init>`()."
-
-isAbstractfalse"
-kindCONSTRUCTOR*<init>˚
-Jlocal30:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaMETHODL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalar
- r("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter18"
-endLine114"
-accessPublicAccess()"
-displayNamecombineK"
-startCharacter10"
-isLocalfalse"	
-package"
-isFinalfalse"
-	startLine114"
-isVarfalse"
-symbollocal30"
-
-isAbstractfalse"
-kindMETHOD*combineK2^
-Jlocal32:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaMETHOD_PARAMETER2^
-Jlocal33:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaMETHOD_PARAMETER2
-a22o/Parser#RETURN_TYPE2Y
-Jlocal34:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaRETURN_TYPE2•
-Jlocal34:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalar: r(;2g
-a22o/Parser#	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalar3 r(92•
-Jlocal33:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalarD r(E2â
-.a22o/AltBuilder2.MergeableAltBuilder2#merge().	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalarG r(L2É
-(a22o/AltBuilder2.MergeableAltBuilder2().	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalarB r(C2t
-a22o/package.ParserOps().	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalar@ r(A’
-a22o/Parser#skipMany1().METHODL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaS S("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter21"
-endLine83"
-accessPublicAccess()"
-displayName	skipMany1"
-startCharacter12"
-isLocalfalse"
-packagea22o"
-isFinaltrue"
-	startLine83"
-isVarfalse""
-symbola22o/Parser#skipMany1()."
-
-isAbstractfalse"
-kindMETHOD*	skipMany12
-a22o/Parser#RETURN_TYPE2
-scala/Unit#RETURN_TYPE2z
-a22o/parser/package.combinator.	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaSC S(M2f
-scala/Unit#	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaS S("2~
-#a22o/parser/Combinator#skipMany1().	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaSN S(W2g
-a22o/parser/	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaS< S(B2g
-a22o/Parser#	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaS S(…
-Jlocal21:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaLOCALL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaE E("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter15"
-endLine69"
-accessEmpty"
-displayNameb"
-startCharacter14"
-isLocaltrue"	
-package"
-isFinalfalse"
-	startLine69"
-isVarfalse"
-symbollocal21"
-
-isAbstractfalse"
-kindLOCAL*b2'
-a22o/Parser#flatMap().[B]
-VALUE_TYPE2•
-Jlocal20:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaE E(2r
-a22o/Parser#mutParse().	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaE E(2t
-a22o/Parser#flatMap().(f)	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaE E(2•
-Jlocal19:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaE  E((§
-a22o/Parser#flatMap().[B]TYPE_PARAMETERL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala@ @("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter21"
-endLine64"
-accessEmpty"
-displayNameB"
-startCharacter20"
-isLocalfalse"
-packagea22o"
-isFinalfalse"
-	startLine64"
-isVarfalse"#
-symbola22o/Parser#flatMap().[B]"
-
-isAbstractfalse"
-kindTYPE_PARAMETER*B2
-
-scala/Any#TYPE_UPPER_BOUND2"
-scala/Nothing#TYPE_LOWER_BOUND¯
-Jlocal32:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	PARAMETERL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalar r("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter23"
-endLine114"
-accessEmpty"
-displayNamex"
-startCharacter22"
-isLocalfalse"	
-package"
-isFinalfalse"
-	startLine114"
-isVarfalse"
-symbollocal32"
-
-isAbstractfalse"
-kind	PARAMETER*x2
-a22o/Parser#
-VALUE_TYPE2X
-Jlocal34:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala
-VALUE_TYPE2g
-a22o/Parser#	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalar r(2•
-Jlocal34:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalar  r(!ø
-Jlocal35:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaTYPE_PARAMETERL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalas s("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter17"
-endLine115"
-accessEmpty"
-displayNameA"
-startCharacter16"
-isLocalfalse"	
-package"
-isFinalfalse"
-	startLine115"
-isVarfalse"
-symbollocal35"
-
-isAbstractfalse"
-kindTYPE_PARAMETER*A2
-
-scala/Any#TYPE_UPPER_BOUND2"
-scala/Nothing#TYPE_LOWER_BOUNDÑ
-
-Jlocal37:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaMETHODL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalay y("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter23"
-endLine121"
-accessPublicAccess()"
-displayNamepure"
-startCharacter19"
-isLocalfalse"	
-package"
-isFinalfalse"
-	startLine121"
-isVarfalse"
-symbollocal37"
-
-isAbstractfalse"
-kindMETHOD*pure2^
-Jlocal43:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaMETHOD_PARAMETER2
-a22o/Parser#RETURN_TYPE2Y
-Jlocal44:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaRETURN_TYPE2•
-Jlocal43:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalay1 y(22g
-a22o/Parser#	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalay" y((2•
-Jlocal44:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalay) y(*2w
-a22o/parser/Combinator#ok().	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalay. y(0Â	
-a22o/Parser#many1().METHODL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaQ Q("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter17"
-endLine81"
-accessPublicAccess()"
-displayNamemany1"
-startCharacter12"
-isLocalfalse"
-packagea22o"
-isFinaltrue"
-	startLine81"
-isVarfalse"
-symbola22o/Parser#many1()."
-
-isAbstractfalse"
-kindMETHOD*many12
-a22o/Parser#RETURN_TYPE2&
-cats/data/NonEmptyList#RETURN_TYPE2
-a22o/Parser#[A]RETURN_TYPE2z
-a22o/parser/package.combinator.	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaQC Q(M2r
-cats/data/NonEmptyList#	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaQ Q(&2j
-a22o/Parser#[A]	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaQ' Q((2g
-a22o/Parser#	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaQ Q(2z
-a22o/parser/Combinator#many1().	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaQN Q(S2g
-a22o/parser/	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaQ< Q(BÜ	
-a22o/Parser#flatMap().METHODL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala@ @("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter19"
-endLine64"
-accessPublicAccess()"
-displayNameflatMap"
-startCharacter12"
-isLocalfalse"
-packagea22o"
-isFinaltrue"
-	startLine64"
-isVarfalse" 
-symbola22o/Parser#flatMap()."
-
-isAbstractfalse"
-kindMETHOD*flatMap2-
-a22o/Parser#flatMap().(f)METHOD_PARAMETER2
-a22o/Parser#RETURN_TYPE2(
-a22o/Parser#flatMap().[B]RETURN_TYPE2r
-a22o/Parser#`<init>`().	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaA A(2t
-a22o/Parser#flatMap().[B]	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala@2 @(32t
-a22o/Parser#flatMap().[B]	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaA A(2g
-a22o/Parser#	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala@+ @(12g
-a22o/Parser#	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaA A(º
-
-a22o/Parser#CLASSL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala
- 
-("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter21"
-endLine10"
-accessPublicAccess()"
-displayNameParser"
-startCharacter15"
-isLocalfalse"
-packagea22o"
-isFinalfalse"
-	startLine10"
-isVarfalse"
-symbola22o/Parser#"
-
-isAbstracttrue"
-kindCLASS*Parser2&
-a22o/Parser#`<init>`().DECLARATION2#
-a22o/Parser#parse().DECLARATION2$
-a22o/Parser#accept().DECLARATION2"
-a22o/Parser#void().DECLARATION2 
-a22o/Parser#as().DECLARATION2!
-a22o/Parser#map().DECLARATION2"
-a22o/Parser#emap().DECLARATION2%
-a22o/Parser#flatMap().DECLARATION2"
-a22o/Parser#text().DECLARATION2!
-a22o/Parser#opt().DECLARATION2"
-a22o/Parser#many().DECLARATION2#
-a22o/Parser#many1().DECLARATION2&
-a22o/Parser#skipMany().DECLARATION2'
-a22o/Parser#skipMany1().DECLARATION2"
-a22o/Parser#`<~`().DECLARATION2"
-a22o/Parser#`~>`().DECLARATION2#
-a22o/Parser#token().DECLARATION2!
-a22o/Parser#`+`().DECLARATION2!
-a22o/Parser#dummy.DECLARATION2&
-a22o/Parser#mutParse().DECLARATION2!
-a22o/Parser#[A]TYPE_PARAMETER2n
-a22o/Parser#dummy.
-DEFINITIONL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala\ \(¨
-a22o/Parser#`+`().(pb)	PARAMETERL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaX X("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter16"
-endLine88"
-accessEmpty"
-displayNamepb"
-startCharacter14"
-isLocalfalse"
-packagea22o"
-isFinalfalse"
-	startLine88"
-isVarfalse" 
-symbola22o/Parser#`+`().(pb)"
-
-isAbstractfalse"
-kind	PARAMETER*pb2g
-a22o/Parser#	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaX X(2o
-scala/Predef.String#	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaX X("ø
-Jlocal34:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaTYPE_PARAMETERL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalar r("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter20"
-endLine114"
-accessEmpty"
-displayNameA"
-startCharacter19"
-isLocalfalse"	
-package"
-isFinalfalse"
-	startLine114"
-isVarfalse"
-symbollocal34"
-
-isAbstractfalse"
-kindTYPE_PARAMETER*A2
-
-scala/Any#TYPE_UPPER_BOUND2"
-scala/Nothing#TYPE_LOWER_BOUND¡
-Jlocal59:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaMETHODL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala ("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter22"
-endLine127"
-accessPublicAccess()"
-displayNamemutParse"
-startCharacter14"
-isLocalfalse"	
-package"
-isFinalfalse"
-	startLine127"
-isVarfalse"
-symbollocal59"
-
-isAbstractfalse"
-kindMETHOD*mutParse2^
-Jlocal60:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaMETHOD_PARAMETER2Y
-Jlocal57:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaRETURN_TYPE2r
-a22o/MutState#isOk().	REFERENCEN
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaÇ Ç(2ß
-Jlocal60:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	REFERENCEN
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaÇ Ç(2®
-Jlocal62:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala
-DEFINITIONN
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaÅ Å(2•
-Jlocal57:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala, (-2ß
-Jlocal60:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	REFERENCEN
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaÜ Ü("2ß
-Jlocal60:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	REFERENCEN
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaÖ Ö(2ß
-Jlocal63:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	REFERENCEN
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaÜ Ü(2s
-a22o/MutState#reset().	REFERENCEN
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaÖ Ö(2ß
-Jlocal61:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	REFERENCEN
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaÖ Ö(2®
-Jlocal61:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala
-DEFINITIONN
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaÄ Ä(2ß
-Jlocal62:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	REFERENCEN
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaÇ Ç( 2t
-a22o/Parser#mutParse().	REFERENCEN
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaÜ Ü(2®
-Jlocal63:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala
-DEFINITIONN
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaÑ Ñ(û
-a22o/Parser#emap().[B]TYPE_PARAMETERL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala/ /("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter18"
-endLine47"
-accessEmpty"
-displayNameB"
-startCharacter17"
-isLocalfalse"
-packagea22o"
-isFinalfalse"
-	startLine47"
-isVarfalse" 
-symbola22o/Parser#emap().[B]"
-
-isAbstractfalse"
-kindTYPE_PARAMETER*B2
-
-scala/Any#TYPE_UPPER_BOUND2"
-scala/Nothing#TYPE_LOWER_BOUND∞
-a22o/Parser#`~>`().(pb)	PARAMETERL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaU U("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter20"
-endLine85"
-accessEmpty"
-displayNamepb"
-startCharacter18"
-isLocalfalse"
-packagea22o"
-isFinalfalse"
-	startLine85"
-isVarfalse"!
-symbola22o/Parser#`~>`().(pb)"
-
-isAbstractfalse"
-kind	PARAMETER*pb2q
-a22o/Parser#`~>`().[B]	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaU  U(!2g
-a22o/Parser#	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaU U(≈
-a22o/Parser#void().METHODL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala (
-"
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter10"
-endLine31"
-accessPublicAccess()"
-displayNamevoid"
-startCharacter6"
-isLocalfalse"
-packagea22o"
-isFinalfalse"
-	startLine31"
-isVarfalse"
-symbola22o/Parser#void()."
-
-isAbstractfalse"
-kindMETHOD*void2
-a22o/Parser#RETURN_TYPE2
-scala/Unit#RETURN_TYPE2g
-a22o/Parser#	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala   (2g
-a22o/Parser#	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala (2f
-scala/Unit#	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala (˜
-Jlocal72:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	PARAMETERN
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaé é("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter29"
-endLine142"
-accessEmpty"
-displayNamea"
-startCharacter28"
-isLocalfalse"	
-package"
-isFinalfalse"
-	startLine142"
-isVarfalse"
-symbollocal72"
-
-isAbstractfalse"
-kind	PARAMETER*a2X
-Jlocal67:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala
-VALUE_TYPE2ß
-Jlocal67:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	REFERENCEN
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaé é( ú
-a22o/Parser#map().[B]TYPE_PARAMETERL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala% %("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter17"
-endLine37"
-accessEmpty"
-displayNameB"
-startCharacter16"
-isLocalfalse"
-packagea22o"
-isFinalfalse"
-	startLine37"
-isVarfalse"
-symbola22o/Parser#map().[B]"
-
-isAbstractfalse"
-kindTYPE_PARAMETER*B2
-
-scala/Any#TYPE_UPPER_BOUND2"
-scala/Nothing#TYPE_LOWER_BOUND˜
-Jlocal64:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	PARAMETERN
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaã" ã(#"
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter35"
-endLine139"
-accessEmpty"
-displayNamea"
-startCharacter34"
-isLocalfalse"	
-package"
-isFinalfalse"
-	startLine139"
-isVarfalse"
-symbollocal64"
-
-isAbstractfalse"
-kind	PARAMETER*a2X
-Jlocal67:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala
-VALUE_TYPE2ß
-Jlocal67:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	REFERENCEN
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaã% ã(&•
-a22o/Parser#flatMap().(f)	PARAMETERL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala@ @("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter24"
-endLine64"
-accessEmpty"
-displayNamef"
-startCharacter23"
-isLocalfalse"
-packagea22o"
-isFinalfalse"
-	startLine64"
-isVarfalse"#
-symbola22o/Parser#flatMap().(f)"
-
-isAbstractfalse"
-kind	PARAMETER*f2
-scala/Function1#
-VALUE_TYPE2
-a22o/Parser#[A]
-VALUE_TYPE2
-a22o/Parser#
-VALUE_TYPE2'
-a22o/Parser#flatMap().[B]
-VALUE_TYPE2g
-a22o/Parser#	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala@ @(%2j
-a22o/Parser#[A]	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala@ @(2t
-a22o/Parser#flatMap().[B]	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala@& @('ˆ
-a22o/Parser#`+`().(ev)	PARAMETERL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaX. X(0"
-
-isImplicittrue"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter48"
-endLine88"
-accessEmpty"
-displayNameev"
-startCharacter46"
-isLocalfalse"
-packagea22o"
-isFinalfalse"
-	startLine88"
-isVarfalse" 
-symbola22o/Parser#`+`().(ev)"
-
-isAbstractfalse"
-kind	PARAMETER*ev2
-scala/`<:<`#
-VALUE_TYPE2
-a22o/Parser#[A]
-VALUE_TYPE2"
-scala/Predef.String#
-VALUE_TYPE2g
-scala/`<:<`#	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaX4 X(72o
-scala/Predef.String#	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaX8 X(>2j
-a22o/Parser#[A]	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaX2 X(3¶
-Ilocal3:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaLOCALL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala (	"
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter9"
-endLine15"
-accessEmpty"
-displayNamer"
-startCharacter8"
-isLocaltrue"	
-package"
-isFinalfalse"
-	startLine15"
-isVarfalse"
-symbollocal3"
-
-isAbstractfalse"
-kindLOCAL*r2
-java/lang/String#
-VALUE_TYPE2z
-a22o/MutState#remainingInput().	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala (2§
-Ilocal1:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala (ì
-
-a22o/Parser.OBJECTL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalae e("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter13"
-endLine101"
-accessPublicAccess()"
-displayNameParser"
-startCharacter7"
-isLocalfalse"
-packagea22o"
-isFinaltrue"
-	startLine101"
-isVarfalse"
-symbola22o/Parser."
-
-isAbstractfalse"
-kindOBJECT*Parser2*
-a22o/Parser.monoidParser().DECLARATION2)
-a22o/Parser.MonoidKParser.DECLARATION2,
-a22o/Parser.MonadErrorParser.DECLARATION2y
-a22o/Parser.MonadErrorParser.
-DEFINITIONL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalav v(2y
-a22o/parser/Combinator#fail().	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaf f(2g
-a22o/parser/	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaf	 f(2w
-a22o/parser/Combinator#ok().	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaf f(2v
-a22o/Parser.MonoidKParser.
-DEFINITIONL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalap p(2s
-a22o/parser/package.all.	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaf f(‹
-Jlocal42:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaMETHODN
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaã ã("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter27"
-endLine139"
-accessPublicAccess()"
-displayNametailRecM"
-startCharacter19"
-isLocalfalse"	
-package"
-isFinalfalse"
-	startLine139"
-isVarfalse"
-symbollocal42"
-
-isAbstractfalse"
-kindMETHOD*tailRecM2^
-Jlocal64:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaMETHOD_PARAMETER2^
-Jlocal65:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaMETHOD_PARAMETER2
-a22o/Parser#RETURN_TYPE2Y
-Jlocal66:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaRETURN_TYPE2i
-a22o/Parser#	REFERENCEN
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaå å(2ß
-Jlocal66:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	REFERENCEN
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaãM ã(N2t
-a22o/Parser#`<init>`().	REFERENCEN
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaå å(2ß
-Jlocal66:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	REFERENCEN
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaå å(2i
-a22o/Parser#	REFERENCEN
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaãF ã(L£
-a22o/Parser.monoidParser().(ma)	PARAMETERL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalai i("
-
-isImplicittrue"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter15"
-endLine105"
-accessEmpty"
-displayNamema"
-startCharacter13"
-isLocalfalse"
-packagea22o"
-isFinalfalse"
-	startLine105"
-isVarfalse")
-symbola22o/Parser.monoidParser().(ma)"
-
-isAbstractfalse"
-kind	PARAMETER*ma2"
-cats/package.Monoid#
-VALUE_TYPE2,
-a22o/Parser.monoidParser().[A]
-VALUE_TYPE2o
-cats/package.Monoid#	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalai i(2y
-a22o/Parser.monoidParser().[A]	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalai i(Ó
-a22o/Parser#emap().METHODL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala/ /("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter16"
-endLine47"
-accessPublicAccess()"
-displayNameemap"
-startCharacter12"
-isLocalfalse"
-packagea22o"
-isFinaltrue"
-	startLine47"
-isVarfalse"
-symbola22o/Parser#emap()."
-
-isAbstractfalse"
-kindMETHOD*emap2*
-a22o/Parser#emap().(f)METHOD_PARAMETER2
-a22o/Parser#RETURN_TYPE2%
-a22o/Parser#emap().[B]RETURN_TYPE2q
-a22o/Parser#emap().[B]	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala/7 /(82q
-a22o/Parser#emap().[B]	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala0 0(2r
-a22o/Parser#`<init>`().	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala0 0(2g
-a22o/Parser#	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala/0 /(62g
-a22o/Parser#	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala0 0(®
-Jlocal13:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaLOCALL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala2 2("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter13"
-endLine50"
-accessEmpty"
-displayNameo"
-startCharacter12"
-isLocaltrue"	
-package"
-isFinalfalse"
-	startLine50"
-isVarfalse"
-symbollocal13"
-
-isAbstractfalse"
-kindLOCAL*o2"
-a22o/MutState#Point#
-VALUE_TYPE2t
-a22o/MutState#getPoint().	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala2 2(!2•
-Jlocal12:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala2 2(ƒ
-Jlocal76:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaLOCALN
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaî î("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter30"
-endLine148"
-accessEmpty"
-displayNameb"
-startCharacter29"
-isLocaltrue"	
-package"
-isFinalfalse"
-	startLine148"
-isVarfalse"
-symbollocal76"
-
-isAbstractfalse"
-kindLOCAL*b2X
-Jlocal66:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala
-VALUE_TYPE¡
-Jlocal67:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaTYPE_PARAMETERN
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaã ã("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter29"
-endLine139"
-accessEmpty"
-displayNameA"
-startCharacter28"
-isLocalfalse"	
-package"
-isFinalfalse"
-	startLine139"
-isVarfalse"
-symbollocal67"
-
-isAbstractfalse"
-kindTYPE_PARAMETER*A2
-
-scala/Any#TYPE_UPPER_BOUND2"
-scala/Nothing#TYPE_LOWER_BOUNDä
-Jlocal14:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaLOCALL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala3 3("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter13"
-endLine51"
-accessEmpty"
-displayNamea"
-startCharacter12"
-isLocaltrue"	
-package"
-isFinalfalse"
-	startLine51"
-isVarfalse"
-symbollocal14"
-
-isAbstractfalse"
-kindLOCAL*a2
-a22o/Parser#[A]
-VALUE_TYPE2r
-a22o/Parser#mutParse().	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala3 3(2•
-Jlocal12:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala3 3('2g
-a22o/Parser#	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala3 3(ﬁ
-Jlocal41:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaMETHODL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala} }(""
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter34"
-endLine125"
-accessPublicAccess()"
-displayNamehandleErrorWith"
-startCharacter19"
-isLocalfalse"	
-package"
-isFinalfalse"
-	startLine125"
-isVarfalse"
-symbollocal41"
-
-isAbstractfalse"
-kindMETHOD*handleErrorWith2^
-Jlocal55:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaMETHOD_PARAMETER2^
-Jlocal56:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaMETHOD_PARAMETER2
-a22o/Parser#RETURN_TYPE2Y
-Jlocal57:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaRETURN_TYPE2•
-Jlocal57:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala}U }(V2r
-a22o/Parser#`<init>`().	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala~ ~(2g
-a22o/Parser#	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala~ ~(2•
-Jlocal57:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala~ ~(2g
-a22o/Parser#	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala}N }(Tà
-Jlocal60:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	PARAMETERL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala ("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter31"
-endLine127"
-accessEmpty"
-displayNamemutState"
-startCharacter23"
-isLocalfalse"	
-package"
-isFinalfalse"
-	startLine127"
-isVarfalse"
-symbollocal60"
-
-isAbstractfalse"
-kind	PARAMETER*mutState2
-a22o/MutState#
-VALUE_TYPE2i
-a22o/MutState#	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala! ()Æ
-Jlocal63:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaLOCALN
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaÑ Ñ("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter20"
-endLine132"
-accessEmpty"
-displayNamepa"
-startCharacter18"
-isLocaltrue"	
-package"
-isFinalfalse"
-	startLine132"
-isVarfalse"
-symbollocal63"
-
-isAbstractfalse"
-kindLOCAL*pa2
-a22o/Parser#
-VALUE_TYPE2X
-Jlocal57:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala
-VALUE_TYPE2ß
-Jlocal56:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	REFERENCEN
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaÑ Ñ(2v
-a22o/MutState#getError().	REFERENCEN
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaÑ" Ñ(*2ß
-Jlocal60:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	REFERENCEN
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaÑ Ñ(!∞
-Jlocal61:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaLOCALN
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaÄ Ä("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter17"
-endLine128"
-accessEmpty"
-displayNameo"
-startCharacter16"
-isLocaltrue"	
-package"
-isFinalfalse"
-	startLine128"
-isVarfalse"
-symbollocal61"
-
-isAbstractfalse"
-kindLOCAL*o2"
-a22o/MutState#Point#
-VALUE_TYPE2v
-a22o/MutState#getPoint().	REFERENCEN
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaÄ Ä(%2ß
-Jlocal60:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	REFERENCEN
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaÄ Ä(˙
-Jlocal51:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	PARAMETERL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala|! |(#"
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter35"
-endLine124"
-accessEmpty"
-displayNamefa"
-startCharacter33"
-isLocalfalse"	
-package"
-isFinalfalse"
-	startLine124"
-isVarfalse"
-symbollocal51"
-
-isAbstractfalse"
-kind	PARAMETER*fa2
-a22o/Parser#
-VALUE_TYPE2X
-Jlocal54:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala
-VALUE_TYPE2g
-a22o/Parser#	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala|% |(+2•
-Jlocal54:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala|, |(-û
-a22o/Parser#`<~`().[B]TYPE_PARAMETERL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaT T("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter16"
-endLine84"
-accessEmpty"
-displayNameB"
-startCharacter15"
-isLocalfalse"
-packagea22o"
-isFinalfalse"
-	startLine84"
-isVarfalse" 
-symbola22o/Parser#`<~`().[B]"
-
-isAbstractfalse"
-kindTYPE_PARAMETER*B2
-
-scala/Any#TYPE_UPPER_BOUND2"
-scala/Nothing#TYPE_LOWER_BOUND«
-a22o/Parser#mutParse().METHODL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaa a("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter30"
-endLine97"&
-accessProtectedWithinAccess(a22o/)"
-displayNamemutParse"
-startCharacter22"
-isLocalfalse"
-packagea22o"
-isFinalfalse"
-	startLine97"
-isVarfalse"!
-symbola22o/Parser#mutParse()."
-
-isAbstracttrue"
-kindMETHOD*mutParse25
-!a22o/Parser#mutParse().(mutState)METHOD_PARAMETER2
-a22o/Parser#[A]RETURN_TYPE¿
-a22o/Parser#emap().(f)	PARAMETERL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala/ /("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter21"
-endLine47"
-accessEmpty"
-displayNamef"
-startCharacter20"
-isLocalfalse"
-packagea22o"
-isFinalfalse"
-	startLine47"
-isVarfalse" 
-symbola22o/Parser#emap().(f)"
-
-isAbstractfalse"
-kind	PARAMETER*f2
-scala/Function1#
-VALUE_TYPE2
-a22o/Parser#[A]
-VALUE_TYPE2#
-scala/package.Either#
-VALUE_TYPE2"
-scala/Predef.String#
-VALUE_TYPE2$
-a22o/Parser#emap().[B]
-VALUE_TYPE2p
-scala/package.Either#	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala/ /("2q
-a22o/Parser#emap().[B]	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala/+ /(,2o
-scala/Predef.String#	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala/# /()2j
-a22o/Parser#[A]	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala/ /(‡
-a22o/Parser#as().METHODL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala" "("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter14"
-endLine34"
-accessPublicAccess()"
-displayNameas"
-startCharacter12"
-isLocalfalse"
-packagea22o"
-isFinaltrue"
-	startLine34"
-isVarfalse"
-symbola22o/Parser#as()."
-
-isAbstractfalse"
-kindMETHOD*as2(
-a22o/Parser#as().(b)METHOD_PARAMETER2
-a22o/Parser#RETURN_TYPE2#
-a22o/Parser#as().[B]RETURN_TYPE2n
-a22o/Parser#void().	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala# #(2o
-a22o/Parser#as().[B]	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"  "(!2o
-a22o/Parser#as().(b)	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala# #(2g
-a22o/Parser#	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala" "(2m
-a22o/Parser#map().	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala#	 #(˜
-a22o/Parser#parse().(input)	PARAMETERL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala ("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter23"
-endLine12"
-accessEmpty"
-displayNameinput"
-startCharacter18"
-isLocalfalse"
-packagea22o"
-isFinalfalse"
-	startLine12"
-isVarfalse"%
-symbola22o/Parser#parse().(input)"
-
-isAbstractfalse"
-kind	PARAMETER*input2"
-scala/Predef.String#
-VALUE_TYPE2o
-scala/Predef.String#	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala (á
-Ilocal9:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaLOCALL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala) )("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter13"
-endLine41"
-accessEmpty"
-displayNamea"
-startCharacter12"
-isLocaltrue"	
-package"
-isFinalfalse"
-	startLine41"
-isVarfalse"
-symbollocal9"
-
-isAbstractfalse"
-kindLOCAL*a2
-a22o/Parser#[A]
-VALUE_TYPE2§
-Ilocal8:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala) )('2g
-a22o/Parser#	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala) )(2r
-a22o/Parser#mutParse().	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala) )(·
-a22o/Parser#as().(b)	PARAMETERL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala" "("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter19"
-endLine34"
-accessEmpty"
-displayNameb"
-startCharacter18"
-isLocalfalse"
-packagea22o"
-isFinalfalse"
-	startLine34"
-isVarfalse"
-symbola22o/Parser#as().(b)"
-
-isAbstractfalse"
-kind	PARAMETER*b2"
-a22o/Parser#as().[B]
-VALUE_TYPE2o
-a22o/Parser#as().[B]	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala" "(ï
-Jlocal48:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	PARAMETERL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala{, {(-"
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter45"
-endLine123"
-accessEmpty"
-displayNamef"
-startCharacter44"
-isLocalfalse"	
-package"
-isFinalfalse"
-	startLine123"
-isVarfalse"
-symbollocal48"
-
-isAbstractfalse"
-kind	PARAMETER*f2
-scala/Function1#
-VALUE_TYPE2X
-Jlocal50:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala
-VALUE_TYPE2X
-Jlocal49:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala
-VALUE_TYPE2•
-Jlocal50:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala{/ {(02•
-Jlocal49:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala{4 {(5≠
-Jlocal56:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	PARAMETERL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala}5 }(6"
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter54"
-endLine125"
-accessEmpty"
-displayNamef"
-startCharacter53"
-isLocalfalse"	
-package"
-isFinalfalse"
-	startLine125"
-isVarfalse"
-symbollocal56"
-
-isAbstractfalse"
-kind	PARAMETER*f2
-scala/Function1#
-VALUE_TYPE2"
-scala/Predef.String#
-VALUE_TYPE2
-a22o/Parser#
-VALUE_TYPE2X
-Jlocal57:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala
-VALUE_TYPE2•
-Jlocal57:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala}I }(J2g
-a22o/Parser#	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala}B }(H2o
-scala/Predef.String#	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala}8 }(>ø
-Jlocal44:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaTYPE_PARAMETERL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalay y("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter25"
-endLine121"
-accessEmpty"
-displayNameA"
-startCharacter24"
-isLocalfalse"	
-package"
-isFinalfalse"
-	startLine121"
-isVarfalse"
-symbollocal44"
-
-isAbstractfalse"
-kindTYPE_PARAMETER*A2
-
-scala/Any#TYPE_UPPER_BOUND2"
-scala/Nothing#TYPE_LOWER_BOUNDı
-Jlocal23:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaMETHODL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalal
- l("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter17"
-endLine108"
-accessPublicAccess()"
-displayNamecombine"
-startCharacter10"
-isLocalfalse"	
-package"
-isFinalfalse"
-	startLine108"
-isVarfalse"
-symbollocal23"
-
-isAbstractfalse"
-kindMETHOD*combine2^
-Jlocal25:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaMETHOD_PARAMETER2^
-Jlocal26:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaMETHOD_PARAMETER2
-a22o/Parser#RETURN_TYPE2-
-a22o/Parser.monoidParser().[A]RETURN_TYPE2{
- cats/kernel/Semigroup#combine().	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalalO l(V2x
-a22o/package.ParserOps#`~`().	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalalA l(B2t
-a22o/package.ParserOps().	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalal> l(@2g
-a22o/Parser#	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalal1 l(72r
-a22o/ApBuilder2#mapN().	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalalG l(K2•
-Jlocal26:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalalC l(E2y
-a22o/Parser.monoidParser().[A]	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalal8 l(92z
-a22o/Parser.monoidParser().(ma)	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalalL l(NÍ	
-a22o/Parser#`<~`().METHODL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaT T("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter14"
-endLine84"
-accessPublicAccess()"
-displayName<~"
-startCharacter12"
-isLocalfalse"
-packagea22o"
-isFinaltrue"
-	startLine84"
-isVarfalse"
-symbola22o/Parser#`<~`()."
-
-isAbstractfalse"
-kindMETHOD*<~2+
-a22o/Parser#`<~`().(pb)METHOD_PARAMETER2
-a22o/Parser#RETURN_TYPE2
-a22o/Parser#[A]RETURN_TYPE2z
-a22o/parser/package.combinator.	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaTC T(M2r
-a22o/Parser#`<~`().(pb)	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaTa T(c2Å
-&a22o/parser/Combinator#discardRight().	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaTN T(Z2g
-a22o/parser/	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaT< T(B2g
-a22o/Parser#	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaT% T(+2j
-a22o/Parser#[A]	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaT, T(-ø
-Jlocal65:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	PARAMETERN
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaã( ã()"
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter41"
-endLine139"
-accessEmpty"
-displayNamef"
-startCharacter40"
-isLocalfalse"	
-package"
-isFinalfalse"
-	startLine139"
-isVarfalse"
-symbollocal65"
-
-isAbstractfalse"
-kind	PARAMETER*f2
-scala/Function1#
-VALUE_TYPE2X
-Jlocal67:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala
-VALUE_TYPE2
-a22o/Parser#
-VALUE_TYPE2#
-scala/package.Either#
-VALUE_TYPE2X
-Jlocal67:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala
-VALUE_TYPE2X
-Jlocal66:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala
-VALUE_TYPE2r
-scala/package.Either#	REFERENCEN
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaã7 ã(=2ß
-Jlocal67:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	REFERENCEN
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaã+ ã(,2ß
-Jlocal67:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	REFERENCEN
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaã> ã(?2i
-a22o/Parser#	REFERENCEN
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaã0 ã(62ß
-Jlocal66:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	REFERENCEN
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaã@ ã(Aÿ	
-a22o/Parser#many().METHODL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaP P("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter16"
-endLine80"
-accessPublicAccess()"
-displayNamemany"
-startCharacter12"
-isLocalfalse"
-packagea22o"
-isFinaltrue"
-	startLine80"
-isVarfalse"
-symbola22o/Parser#many()."
-
-isAbstractfalse"
-kindMETHOD*many2
-a22o/Parser#RETURN_TYPE2"
-scala/package.List#RETURN_TYPE2
-a22o/Parser#[A]RETURN_TYPE2g
-a22o/parser/	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaP< P(B2y
-a22o/parser/Combinator#many().	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaPN P(R2g
-a22o/Parser#	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaP P(2j
-a22o/Parser#[A]	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaP P(2z
-a22o/parser/package.combinator.	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaPC P(M2n
-scala/package.List#	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaP P(ø
-Jlocal46:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaTYPE_PARAMETERL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaz z("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter31"
-endLine122"
-accessEmpty"
-displayNameA"
-startCharacter30"
-isLocalfalse"	
-package"
-isFinalfalse"
-	startLine122"
-isVarfalse"
-symbollocal46"
-
-isAbstractfalse"
-kindTYPE_PARAMETER*A2
-
-scala/Any#TYPE_UPPER_BOUND2"
-scala/Nothing#TYPE_LOWER_BOUNDÑ
-Ilocal8:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	PARAMETERL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala( (("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter27"
-endLine40"
-accessEmpty"
-displayNamemutState"
-startCharacter19"
-isLocalfalse"	
-package"
-isFinalfalse"
-	startLine40"
-isVarfalse"
-symbollocal8"
-
-isAbstractfalse"
-kind	PARAMETER*mutState2
-a22o/MutState#
-VALUE_TYPE2i
-a22o/MutState#	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala( ((%˚
-a22o/Parser.MonoidKParser.METHODL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalap p("
-
-isImplicittrue"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter28"
-endLine112"
-accessPublicAccess()"
-displayNameMonoidKParser"
-startCharacter15"
-isLocalfalse"
-packagea22o"
-isFinalfalse"
-	startLine112"
-isVarfalse"$
-symbola22o/Parser.MonoidKParser."
-
-isAbstractfalse"
-kindMETHOD*MonoidKParser2
-cats/MonoidK#RETURN_TYPE2
-a22o/Parser#RETURN_TYPE2g
-a22o/Parser#	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaq q(2w
-java/lang/Object#`<init>`().	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaq q(2h
-cats/MonoidK#	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaq q(å
-Jlocal40:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaMETHODL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala| |("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter26"
-endLine124"
-accessPublicAccess()"
-displayNameflatMap"
-startCharacter19"
-isLocalfalse"	
-package"
-isFinalfalse"
-	startLine124"
-isVarfalse"
-symbollocal40"
-
-isAbstractfalse"
-kindMETHOD*flatMap2^
-Jlocal51:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaMETHOD_PARAMETER2^
-Jlocal52:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaMETHOD_PARAMETER2
-a22o/Parser#RETURN_TYPE2Y
-Jlocal53:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaRETURN_TYPE2•
-Jlocal51:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala|P |(R2g
-a22o/Parser#	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala|D |(J2•
-Jlocal53:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala|K |(L2q
-a22o/Parser#flatMap().	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala|S |(Z2•
-Jlocal52:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala|[ |(\Ü
-Jlocal19:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	PARAMETERL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaB B("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter27"
-endLine66"
-accessEmpty"
-displayNamemutState"
-startCharacter19"
-isLocalfalse"	
-package"
-isFinalfalse"
-	startLine66"
-isVarfalse"
-symbollocal19"
-
-isAbstractfalse"
-kind	PARAMETER*mutState2
-a22o/MutState#
-VALUE_TYPE2i
-a22o/MutState#	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaB B(%˜	
-a22o/Parser#`~>`().METHODL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaU U("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter14"
-endLine85"
-accessPublicAccess()"
-displayName~>"
-startCharacter12"
-isLocalfalse"
-packagea22o"
-isFinaltrue"
-	startLine85"
-isVarfalse"
-symbola22o/Parser#`~>`()."
-
-isAbstractfalse"
-kindMETHOD*~>2+
-a22o/Parser#`~>`().(pb)METHOD_PARAMETER2
-a22o/Parser#RETURN_TYPE2%
-a22o/Parser#`~>`().[B]RETURN_TYPE2g
-a22o/Parser#	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaU% U(+2q
-a22o/Parser#`~>`().[B]	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaU, U(-2z
-a22o/parser/package.combinator.	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaUC U(M2Ä
-%a22o/parser/Combinator#discardLeft().	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaUN U(Y2g
-a22o/parser/	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaU< U(B2r
-a22o/Parser#`~>`().(pb)	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaU` U(b√
-Jlocal11:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaMETHODL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala1
- 1("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter18"
-endLine49"
-accessPublicAccess()"
-displayNamemutParse"
-startCharacter10"
-isLocalfalse"	
-package"
-isFinalfalse"
-	startLine49"
-isVarfalse"
-symbollocal11"
-
-isAbstractfalse"
-kindMETHOD*mutParse2^
-Jlocal12:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaMETHOD_PARAMETER2%
-a22o/Parser#emap().[B]RETURN_TYPE2q
-a22o/MutState#reset().	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala8 8(2¶
-Jlocal14:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala
-DEFINITIONL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala3 3(2•
-Jlocal16:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala9  9(!2q
-a22o/Parser#emap().(f)	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala5
- 5(2p
-a22o/MutState#isOk().	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala4 4(2•
-Jlocal15:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala6 6(2¶
-Jlocal13:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala
-DEFINITIONL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala2 2(2o
-scala/package.Right.	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala6 6(2n
-scala/package.Left.	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala7 7(2•
-Jlocal14:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala5 5(2¶
-Jlocal15:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala
-DEFINITIONL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala6 6(2m
-a22o/Parser#dummy.	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala: :(2•
-Jlocal12:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala4 4(2q
-a22o/Parser#emap().[B]	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala1( 1()2•
-Jlocal13:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala8 8(2m
-a22o/Parser#dummy.	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala< <(2¶
-Jlocal16:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala
-DEFINITIONL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala7 7(2t
-a22o/MutState#setError().	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala9 9(2•
-Jlocal12:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala9 9(2•
-Jlocal12:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala8 8(Ü
-Jlocal45:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	PARAMETERL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaz! z(""
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter34"
-endLine122"
-accessEmpty"
-displayNamee"
-startCharacter33"
-isLocalfalse"	
-package"
-isFinalfalse"
-	startLine122"
-isVarfalse"
-symbollocal45"
-
-isAbstractfalse"
-kind	PARAMETER*e2"
-scala/Predef.String#
-VALUE_TYPE2o
-scala/Predef.String#	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaz$ z(*◊
-a22o/Parser#dummy.METHODL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala\ \("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter27"
-endLine92"
-accessProtectedAccess()"
-displayNamedummy"
-startCharacter22"
-isLocalfalse"
-packagea22o"
-isFinaltrue"
-	startLine92"
-isVarfalse"
-symbola22o/Parser#dummy."
-
-isAbstractfalse"
-kindMETHOD*dummy2
-a22o/Parser#[A]RETURN_TYPE2j
-a22o/Parser#[A]	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala] ](2t
-scala/Any#asInstanceOf().	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala]	 ](Ω
-a22o/Parser.monoidParser().METHODL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalah h("
-
-isImplicittrue"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter27"
-endLine104"
-accessPublicAccess()"
-displayNamemonoidParser"
-startCharacter15"
-isLocalfalse"
-packagea22o"
-isFinalfalse"
-	startLine104"
-isVarfalse"%
-symbola22o/Parser.monoidParser()."
-
-isAbstractfalse"
-kindMETHOD*monoidParser23
-a22o/Parser.monoidParser().(ma)METHOD_PARAMETER2#
-cats/package.Monoid#RETURN_TYPE2
-a22o/Parser#RETURN_TYPE2-
-a22o/Parser.monoidParser().[A]RETURN_TYPE2w
-java/lang/Object#`<init>`().	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalak k(2g
-a22o/Parser#	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalak k(2y
-a22o/Parser.monoidParser().[A]	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalak k(2g
-a22o/Parser#	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaj j(2y
-a22o/Parser.monoidParser().[A]	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaj j(2o
-cats/package.Monoid#	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalak k(2o
-cats/package.Monoid#	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaj j(ø
-Jlocal53:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaTYPE_PARAMETERL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala| |("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter31"
-endLine124"
-accessEmpty"
-displayNameB"
-startCharacter30"
-isLocalfalse"	
-package"
-isFinalfalse"
-	startLine124"
-isVarfalse"
-symbollocal53"
-
-isAbstractfalse"
-kindTYPE_PARAMETER*B2
-
-scala/Any#TYPE_UPPER_BOUND2"
-scala/Nothing#TYPE_LOWER_BOUND¬
-a22o/Parser#text().METHODL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaN N("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter16"
-endLine78"
-accessPublicAccess()"
-displayNametext"
-startCharacter12"
-isLocalfalse"
-packagea22o"
-isFinaltrue"
-	startLine78"
-isVarfalse"
-symbola22o/Parser#text()."
-
-isAbstractfalse"
-kindMETHOD*text2
-a22o/Parser#RETURN_TYPE2#
-scala/Predef.String#RETURN_TYPE2s
-a22o/parser/Text#text().	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaNH N(L2g
-a22o/Parser#	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaN N(2t
-a22o/parser/package.text.	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaNC N(G2g
-a22o/parser/	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaN< N(B2o
-scala/Predef.String#	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaN N(°
-Jlocal25:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	PARAMETERL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalal l("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter20"
-endLine108"
-accessEmpty"
-displayNamep0"
-startCharacter18"
-isLocalfalse"	
-package"
-isFinalfalse"
-	startLine108"
-isVarfalse"
-symbollocal25"
-
-isAbstractfalse"
-kind	PARAMETER*p02
-a22o/Parser#
-VALUE_TYPE2,
-a22o/Parser.monoidParser().[A]
-VALUE_TYPE2y
-a22o/Parser.monoidParser().[A]	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalal l(2g
-a22o/Parser#	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalal l(ä
-Jlocal20:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaLOCALL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaC C("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter13"
-endLine67"
-accessEmpty"
-displayNamea"
-startCharacter12"
-isLocaltrue"	
-package"
-isFinalfalse"
-	startLine67"
-isVarfalse"
-symbollocal20"
-
-isAbstractfalse"
-kindLOCAL*a2
-a22o/Parser#[A]
-VALUE_TYPE2•
-Jlocal19:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaC C('2r
-a22o/Parser#mutParse().	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaC C(2g
-a22o/Parser#	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaC C(Û
-Jlocal43:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	PARAMETERL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalay y("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter28"
-endLine121"
-accessEmpty"
-displayNamea"
-startCharacter27"
-isLocalfalse"	
-package"
-isFinalfalse"
-	startLine121"
-isVarfalse"
-symbollocal43"
-
-isAbstractfalse"
-kind	PARAMETER*a2X
-Jlocal44:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala
-VALUE_TYPE2•
-Jlocal44:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalay y(ä
-Jlocal16:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaLOCALL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala7 7("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter23"
-endLine55"
-accessEmpty"
-displayNamee"
-startCharacter22"
-isLocaltrue"	
-package"
-isFinalfalse"
-	startLine55"
-isVarfalse"
-symbollocal16"
-
-isAbstractfalse"
-kindLOCAL*e2"
-scala/Predef.String#
-VALUE_TYPE˘
-a22o/Parser#accept().(input)	PARAMETERL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala ("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter24"
-endLine24"
-accessEmpty"
-displayNameinput"
-startCharacter19"
-isLocalfalse"
-packagea22o"
-isFinalfalse"
-	startLine24"
-isVarfalse"&
-symbola22o/Parser#accept().(input)"
-
-isAbstractfalse"
-kind	PARAMETER*input2"
-scala/Predef.String#
-VALUE_TYPE2o
-scala/Predef.String#	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala ( ø
-Jlocal50:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaTYPE_PARAMETERL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala{ {("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter24"
-endLine123"
-accessEmpty"
-displayNameA"
-startCharacter23"
-isLocalfalse"	
-package"
-isFinalfalse"
-	startLine123"
-isVarfalse"
-symbollocal50"
-
-isAbstractfalse"
-kindTYPE_PARAMETER*A2
-
-scala/Any#TYPE_UPPER_BOUND2"
-scala/Nothing#TYPE_LOWER_BOUNDø
-Jlocal54:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaTYPE_PARAMETERL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala| |("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter28"
-endLine124"
-accessEmpty"
-displayNameA"
-startCharacter27"
-isLocalfalse"	
-package"
-isFinalfalse"
-	startLine124"
-isVarfalse"
-symbollocal54"
-
-isAbstractfalse"
-kindTYPE_PARAMETER*A2
-
-scala/Any#TYPE_UPPER_BOUND2"
-scala/Nothing#TYPE_LOWER_BOUNDö	
-Jlocal52:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	PARAMETERL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala|0 |(1"
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter49"
-endLine124"
-accessEmpty"
-displayNamef"
-startCharacter48"
-isLocalfalse"	
-package"
-isFinalfalse"
-	startLine124"
-isVarfalse"
-symbollocal52"
-
-isAbstractfalse"
-kind	PARAMETER*f2
-scala/Function1#
-VALUE_TYPE2X
-Jlocal54:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala
-VALUE_TYPE2
-a22o/Parser#
-VALUE_TYPE2X
-Jlocal53:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala
-VALUE_TYPE2•
-Jlocal53:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala|? |(@2g
-a22o/Parser#	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala|8 |(>2•
-Jlocal54:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala|3 |(4æ
-Ilocal7:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaMETHODL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala(
- (("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter18"
-endLine40"
-accessPublicAccess()"
-displayNamemutParse"
-startCharacter10"
-isLocalfalse"	
-package"
-isFinalfalse"
-	startLine40"
-isVarfalse"
-symbollocal7"
-
-isAbstractfalse"
-kindMETHOD*mutParse2]
-Ilocal8:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaMETHOD_PARAMETER2$
-a22o/Parser#map().[B]RETURN_TYPE2•
-Ilocal9:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala
-DEFINITIONL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala) )(2p
-a22o/Parser#map().(f)	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala* *(2§
-Ilocal8:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala* *(2p
-a22o/Parser#map().[B]	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala(( (()2§
-Ilocal9:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala* *(2p
-a22o/MutState#isOk().	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala* *(2m
-a22o/Parser#dummy.	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala+ +(à
-Ilocal6:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaMETHODL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala' '("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter23"
-endLine39"
-accessPublicAccess()"
-displayNamevoid"
-startCharacter19"
-isLocalfalse"	
-package"
-isFinalfalse"
-	startLine39"
-isVarfalse"
-symbollocal6"
-
-isAbstractfalse"
-kindMETHOD*void2
-a22o/Parser#RETURN_TYPE2
-scala/Unit#RETURN_TYPE2n
-a22o/Parser#void().	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala'  '($2g
-a22o/Parser#	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala' '(¯
-Jlocal33:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	PARAMETERL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalar$ r(%"
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter37"
-endLine114"
-accessEmpty"
-displayNamey"
-startCharacter36"
-isLocalfalse"	
-package"
-isFinalfalse"
-	startLine114"
-isVarfalse"
-symbollocal33"
-
-isAbstractfalse"
-kind	PARAMETER*y2
-a22o/Parser#
-VALUE_TYPE2X
-Jlocal34:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala
-VALUE_TYPE2•
-Jlocal34:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalar. r(/2g
-a22o/Parser#	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalar' r(-£
-Jlocal71:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaMETHODN
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaé é("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter27"
-endLine142"
-accessPublicAccess()"
-displayNamego"
-startCharacter25"
-isLocalfalse"	
-package"
-isFinalfalse"
-	startLine142"
-isVarfalse"
-symbollocal71"
-
-isAbstractfalse"
-kindMETHOD*go2^
-Jlocal72:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaMETHOD_PARAMETER2Y
-Jlocal66:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaRETURN_TYPE2&
-scala/annotation/tailrec#	ANNOTATED2®
-Jlocal76:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala
-DEFINITIONN
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaî î(2ß
-Jlocal76:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	REFERENCEN
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaî# î($2o
-a22o/Parser#dummy.	REFERENCEN
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalañ ñ(2ß
-Jlocal70:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	REFERENCEN
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaë ë(2p
-scala/package.Left.	REFERENCEN
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaì ì(2ß
-Jlocal74:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	REFERENCEN
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaí í(2®
-Jlocal75:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala
-DEFINITIONN
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaì ì(2®
-Jlocal73:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala
-DEFINITIONN
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaè è(2®
-Jlocal74:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala
-DEFINITIONN
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaê ê(2ß
-Jlocal75:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	REFERENCEN
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaì& ì('2q
-scala/package.Right.	REFERENCEN
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaî î(2r
-a22o/MutState#isOk().	REFERENCEN
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaë ë(2ß
-Jlocal66:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	REFERENCEN
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaé# é($Ú
-
-a22o/Parser#accept().METHODL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala ("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter18"
-endLine24"
-accessPublicAccess()"
-displayNameaccept"
-startCharacter12"
-isLocalfalse"
-packagea22o"
-isFinaltrue"
-	startLine24"
-isVarfalse"
-symbola22o/Parser#accept()."
-
-isAbstractfalse"
-kindMETHOD*accept20
-a22o/Parser#accept().(input)METHOD_PARAMETER2
-scala/Boolean#RETURN_TYPE2p
-a22o/MutState#isOk().	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala (
-2§
-Ilocal4:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala (2i
-scala/Boolean#	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala# (*2r
-a22o/Parser#mutParse().	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala (2•
-Ilocal4:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala
-DEFINITIONL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala (	2§
-Ilocal4:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala (ê
-a22o/Parser#[A]TYPE_PARAMETERL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala
- 
-("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter24"
-endLine10"
-accessEmpty"
-displayNameA"
-startCharacter23"
-isLocalfalse"
-packagea22o"
-isFinalfalse"
-	startLine10"
-isVarfalse"
-symbola22o/Parser#[A]"
-
-isAbstractfalse"
-kindTYPE_PARAMETER*A2
-
-scala/Any#TYPE_UPPER_BOUND2"
-scala/Nothing#TYPE_LOWER_BOUNDö
-a22o/Parser#as().[B]TYPE_PARAMETERL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala" "("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter16"
-endLine34"
-accessEmpty"
-displayNameB"
-startCharacter15"
-isLocalfalse"
-packagea22o"
-isFinalfalse"
-	startLine34"
-isVarfalse"
-symbola22o/Parser#as().[B]"
-
-isAbstractfalse"
-kindTYPE_PARAMETER*B2
-
-scala/Any#TYPE_UPPER_BOUND2"
-scala/Nothing#TYPE_LOWER_BOUND°
-Jlocal26:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	PARAMETERL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalal! l(#"
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter35"
-endLine108"
-accessEmpty"
-displayNamep1"
-startCharacter33"
-isLocalfalse"	
-package"
-isFinalfalse"
-	startLine108"
-isVarfalse"
-symbollocal26"
-
-isAbstractfalse"
-kind	PARAMETER*p12
-a22o/Parser#
-VALUE_TYPE2,
-a22o/Parser.monoidParser().[A]
-VALUE_TYPE2y
-a22o/Parser.monoidParser().[A]	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalal, l(-2g
-a22o/Parser#	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalal% l(+Ä
-Jlocal31:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaMETHODL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalas
- s("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter15"
-endLine115"
-accessPublicAccess()"
-displayNameempty"
-startCharacter10"
-isLocalfalse"	
-package"
-isFinalfalse"
-	startLine115"
-isVarfalse"
-symbollocal31"
-
-isAbstractfalse"
-kindMETHOD*empty2
-a22o/Parser#RETURN_TYPE2Y
-Jlocal35:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaRETURN_TYPE2g
-a22o/Parser#	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalas s(2y
-a22o/parser/Combinator#fail().	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalas  s($2•
-Jlocal35:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalas s(˙
-Jlocal47:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	PARAMETERL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala{ {("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter31"
-endLine123"
-accessEmpty"
-displayNamefa"
-startCharacter29"
-isLocalfalse"	
-package"
-isFinalfalse"
-	startLine123"
-isVarfalse"
-symbollocal47"
-
-isAbstractfalse"
-kind	PARAMETER*fa2
-a22o/Parser#
-VALUE_TYPE2X
-Jlocal50:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala
-VALUE_TYPE2•
-Jlocal50:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala{( {()2g
-a22o/Parser#	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala{! {('„
-a22o/Parser#`+`().METHODL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaX X("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter13"
-endLine88"
-accessPublicAccess()"
-displayName+"
-startCharacter12"
-isLocalfalse"
-packagea22o"
-isFinaltrue"
-	startLine88"
-isVarfalse"
-symbola22o/Parser#`+`()."
-
-isAbstractfalse"
-kindMETHOD*+2*
-a22o/Parser#`+`().(pb)METHOD_PARAMETER2*
-a22o/Parser#`+`().(ev)METHOD_PARAMETER2
-a22o/Parser#RETURN_TYPE2#
-scala/Predef.String#RETURN_TYPE2q
-a22o/Parser#`+`().(pb)	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaY  Y("2g
-a22o/Parser#	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaXA X(G2g
-a22o/Parser#	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaY Y(2u
-a22o/parser/Text#concat().	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaY Y(2t
-a22o/parser/package.text.	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaY Y(2o
-scala/Predef.String#	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaXH X(N2q
-a22o/Parser#`+`().(ev)	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaY Y(2g
-a22o/parser/	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaY Y(
-ê
-a22o/Parser#map().(f)	PARAMETERL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala% %("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter20"
-endLine37"
-accessEmpty"
-displayNamef"
-startCharacter19"
-isLocalfalse"
-packagea22o"
-isFinalfalse"
-	startLine37"
-isVarfalse"
-symbola22o/Parser#map().(f)"
-
-isAbstractfalse"
-kind	PARAMETER*f2
-scala/Function1#
-VALUE_TYPE2
-a22o/Parser#[A]
-VALUE_TYPE2#
-a22o/Parser#map().[B]
-VALUE_TYPE2p
-a22o/Parser#map().[B]	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala% %(2j
-a22o/Parser#[A]	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala% %(ƒ
-Jlocal75:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaLOCALN
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaì ì("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter29"
-endLine147"
-accessEmpty"
-displayNamea"
-startCharacter28"
-isLocaltrue"	
-package"
-isFinalfalse"
-	startLine147"
-isVarfalse"
-symbollocal75"
-
-isAbstractfalse"
-kindLOCAL*a2X
-Jlocal67:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala
-VALUE_TYPEí
-
-Jlocal38:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaMETHODL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaz z("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter29"
-endLine122"
-accessPublicAccess()"
-displayName
-raiseError"
-startCharacter19"
-isLocalfalse"	
-package"
-isFinalfalse"
-	startLine122"
-isVarfalse"
-symbollocal38"
-
-isAbstractfalse"
-kindMETHOD*
-raiseError2^
-Jlocal45:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaMETHOD_PARAMETER2
-a22o/Parser#RETURN_TYPE2Y
-Jlocal46:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaRETURN_TYPE2g
-a22o/Parser#	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaz- z(32•
-Jlocal46:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaz4 z(52y
-a22o/parser/Combinator#fail().	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaz9 z(=2•
-Jlocal45:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaz> z(?ø
-Jlocal57:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaTYPE_PARAMETERL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala}# }($"
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter36"
-endLine125"
-accessEmpty"
-displayNameA"
-startCharacter35"
-isLocalfalse"	
-package"
-isFinalfalse"
-	startLine125"
-isVarfalse"
-symbollocal57"
-
-isAbstractfalse"
-kindTYPE_PARAMETER*A2
-
-scala/Any#TYPE_UPPER_BOUND2"
-scala/Nothing#TYPE_LOWER_BOUND«	
-a22o/Parser#opt().METHODL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaO O("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter15"
-endLine79"
-accessPublicAccess()"
-displayNameopt"
-startCharacter12"
-isLocalfalse"
-packagea22o"
-isFinaltrue"
-	startLine79"
-isVarfalse"
-symbola22o/Parser#opt()."
-
-isAbstractfalse"
-kindMETHOD*opt2
-a22o/Parser#RETURN_TYPE2
-scala/Option#RETURN_TYPE2
-a22o/Parser#[A]RETURN_TYPE2h
-scala/Option#	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaO O(2x
-a22o/parser/Combinator#opt().	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaON O(Q2g
-a22o/parser/	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaO< O(B2j
-a22o/Parser#[A]	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaO O( 2g
-a22o/Parser#	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaO O(2z
-a22o/parser/package.combinator.	REFERENCEL
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaOC O(MΩ	
-Jlocal69:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaMETHODN
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaç ç("
-
-isImplicitfalse"I
-uriB/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala"
-endCharacter22"
-endLine141"
-accessPublicAccess()"
-displayNamemutParse"
-startCharacter14"
-isLocalfalse"	
-package"
-isFinalfalse"
-	startLine141"
-isVarfalse"
-symbollocal69"
-
-isAbstractfalse"
-kindMETHOD*mutParse2^
-Jlocal70:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaMETHOD_PARAMETER2Y
-Jlocal66:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaRETURN_TYPE2ß
-Jlocal66:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	REFERENCEN
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaç, ç(-2ß
-Jlocal64:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	REFERENCEN
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaò ò(2ß
-Jlocal71:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scala	REFERENCEN
-B/Users/rnorris/Scala/a22o/modules/core/src/main/scala/Parser.scalaò ò(

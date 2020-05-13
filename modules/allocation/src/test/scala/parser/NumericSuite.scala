@@ -28,7 +28,7 @@ class NumericSuite extends AllocationSuite {
       }
 
     lazy val factor: Parser[Int] =
-      (int.token | parens(expr).token).merge
+      (int.token | expr.parens.token).merge
 
     expr.assertNoAllocation0("((1+1*2)+(3*4*5))/3") // failure case?
 

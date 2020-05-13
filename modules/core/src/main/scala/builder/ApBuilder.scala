@@ -3,6 +3,7 @@
 // For more information see LICENSE or https://opensource.org/licenses/MIT
 
 package a22o
+package builder
 
 class ApBuilder2[+A, +B](pa: Parser[A], pb: => Parser[B]) {
 

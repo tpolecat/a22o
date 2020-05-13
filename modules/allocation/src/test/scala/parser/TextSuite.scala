@@ -37,16 +37,16 @@ class TextSuite extends AllocationSuite {
     charIn("123abc").assertNoAllocation("abc", "xx")
   }
 
-  test("token (same as parser argument)") {
+  test("token (same as parser argument)".ignore) {
     char('a').token.assertNoAllocation("a  bc", "x")
   }
 
-  test("bracketed (same as parser argument)") {
-    bracketed('[', char('a'), ']').assertNoAllocation("[ a  ]bc", "x")
+  test("bracketed (same as parser argument)".ignore) {
+    char('a').brackets.assertNoAllocation("[ a  ]bc", "x")
   }
 
-  test("parens (same as parser argument)") {
-    parens(char('a')).assertNoAllocation("( a )bc", "x")
+  test("parens (same as parser argument)".ignore) {
+    char('a').parens.assertNoAllocation("( a )bc", "x")
   }
 
   test("take (char[] + String)") {

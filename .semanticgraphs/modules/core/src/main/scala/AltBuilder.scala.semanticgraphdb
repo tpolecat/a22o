@@ -1,1631 +1,0 @@
-
-,modules/core/src/main/scala/AltBuilder.scala†
-a22o/AltBuilder2#[B]TYPE_PARAMETERP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala ("
-
-isImplicitfalse"M
-uriF/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala"
-endCharacter24"
-endLine6"
-accessEmpty"
-displayNameB"
-startCharacter23"
-isLocalfalse"
-packagea22o"
-isFinalfalse"
-	startLine6"
-isVarfalse"
-symbola22o/AltBuilder2#[B]"
-
-isAbstractfalse"
-kindTYPE_PARAMETER*B2
-
-scala/Any#TYPE_UPPER_BOUND2"
-scala/Nothing#TYPE_LOWER_BOUND“
-a22o/AltBuilder2#CLASSP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala ("
-
-isImplicitfalse"M
-uriF/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala"
-endCharacter17"
-endLine6"
-accessPublicAccess()"
-displayNameAltBuilder2"
-startCharacter6"
-isLocalfalse"
-packagea22o"
-isFinalfalse"
-	startLine6"
-isVarfalse"
-symbola22o/AltBuilder2#"
-
-isAbstractfalse"
-kindCLASS*AltBuilder22#
-a22o/AltBuilder2#pa.DECLARATION2#
-a22o/AltBuilder2#pb.DECLARATION2+
-a22o/AltBuilder2#`<init>`().DECLARATION2)
-a22o/AltBuilder2#either().DECLARATION2&
-a22o/AltBuilder2#`|`().DECLARATION2,
-a22o/AltBuilder2#coproduct().DECLARATION2(
-a22o/AltBuilder2#foldN().DECLARATION2&
-a22o/AltBuilder2#[A]TYPE_PARAMETER2&
-a22o/AltBuilder2#[B]TYPE_PARAMETERº
-Nlocal17:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scalaMETHODP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala> >("
-
-isImplicitfalse"M
-uriF/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala"
-endCharacter18"
-endLine62"
-accessPrivateAccess()"
-displayNamepa π"
-startCharacter15"
-isLocalfalse"	
-package"
-isFinalfalse"
-	startLine62"
-isVarfalse"
-symbollocal17"
-
-isAbstractfalse"
-kindMETHOD*pa π2
-a22o/Parser#RETURN_TYPE2#
-a22o/AltBuilder3#[A]RETURN_TYPE2s
-a22o/AltBuilder3#pa.	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala> >(ù
-Nlocal13:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala	PARAMETERP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala6 6("
-
-isImplicitfalse"M
-uriF/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala"
-endCharacter7"
-endLine54"
-accessEmpty"
-displayNamea"
-startCharacter6"
-isLocalfalse"	
-package"
-isFinalfalse"
-	startLine54"
-isVarfalse"
-symbollocal13"
-
-isAbstractfalse"
-kind	PARAMETER*a2"
-a22o/AltBuilder3#[A]
-VALUE_TYPEõ
-Mlocal1:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala	PARAMETERP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala ("
-
-isImplicitfalse"M
-uriF/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala"
-endCharacter7"
-endLine18"
-accessEmpty"
-displayNameb"
-startCharacter6"
-isLocalfalse"	
-package"
-isFinalfalse"
-	startLine18"
-isVarfalse"
-symbollocal1"
-
-isAbstractfalse"
-kind	PARAMETER*b2"
-a22o/AltBuilder2#[B]
-VALUE_TYPE¿
-a22o/AltBuilder3#pb.METHODP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala2- 2(/"
-
-isImplicitfalse"M
-uriF/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala"
-endCharacter47"
-endLine50"
-accessPrivateThisAccess()"
-displayNamepb"
-startCharacter45"
-isLocalfalse"
-packagea22o"
-isFinalfalse"
-	startLine50"
-isVarfalse"
-symbola22o/AltBuilder3#pb."
-
-isAbstractfalse"
-kindMETHOD*pb2s
-a22o/AltBuilder3#[B]	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala2; 2(<2k
-a22o/Parser#	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala24 2(:Â
-a22o/AltBuilder2#`<init>`().CONSTRUCTORP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala ("
-
-isImplicitfalse"M
-uriF/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala"
-endCharacter25"
-endLine6"
-accessPublicAccess()"
-displayName<init>"
-startCharacter25"
-isLocalfalse"
-packagea22o"
-isFinalfalse"
-	startLine6"
-isVarfalse"&
-symbola22o/AltBuilder2#`<init>`()."
-
-isAbstractfalse"
-kindCONSTRUCTOR*<init>24
- a22o/AltBuilder2#`<init>`().(pa)METHOD_PARAMETER24
- a22o/AltBuilder2#`<init>`().(pb)METHOD_PARAMETER˚!
-Nlocal21:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scalaMETHODP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scalaE
- E("
-
-isImplicitfalse"M
-uriF/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala"
-endCharacter18"
-endLine69"
-accessPublicAccess()"
-displayNamemutParse"
-startCharacter10"
-isLocalfalse"	
-package"
-isFinalfalse"
-	startLine69"
-isVarfalse"
-symbollocal21"
-
-isAbstractfalse"
-kindMETHOD*mutParse2b
-Nlocal22:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scalaMETHOD_PARAMETER2+
-a22o/AltBuilder3#foldN().[D]RETURN_TYPE2≠
-Nlocal25:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scalaH[ H(\2Æ
-Nlocal26:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala
-DEFINITIONP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scalaI" I(#2Æ
-Nlocal25:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala
-DEFINITIONP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scalaH" H(#2≠
-Nlocal22:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scalaH H(2|
-a22o/AltBuilder3#foldN().(fc)	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scalaIX I(Z2|
-a22o/AltBuilder3#foldN().(fa)	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scalaGX G(Z2≠
-Nlocal22:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scalaI I(2{
-a22o/AltBuilder3#foldN().[D]	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scalaE( E()2Æ
-Nlocal23:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala
-DEFINITIONP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scalaF F(2|
-a22o/AltBuilder3#foldN().(fb)	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scalaHX H(Z2Æ
-Nlocal24:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala
-DEFINITIONP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scalaG" G(#2q
-a22o/Parser#dummy.	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scalaJ J(2≠
-Nlocal22:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scalaHB H(J2u
-a22o/MutState#reset().	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scalaI I(2≠
-Nlocal26:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scalaI[ I(\2≠
-Nlocal24:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scalaG[ G(\2t
-a22o/MutState#isOk().	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scalaHK H(O2t
-a22o/MutState#isOk().	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scalaIK I(O2u
-a22o/MutState#reset().	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scalaH H(2≠
-Nlocal22:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scalaIB I(J2≠
-Nlocal23:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scalaI I(2≠
-Nlocal22:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scalaGB G(J2t
-a22o/MutState#isOk().	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scalaGK G(O2≠
-Nlocal23:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scalaH H(ƒ
-a22o/AltBuilder2#foldN().METHODP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala ("
-
-isImplicitfalse"M
-uriF/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala"
-endCharacter11"
-endLine21"
-accessPublicAccess()"
-displayNamefoldN"
-startCharacter6"
-isLocalfalse"
-packagea22o"
-isFinalfalse"
-	startLine21"
-isVarfalse"#
-symbola22o/AltBuilder2#foldN()."
-
-isAbstractfalse"
-kindMETHOD*foldN21
-a22o/AltBuilder2#foldN().(fa)METHOD_PARAMETER21
-a22o/AltBuilder2#foldN().(fb)METHOD_PARAMETER2
-a22o/Parser#RETURN_TYPE2+
-a22o/AltBuilder2#foldN().[C]RETURN_TYPE2≠
-Mlocal3:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala
-DEFINITIONP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala (2k
-a22o/Parser#	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala (2≠
-Mlocal4:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala
-DEFINITIONP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala (2v
-a22o/Parser#`<init>`().	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala (2{
-a22o/AltBuilder2#foldN().[C]	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala/ (02k
-a22o/Parser#	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala( (.2{
-a22o/AltBuilder2#foldN().[C]	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala (ù
-Nlocal15:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala	PARAMETERP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala8 8("
-
-isImplicitfalse"M
-uriF/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala"
-endCharacter7"
-endLine56"
-accessEmpty"
-displayNamec"
-startCharacter6"
-isLocalfalse"	
-package"
-isFinalfalse"
-	startLine56"
-isVarfalse"
-symbollocal15"
-
-isAbstractfalse"
-kind	PARAMETER*c2"
-a22o/AltBuilder3#[C]
-VALUE_TYPEƒ
-Nlocal23:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scalaLOCALP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scalaF F("
-
-isImplicitfalse"M
-uriF/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala"
-endCharacter15"
-endLine70"
-accessEmpty"
-displayNamepos"
-startCharacter12"
-isLocaltrue"	
-package"
-isFinalfalse"
-	startLine70"
-isVarfalse"
-symbollocal23"
-
-isAbstractfalse"
-kindLOCAL*pos2"
-a22o/MutState#Point#
-VALUE_TYPE2x
-a22o/MutState#getPoint().	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scalaF F(#2≠
-Nlocal22:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scalaF F( 
-a22o/AltBuilder3#foldN().(fa)	PARAMETERP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala; ;("
-
-isImplicitfalse"M
-uriF/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala"
-endCharacter17"
-endLine59"
-accessEmpty"
-displayNamefa"
-startCharacter15"
-isLocalfalse"
-packagea22o"
-isFinalfalse"
-	startLine59"
-isVarfalse"'
-symbola22o/AltBuilder3#foldN().(fa)"
-
-isAbstractfalse"
-kind	PARAMETER*fa2
-scala/Function1#
-VALUE_TYPE2"
-a22o/AltBuilder3#[A]
-VALUE_TYPE2*
-a22o/AltBuilder3#foldN().[D]
-VALUE_TYPE2{
-a22o/AltBuilder3#foldN().[D]	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala; ;(2s
-a22o/AltBuilder3#[A]	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala; ;(¶
-)a22o/AltBuilder2.MergeableAltBuilder2#ab.METHODP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala+) +(+"
-
-isImplicitfalse"M
-uriF/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala"
-endCharacter43"
-endLine43"
-accessPrivateThisAccess()"
-displayNameab"
-startCharacter41"
-isLocalfalse"
-packagea22o"
-isFinalfalse"
-	startLine43"
-isVarfalse"3
-symbol)a22o/AltBuilder2.MergeableAltBuilder2#ab."
-
-isAbstractfalse"
-kindMETHOD*ab2 
-a22o/AltBuilder2#RETURN_TYPE28
-)a22o/AltBuilder2.MergeableAltBuilder2#[A]RETURN_TYPE28
-)a22o/AltBuilder2.MergeableAltBuilder2#[A]RETURN_TYPE2à
-)a22o/AltBuilder2.MergeableAltBuilder2#[A]	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala+< +(=2à
-)a22o/AltBuilder2.MergeableAltBuilder2#[A]	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala+9 +(:2p
-a22o/AltBuilder2#	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala+- +(8ñ
-&a22o/AltBuilder2.MergeableAltBuilder2#CLASSP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala+ +(%"
-
-isImplicittrue"M
-uriF/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala"
-endCharacter37"
-endLine43"
-accessPublicAccess()"#
-displayNameMergeableAltBuilder2"
-startCharacter17"
-isLocalfalse"
-packagea22o"
-isFinalfalse"
-	startLine43"
-isVarfalse"0
-symbol&a22o/AltBuilder2.MergeableAltBuilder2#"
-
-isAbstractfalse"
-kindCLASS*MergeableAltBuilder228
-)a22o/AltBuilder2.MergeableAltBuilder2#ab.DECLARATION2@
-1a22o/AltBuilder2.MergeableAltBuilder2#`<init>`().DECLARATION2=
-.a22o/AltBuilder2.MergeableAltBuilder2#merge().DECLARATION2;
-)a22o/AltBuilder2.MergeableAltBuilder2#[A]TYPE_PARAMETERî
-Mlocal7:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala	PARAMETERP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala ("
-
-isImplicitfalse"M
-uriF/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala"
-endCharacter27"
-endLine30"
-accessEmpty"
-displayNamemutState"
-startCharacter19"
-isLocalfalse"	
-package"
-isFinalfalse"
-	startLine30"
-isVarfalse"
-symbollocal7"
-
-isAbstractfalse"
-kind	PARAMETER*mutState2
-a22o/MutState#
-VALUE_TYPE2m
-a22o/MutState#	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala (%ì
-a22o/AltBuilder2#coproduct().METHODP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala ("
-
-isImplicitfalse"M
-uriF/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala"
-endCharacter15"
-endLine15"
-accessPublicAccess()"
-displayName	coproduct"
-startCharacter6"
-isLocalfalse"
-packagea22o"
-isFinalfalse"
-	startLine15"
-isVarfalse"'
-symbola22o/AltBuilder2#coproduct()."
-
-isAbstractfalse"
-kindMETHOD*	coproduct2
-a22o/Parser#RETURN_TYPE2$
-scala/package.Either#RETURN_TYPE2#
-a22o/AltBuilder2#[A]RETURN_TYPE2#
-a22o/AltBuilder2#[B]RETURN_TYPE2s
-a22o/AltBuilder2#[B]	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala" (#2s
-a22o/AltBuilder2#[A]	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala ( 2r
-scala/package.Left.	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala (2s
-scala/package.Right.	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala (2k
-a22o/Parser#	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala (2¨
-Mlocal1:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala (2¨
-Mlocal0:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala (2t
-scala/package.Either#	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala (2x
-a22o/AltBuilder2#foldN().	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala (	ï
-Mlocal6:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scalaMETHODP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala
- ("
-
-isImplicitfalse"M
-uriF/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala"
-endCharacter18"
-endLine30"
-accessPublicAccess()"
-displayNamemutParse"
-startCharacter10"
-isLocalfalse"	
-package"
-isFinalfalse"
-	startLine30"
-isVarfalse"
-symbollocal6"
-
-isAbstractfalse"
-kindMETHOD*mutParse2a
-Mlocal7:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scalaMETHOD_PARAMETER2+
-a22o/AltBuilder2#foldN().[C]RETURN_TYPE2¨
-Mlocal7:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala!B !(J2Æ
-Nlocal10:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala
-DEFINITIONP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala!" !(#2≠
-Mlocal9:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala
-DEFINITIONP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala "  (#2≠
-Mlocal8:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala
-DEFINITIONP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala (2|
-a22o/AltBuilder2#foldN().(fa)	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala X  (Z2¨
-Mlocal7:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala! !(2≠
-Nlocal10:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala![ !(\2¨
-Mlocal9:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala [  (\2¨
-Mlocal8:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala! !(2t
-a22o/MutState#isOk().	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala K  (O2¨
-Mlocal7:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala B  (J2t
-a22o/MutState#isOk().	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala!K !(O2|
-a22o/AltBuilder2#foldN().(fb)	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala!X !(Z2{
-a22o/AltBuilder2#foldN().[C]	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala( ()2u
-a22o/MutState#reset().	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala! !(2q
-a22o/Parser#dummy.	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala" "(¨
-a22o/AltBuilder2#`|`().[C]TYPE_PARAMETERP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala (	"
-
-isImplicitfalse"M
-uriF/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala"
-endCharacter9"
-endLine12"
-accessEmpty"
-displayNameC"
-startCharacter8"
-isLocalfalse"
-packagea22o"
-isFinalfalse"
-	startLine12"
-isVarfalse"$
-symbola22o/AltBuilder2#`|`().[C]"
-
-isAbstractfalse"
-kindTYPE_PARAMETER*C2
-
-scala/Any#TYPE_UPPER_BOUND2"
-scala/Nothing#TYPE_LOWER_BOUNDÃ
-)a22o/AltBuilder2.MergeableAltBuilder2#[A]TYPE_PARAMETERP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala+& +('"
-
-isImplicitfalse"M
-uriF/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala"
-endCharacter39"
-endLine43"
-accessEmpty"
-displayNameA"
-startCharacter38"
-isLocalfalse"
-packagea22o"
-isFinalfalse"
-	startLine43"
-isVarfalse"3
-symbol)a22o/AltBuilder2.MergeableAltBuilder2#[A]"
-
-isAbstractfalse"
-kindTYPE_PARAMETER*A2
-
-scala/Any#TYPE_UPPER_BOUND2"
-scala/Nothing#TYPE_LOWER_BOUNDŸ
-a22o/AltBuilder3#coproduct().METHODP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala4 4("
-
-isImplicitfalse"M
-uriF/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala"
-endCharacter15"
-endLine52"
-accessPublicAccess()"
-displayName	coproduct"
-startCharacter6"
-isLocalfalse"
-packagea22o"
-isFinalfalse"
-	startLine52"
-isVarfalse"'
-symbola22o/AltBuilder3#coproduct()."
-
-isAbstractfalse"
-kindMETHOD*	coproduct2
-a22o/Parser#RETURN_TYPE2$
-scala/package.Either#RETURN_TYPE2#
-a22o/AltBuilder3#[A]RETURN_TYPE2$
-scala/package.Either#RETURN_TYPE2#
-a22o/AltBuilder3#[B]RETURN_TYPE2#
-a22o/AltBuilder3#[C]RETURN_TYPE2s
-a22o/AltBuilder3#[C]	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala4, 4(-2t
-scala/package.Either#	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala4 4(2r
-scala/package.Left.	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala6 6(2s
-scala/package.Right.	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala7 7(2x
-a22o/AltBuilder3#foldN().	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala5 5(	2r
-scala/package.Left.	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala7 7(2≠
-Nlocal15:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala8 8(2s
-a22o/AltBuilder3#[A]	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala4 4( 2s
-a22o/AltBuilder3#[B]	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala4) 4(*2k
-a22o/Parser#	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala4 4(2s
-scala/package.Right.	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala8 8(2≠
-Nlocal13:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala6 6(2t
-scala/package.Either#	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala4" 4((2≠
-Nlocal14:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala7 7(2s
-scala/package.Right.	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala8 8(Ä
-a22o/AltBuilder2#pa.METHODP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala ("
-
-isImplicitfalse"M
-uriF/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala"
-endCharacter28"
-endLine6"
-accessPrivateThisAccess()"
-displayNamepa"
-startCharacter26"
-isLocalfalse"
-packagea22o"
-isFinalfalse"
-	startLine6"
-isVarfalse"
-symbola22o/AltBuilder2#pa."
-
-isAbstractfalse"
-kindMETHOD*pa2
-a22o/Parser#RETURN_TYPE2#
-a22o/AltBuilder2#[A]RETURN_TYPE2s
-a22o/AltBuilder2#[A]	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala% (&2k
-a22o/Parser#	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala ($ 
-a22o/AltBuilder3#foldN().(fb)	PARAMETERP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala; ;("
-
-isImplicitfalse"M
-uriF/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala"
-endCharacter29"
-endLine59"
-accessEmpty"
-displayNamefb"
-startCharacter27"
-isLocalfalse"
-packagea22o"
-isFinalfalse"
-	startLine59"
-isVarfalse"'
-symbola22o/AltBuilder3#foldN().(fb)"
-
-isAbstractfalse"
-kind	PARAMETER*fb2
-scala/Function1#
-VALUE_TYPE2"
-a22o/AltBuilder3#[B]
-VALUE_TYPE2*
-a22o/AltBuilder3#foldN().[D]
-VALUE_TYPE2{
-a22o/AltBuilder3#foldN().[D]	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala;$ ;(%2s
-a22o/AltBuilder3#[B]	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala; ;( Ã
-a22o/AltBuilder2#`|`().(pc)	PARAMETERP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala ("
-
-isImplicitfalse"M
-uriF/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala"
-endCharacter13"
-endLine12"
-accessEmpty"
-displayNamepc"
-startCharacter11"
-isLocalfalse"
-packagea22o"
-isFinalfalse"
-	startLine12"
-isVarfalse"%
-symbola22o/AltBuilder2#`|`().(pc)"
-
-isAbstractfalse"
-kind	PARAMETER*pc2y
-a22o/AltBuilder2#`|`().[C]	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala (2k
-a22o/Parser#	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala (œ
-a22o/AltBuilder2#`|`().METHODP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala ("
-
-isImplicitfalse"M
-uriF/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala"
-endCharacter7"
-endLine12"
-accessPublicAccess()"
-displayName|"
-startCharacter6"
-isLocalfalse"
-packagea22o"
-isFinalfalse"
-	startLine12"
-isVarfalse"!
-symbola22o/AltBuilder2#`|`()."
-
-isAbstractfalse"
-kindMETHOD*|2/
-a22o/AltBuilder2#`|`().(pc)METHOD_PARAMETER2 
-a22o/AltBuilder3#RETURN_TYPE2#
-a22o/AltBuilder2#[A]RETURN_TYPE2#
-a22o/AltBuilder2#[B]RETURN_TYPE2)
-a22o/AltBuilder2#`|`().[C]RETURN_TYPE2p
-a22o/AltBuilder3#	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala ()2s
-a22o/AltBuilder2#pb.	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala (2s
-a22o/AltBuilder2#pa.	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala (2p
-a22o/AltBuilder3#	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala (2s
-a22o/AltBuilder2#[B]	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala- (.2z
-a22o/AltBuilder2#`|`().(pc)	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala (2s
-a22o/AltBuilder2#[A]	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala* (+2y
-a22o/AltBuilder2#`|`().[C]	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala0 (12{
-a22o/AltBuilder3#`<init>`().	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala (º
-Nlocal19:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scalaMETHODP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala@ @("
-
-isImplicitfalse"M
-uriF/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala"
-endCharacter18"
-endLine64"
-accessPrivateAccess()"
-displayNamepc π"
-startCharacter15"
-isLocalfalse"	
-package"
-isFinalfalse"
-	startLine64"
-isVarfalse"
-symbollocal19"
-
-isAbstractfalse"
-kindMETHOD*pc π2
-a22o/Parser#RETURN_TYPE2#
-a22o/AltBuilder3#[C]RETURN_TYPE2s
-a22o/AltBuilder3#pc.	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala@ @(¢
-a22o/AltBuilder3#[B]TYPE_PARAMETERP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala2 2("
-
-isImplicitfalse"M
-uriF/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala"
-endCharacter24"
-endLine50"
-accessEmpty"
-displayNameB"
-startCharacter23"
-isLocalfalse"
-packagea22o"
-isFinalfalse"
-	startLine50"
-isVarfalse"
-symbola22o/AltBuilder3#[B]"
-
-isAbstractfalse"
-kindTYPE_PARAMETER*B2
-
-scala/Any#TYPE_UPPER_BOUND2"
-scala/Nothing#TYPE_LOWER_BOUNDÏ
-Nlocal10:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scalaLOCALP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala!" !(#"
-
-isImplicitfalse"M
-uriF/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala"
-endCharacter35"
-endLine33"
-accessEmpty"
-displayNameb"
-startCharacter34"
-isLocaltrue"	
-package"
-isFinalfalse"
-	startLine33"
-isVarfalse"
-symbollocal10"
-
-isAbstractfalse"
-kindLOCAL*b2"
-a22o/AltBuilder2#[B]
-VALUE_TYPE2¨
-Mlocal4:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala!& !()2¨
-Mlocal7:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala!3 !(;2v
-a22o/Parser#mutParse().	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala!* !(2Œ
-a22o/AltBuilder3#CLASSP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala2 2("
-
-isImplicitfalse"M
-uriF/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala"
-endCharacter17"
-endLine50"
-accessPublicAccess()"
-displayNameAltBuilder3"
-startCharacter6"
-isLocalfalse"
-packagea22o"
-isFinalfalse"
-	startLine50"
-isVarfalse"
-symbola22o/AltBuilder3#"
-
-isAbstractfalse"
-kindCLASS*AltBuilder32#
-a22o/AltBuilder3#pa.DECLARATION2#
-a22o/AltBuilder3#pb.DECLARATION2#
-a22o/AltBuilder3#pc.DECLARATION2+
-a22o/AltBuilder3#`<init>`().DECLARATION2,
-a22o/AltBuilder3#coproduct().DECLARATION2(
-a22o/AltBuilder3#foldN().DECLARATION2&
-a22o/AltBuilder3#[A]TYPE_PARAMETER2&
-a22o/AltBuilder3#[B]TYPE_PARAMETER2&
-a22o/AltBuilder3#[C]TYPE_PARAMETER≤
-a22o/AltBuilder3#foldN().[D]TYPE_PARAMETERP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala; ;("
-
-isImplicitfalse"M
-uriF/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala"
-endCharacter13"
-endLine59"
-accessEmpty"
-displayNameD"
-startCharacter12"
-isLocalfalse"
-packagea22o"
-isFinalfalse"
-	startLine59"
-isVarfalse"&
-symbola22o/AltBuilder3#foldN().[D]"
-
-isAbstractfalse"
-kindTYPE_PARAMETER*D2
-
-scala/Any#TYPE_UPPER_BOUND2"
-scala/Nothing#TYPE_LOWER_BOUND∫
-Nlocal20:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scalaMETHODP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scalaB B("
-
-isImplicitfalse"M
-uriF/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala"
-endCharacter23"
-endLine66"
-accessPublicAccess()"
-displayNamevoid"
-startCharacter19"
-isLocalfalse"	
-package"
-isFinalfalse"
-	startLine66"
-isVarfalse"
-symbollocal20"
-
-isAbstractfalse"
-kindMETHOD*void2
-a22o/Parser#RETURN_TYPE2
-scala/Unit#RETURN_TYPE2r
-a22o/Parser#void().	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scalaC$ C((2s
-a22o/AltBuilder3#pb.	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scalaC! C(#2{
-a22o/AltBuilder3#`<init>`().	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scalaC C(2p
-a22o/AltBuilder3#	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scalaC C(2j
-scala/Unit#	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scalaB  B($2k
-a22o/Parser#	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scalaB B(2s
-a22o/AltBuilder3#pc.	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scalaC* C(,2r
-a22o/Parser#void().	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scalaC- C(12s
-a22o/AltBuilder3#pa.	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scalaC C(2x
-a22o/AltBuilder3#foldN().	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scalaC3 C(82r
-a22o/Parser#void().	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scalaC C(Ó
-Nlocal25:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scalaLOCALP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scalaH" H(#"
-
-isImplicitfalse"M
-uriF/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala"
-endCharacter35"
-endLine72"
-accessEmpty"
-displayNameb"
-startCharacter34"
-isLocaltrue"	
-package"
-isFinalfalse"
-	startLine72"
-isVarfalse"
-symbollocal25"
-
-isAbstractfalse"
-kindLOCAL*b2"
-a22o/AltBuilder3#[B]
-VALUE_TYPE2≠
-Nlocal18:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scalaH& H()2≠
-Nlocal22:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scalaH3 H(;2v
-a22o/Parser#mutParse().	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scalaH* H(2ù
-Nlocal14:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala	PARAMETERP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala7 7("
-
-isImplicitfalse"M
-uriF/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala"
-endCharacter7"
-endLine55"
-accessEmpty"
-displayNameb"
-startCharacter6"
-isLocalfalse"	
-package"
-isFinalfalse"
-	startLine55"
-isVarfalse"
-symbollocal14"
-
-isAbstractfalse"
-kind	PARAMETER*b2"
-a22o/AltBuilder3#[B]
-VALUE_TYPEõ
-Mlocal0:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala	PARAMETERP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala ("
-
-isImplicitfalse"M
-uriF/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala"
-endCharacter7"
-endLine17"
-accessEmpty"
-displayNamea"
-startCharacter6"
-isLocalfalse"	
-package"
-isFinalfalse"
-	startLine17"
-isVarfalse"
-symbollocal0"
-
-isAbstractfalse"
-kind	PARAMETER*a2"
-a22o/AltBuilder2#[A]
-VALUE_TYPEÍ
-Mlocal9:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scalaLOCALP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala "  (#"
-
-isImplicitfalse"M
-uriF/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala"
-endCharacter35"
-endLine32"
-accessEmpty"
-displayNamea"
-startCharacter34"
-isLocaltrue"	
-package"
-isFinalfalse"
-	startLine32"
-isVarfalse"
-symbollocal9"
-
-isAbstractfalse"
-kindLOCAL*a2"
-a22o/AltBuilder2#[A]
-VALUE_TYPE2¨
-Mlocal3:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala &  ()2v
-a22o/Parser#mutParse().	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala *  (22¨
-Mlocal7:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala 3  (;œ
-Mlocal5:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scalaMETHODP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala ("
-
-isImplicitfalse"M
-uriF/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala"
-endCharacter23"
-endLine27"
-accessPublicAccess()"
-displayNamevoid"
-startCharacter19"
-isLocalfalse"	
-package"
-isFinalfalse"
-	startLine27"
-isVarfalse"
-symbollocal5"
-
-isAbstractfalse"
-kindMETHOD*void2
-a22o/Parser#RETURN_TYPE2
-scala/Unit#RETURN_TYPE2p
-a22o/AltBuilder2#	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala (2s
-a22o/AltBuilder2#pb.	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala! (#2{
-a22o/AltBuilder2#`<init>`().	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala (2k
-a22o/Parser#	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala (2x
-a22o/AltBuilder2#foldN().	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala* (/2j
-scala/Unit#	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala  ($2s
-a22o/AltBuilder2#pa.	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala (2r
-a22o/Parser#void().	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala (2r
-a22o/Parser#void().	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala$ ((º
-Nlocal18:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scalaMETHODP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala? ?("
-
-isImplicitfalse"M
-uriF/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala"
-endCharacter18"
-endLine63"
-accessPrivateAccess()"
-displayNamepb π"
-startCharacter15"
-isLocalfalse"	
-package"
-isFinalfalse"
-	startLine63"
-isVarfalse"
-symbollocal18"
-
-isAbstractfalse"
-kindMETHOD*pb π2
-a22o/Parser#RETURN_TYPE2#
-a22o/AltBuilder3#[B]RETURN_TYPE2s
-a22o/AltBuilder3#pb.	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala? ?(ù
-a22o/AltBuilder3#`<init>`().CONSTRUCTORP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala2 2("
-
-isImplicitfalse"M
-uriF/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala"
-endCharacter29"
-endLine50"
-accessPublicAccess()"
-displayName<init>"
-startCharacter29"
-isLocalfalse"
-packagea22o"
-isFinalfalse"
-	startLine50"
-isVarfalse"&
-symbola22o/AltBuilder3#`<init>`()."
-
-isAbstractfalse"
-kindCONSTRUCTOR*<init>24
- a22o/AltBuilder3#`<init>`().(pa)METHOD_PARAMETER24
- a22o/AltBuilder3#`<init>`().(pb)METHOD_PARAMETER24
- a22o/AltBuilder3#`<init>`().(pc)METHOD_PARAMETER¿
-a22o/AltBuilder3#pc.METHODP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala2? 2(A"
-
-isImplicitfalse"M
-uriF/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala"
-endCharacter65"
-endLine50"
-accessPrivateThisAccess()"
-displayNamepc"
-startCharacter63"
-isLocalfalse"
-packagea22o"
-isFinalfalse"
-	startLine50"
-isVarfalse"
-symbola22o/AltBuilder3#pc."
-
-isAbstractfalse"
-kindMETHOD*pc2s
-a22o/AltBuilder3#[C]	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala2M 2(N2k
-a22o/Parser#	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala2F 2(L¡
-Mlocal8:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scalaLOCALP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala ("
-
-isImplicitfalse"M
-uriF/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala"
-endCharacter15"
-endLine31"
-accessEmpty"
-displayNamepos"
-startCharacter12"
-isLocaltrue"	
-package"
-isFinalfalse"
-	startLine31"
-isVarfalse"
-symbollocal8"
-
-isAbstractfalse"
-kindLOCAL*pos2"
-a22o/MutState#Point#
-VALUE_TYPE2¨
-Mlocal7:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala (2x
-a22o/MutState#getPoint().	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala (#¢
-a22o/AltBuilder3#[C]TYPE_PARAMETERP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala2 2("
-
-isImplicitfalse"M
-uriF/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala"
-endCharacter28"
-endLine50"
-accessEmpty"
-displayNameC"
-startCharacter27"
-isLocalfalse"
-packagea22o"
-isFinalfalse"
-	startLine50"
-isVarfalse"
-symbola22o/AltBuilder3#[C]"
-
-isAbstractfalse"
-kindTYPE_PARAMETER*C2
-
-scala/Any#TYPE_UPPER_BOUND2"
-scala/Nothing#TYPE_LOWER_BOUND¬	
-a22o/AltBuilder2#either().METHODP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala	 	("
-
-isImplicitfalse"M
-uriF/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala"
-endCharacter12"
-endLine9"
-accessPublicAccess()"
-displayNameeither"
-startCharacter6"
-isLocalfalse"
-packagea22o"
-isFinalfalse"
-	startLine9"
-isVarfalse"$
-symbola22o/AltBuilder2#either()."
-
-isAbstractfalse"
-kindMETHOD*either2
-a22o/Parser#RETURN_TYPE2$
-scala/package.Either#RETURN_TYPE2#
-a22o/AltBuilder2#[A]RETURN_TYPE2#
-a22o/AltBuilder2#[B]RETURN_TYPE2t
-scala/package.Either#	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala	 	(2k
-a22o/Parser#	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala	 	(2|
-a22o/AltBuilder2#coproduct().	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala
- 
-(2s
-a22o/AltBuilder2#[B]	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala	 	( 2s
-a22o/AltBuilder2#[A]	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala	 	(≤
-a22o/AltBuilder2#foldN().[C]TYPE_PARAMETERP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala ("
-
-isImplicitfalse"M
-uriF/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala"
-endCharacter13"
-endLine21"
-accessEmpty"
-displayNameC"
-startCharacter12"
-isLocalfalse"
-packagea22o"
-isFinalfalse"
-	startLine21"
-isVarfalse"&
-symbola22o/AltBuilder2#foldN().[C]"
-
-isAbstractfalse"
-kindTYPE_PARAMETER*C2
-
-scala/Any#TYPE_UPPER_BOUND2"
-scala/Nothing#TYPE_LOWER_BOUNDñ
-Nlocal22:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala	PARAMETERP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scalaE E("
-
-isImplicitfalse"M
-uriF/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala"
-endCharacter27"
-endLine69"
-accessEmpty"
-displayNamemutState"
-startCharacter19"
-isLocalfalse"	
-package"
-isFinalfalse"
-	startLine69"
-isVarfalse"
-symbollocal22"
-
-isAbstractfalse"
-kind	PARAMETER*mutState2
-a22o/MutState#
-VALUE_TYPE2m
-a22o/MutState#	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scalaE E(%¢
-a22o/AltBuilder3#[A]TYPE_PARAMETERP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala2 2("
-
-isImplicitfalse"M
-uriF/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala"
-endCharacter20"
-endLine50"
-accessEmpty"
-displayNameA"
-startCharacter19"
-isLocalfalse"
-packagea22o"
-isFinalfalse"
-	startLine50"
-isVarfalse"
-symbola22o/AltBuilder3#[A]"
-
-isAbstractfalse"
-kindTYPE_PARAMETER*A2
-
-scala/Any#TYPE_UPPER_BOUND2"
-scala/Nothing#TYPE_LOWER_BOUNDæ
-a22o/AltBuilder2#pb.METHODP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala) (+"
-
-isImplicitfalse"M
-uriF/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala"
-endCharacter43"
-endLine6"
-accessPrivateThisAccess()"
-displayNamepb"
-startCharacter41"
-isLocalfalse"
-packagea22o"
-isFinalfalse"
-	startLine6"
-isVarfalse"
-symbola22o/AltBuilder2#pb."
-
-isAbstractfalse"
-kindMETHOD*pb2k
-a22o/Parser#	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala0 (62s
-a22o/AltBuilder2#[B]	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala7 (8ÿ
-
-.a22o/AltBuilder2.MergeableAltBuilder2#merge().METHODP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala, ,("
-
-isImplicitfalse"M
-uriF/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala"
-endCharacter13"
-endLine44"
-accessPublicAccess()"
-displayNamemerge"
-startCharacter8"
-isLocalfalse"
-packagea22o"
-isFinalfalse"
-	startLine44"
-isVarfalse"8
-symbol.a22o/AltBuilder2.MergeableAltBuilder2#merge()."
-
-isAbstractfalse"
-kindMETHOD*merge2
-a22o/Parser#RETURN_TYPE28
-)a22o/AltBuilder2.MergeableAltBuilder2#[A]RETURN_TYPE2à
-)a22o/AltBuilder2.MergeableAltBuilder2#ab.	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala- -(2w
-scala/Predef.identity().	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala- -(2x
-a22o/AltBuilder2#foldN().	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala-	 -(2à
-)a22o/AltBuilder2.MergeableAltBuilder2#[A]	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala, ,(2k
-a22o/Parser#	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala, ,(2w
-scala/Predef.identity().	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala- -(!Ç
-a22o/AltBuilder3#pa.METHODP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala2 2( "
-
-isImplicitfalse"M
-uriF/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala"
-endCharacter32"
-endLine50"
-accessPrivateThisAccess()"
-displayNamepa"
-startCharacter30"
-isLocalfalse"
-packagea22o"
-isFinalfalse"
-	startLine50"
-isVarfalse"
-symbola22o/AltBuilder3#pa."
-
-isAbstractfalse"
-kindMETHOD*pa2
-a22o/Parser#RETURN_TYPE2#
-a22o/AltBuilder3#[A]RETURN_TYPE2k
-a22o/Parser#	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala2" 2((2s
-a22o/AltBuilder3#[A]	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala2) 2(* 
-a22o/AltBuilder2#foldN().(fb)	PARAMETERP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala ("
-
-isImplicitfalse"M
-uriF/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala"
-endCharacter29"
-endLine21"
-accessEmpty"
-displayNamefb"
-startCharacter27"
-isLocalfalse"
-packagea22o"
-isFinalfalse"
-	startLine21"
-isVarfalse"'
-symbola22o/AltBuilder2#foldN().(fb)"
-
-isAbstractfalse"
-kind	PARAMETER*fb2
-scala/Function1#
-VALUE_TYPE2"
-a22o/AltBuilder2#[B]
-VALUE_TYPE2*
-a22o/AltBuilder2#foldN().[C]
-VALUE_TYPE2s
-a22o/AltBuilder2#[B]	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala ( 2{
-a22o/AltBuilder2#foldN().[C]	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala$ (%∫
-Mlocal4:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scalaMETHODP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala ("
-
-isImplicitfalse"M
-uriF/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala"
-endCharacter18"
-endLine25"
-accessPrivateAccess()"
-displayNamepb π"
-startCharacter15"
-isLocalfalse"	
-package"
-isFinalfalse"
-	startLine25"
-isVarfalse"
-symbollocal4"
-
-isAbstractfalse"
-kindMETHOD*pb π2
-a22o/Parser#RETURN_TYPE2#
-a22o/AltBuilder2#[B]RETURN_TYPE2s
-a22o/AltBuilder2#pb.	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala (†
-a22o/AltBuilder2#[A]TYPE_PARAMETERP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala ("
-
-isImplicitfalse"M
-uriF/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala"
-endCharacter20"
-endLine6"
-accessEmpty"
-displayNameA"
-startCharacter19"
-isLocalfalse"
-packagea22o"
-isFinalfalse"
-	startLine6"
-isVarfalse"
-symbola22o/AltBuilder2#[A]"
-
-isAbstractfalse"
-kindTYPE_PARAMETER*A2
-
-scala/Any#TYPE_UPPER_BOUND2"
-scala/Nothing#TYPE_LOWER_BOUND 
-a22o/AltBuilder2#foldN().(fa)	PARAMETERP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala ("
-
-isImplicitfalse"M
-uriF/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala"
-endCharacter17"
-endLine21"
-accessEmpty"
-displayNamefa"
-startCharacter15"
-isLocalfalse"
-packagea22o"
-isFinalfalse"
-	startLine21"
-isVarfalse"'
-symbola22o/AltBuilder2#foldN().(fa)"
-
-isAbstractfalse"
-kind	PARAMETER*fa2
-scala/Function1#
-VALUE_TYPE2"
-a22o/AltBuilder2#[A]
-VALUE_TYPE2*
-a22o/AltBuilder2#foldN().[C]
-VALUE_TYPE2s
-a22o/AltBuilder2#[A]	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala (2{
-a22o/AltBuilder2#foldN().[C]	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala (Ó
-Nlocal24:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scalaLOCALP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scalaG" G(#"
-
-isImplicitfalse"M
-uriF/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala"
-endCharacter35"
-endLine71"
-accessEmpty"
-displayNamea"
-startCharacter34"
-isLocaltrue"	
-package"
-isFinalfalse"
-	startLine71"
-isVarfalse"
-symbollocal24"
-
-isAbstractfalse"
-kindLOCAL*a2"
-a22o/AltBuilder3#[A]
-VALUE_TYPE2v
-a22o/Parser#mutParse().	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scalaG* G(22≠
-Nlocal22:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scalaG3 G(;2≠
-Nlocal17:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scalaG& G()™
-a22o/AltBuilder3#foldN().METHODP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala; ;("
-
-isImplicitfalse"M
-uriF/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala"
-endCharacter11"
-endLine59"
-accessPublicAccess()"
-displayNamefoldN"
-startCharacter6"
-isLocalfalse"
-packagea22o"
-isFinalfalse"
-	startLine59"
-isVarfalse"#
-symbola22o/AltBuilder3#foldN()."
-
-isAbstractfalse"
-kindMETHOD*foldN21
-a22o/AltBuilder3#foldN().(fa)METHOD_PARAMETER21
-a22o/AltBuilder3#foldN().(fb)METHOD_PARAMETER21
-a22o/AltBuilder3#foldN().(fc)METHOD_PARAMETER2
-a22o/Parser#RETURN_TYPE2+
-a22o/AltBuilder3#foldN().[D]RETURN_TYPE2v
-a22o/Parser#`<init>`().	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala< <(2Æ
-Nlocal18:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala
-DEFINITIONP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala? ?(2k
-a22o/Parser#	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala;4 ;(:2Æ
-Nlocal19:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala
-DEFINITIONP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala@ @(2{
-a22o/AltBuilder3#foldN().[D]	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala;; ;(<2{
-a22o/AltBuilder3#foldN().[D]	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala< <(2k
-a22o/Parser#	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala< <(2Æ
-Nlocal17:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala
-DEFINITIONP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala> >(”
-a22o/AltBuilder2.OBJECTP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala) )("
-
-isImplicitfalse"M
-uriF/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala"
-endCharacter18"
-endLine41"
-accessPublicAccess()"
-displayNameAltBuilder2"
-startCharacter7"
-isLocalfalse"
-packagea22o"
-isFinaltrue"
-	startLine41"
-isVarfalse"
-symbola22o/AltBuilder2."
-
-isAbstractfalse"
-kindOBJECT*AltBuilder225
-&a22o/AltBuilder2.MergeableAltBuilder2#DECLARATION27
-(a22o/AltBuilder2.MergeableAltBuilder2().DECLARATIONÓ
-Nlocal26:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scalaLOCALP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scalaI" I(#"
-
-isImplicitfalse"M
-uriF/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala"
-endCharacter35"
-endLine73"
-accessEmpty"
-displayNamec"
-startCharacter34"
-isLocaltrue"	
-package"
-isFinalfalse"
-	startLine73"
-isVarfalse"
-symbollocal26"
-
-isAbstractfalse"
-kindLOCAL*c2"
-a22o/AltBuilder3#[C]
-VALUE_TYPE2≠
-Nlocal22:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scalaI3 I(;2v
-a22o/Parser#mutParse().	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scalaI* I(22≠
-Nlocal19:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scalaI& I() 
-a22o/AltBuilder3#foldN().(fc)	PARAMETERP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala;' ;()"
-
-isImplicitfalse"M
-uriF/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala"
-endCharacter41"
-endLine59"
-accessEmpty"
-displayNamefc"
-startCharacter39"
-isLocalfalse"
-packagea22o"
-isFinalfalse"
-	startLine59"
-isVarfalse"'
-symbola22o/AltBuilder3#foldN().(fc)"
-
-isAbstractfalse"
-kind	PARAMETER*fc2
-scala/Function1#
-VALUE_TYPE2"
-a22o/AltBuilder3#[C]
-VALUE_TYPE2*
-a22o/AltBuilder3#foldN().[D]
-VALUE_TYPE2s
-a22o/AltBuilder3#[C]	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala;+ ;(,2{
-a22o/AltBuilder3#foldN().[D]	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala;0 ;(1
-1a22o/AltBuilder2.MergeableAltBuilder2#`<init>`().CONSTRUCTORP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala+( +(("
-
-isImplicitfalse"M
-uriF/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala"
-endCharacter40"
-endLine43"
-accessPublicAccess()"
-displayName<init>"
-startCharacter40"
-isLocalfalse"
-packagea22o"
-isFinalfalse"
-	startLine43"
-isVarfalse";
-symbol1a22o/AltBuilder2.MergeableAltBuilder2#`<init>`()."
-
-isAbstractfalse"
-kindCONSTRUCTOR*<init>2I
-5a22o/AltBuilder2.MergeableAltBuilder2#`<init>`().(ab)METHOD_PARAMETER∫
-Mlocal3:/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scalaMETHODP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala ("
-
-isImplicitfalse"M
-uriF/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala"
-endCharacter18"
-endLine24"
-accessPrivateAccess()"
-displayNamepa π"
-startCharacter15"
-isLocalfalse"	
-package"
-isFinalfalse"
-	startLine24"
-isVarfalse"
-symbollocal3"
-
-isAbstractfalse"
-kindMETHOD*pa π2
-a22o/Parser#RETURN_TYPE2#
-a22o/AltBuilder2#[A]RETURN_TYPE2s
-a22o/AltBuilder2#pa.	REFERENCEP
-F/Users/rnorris/Scala/a22o/modules/core/src/main/scala/AltBuilder.scala (

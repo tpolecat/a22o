@@ -59,9 +59,9 @@ take(10).consumed
 take(10).peek
 take(10).as("hi")
 
-take(10).validate("long")(_.length > 20)
-take(10).validate("long")(_.length > 20).void
-take(10).validate("long")(_.length > 20).void.void
+take(10).filter(_.length > 20).parse("1qeuydteuytdqtuy")
+take(10).filter(_.length > 20).void
+take(10).filter(_.length > 20).void.void
 
 // consume and yield whatever `pa` does, if possible (yields an Option)
 take(10).opt

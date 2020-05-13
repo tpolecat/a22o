@@ -36,8 +36,8 @@ lazy val commonSettings = Seq(
 
   // Let's use MUnit everywhere
   libraryDependencies ++= Seq(
-    "org.scalameta" %% "munit"            % "0.7.3" % Test,
-    "org.scalameta" %% "munit-scalacheck" % "0.7.3" % Test,
+    "org.scalameta" %% "munit"            % "0.7.6" % Test,
+    "org.scalameta" %% "munit-scalacheck" % "0.7.6" % Test,
   ),
   testFrameworks += new TestFramework("munit.Framework"),
 
@@ -65,7 +65,10 @@ lazy val core = project
     name := "a22o-core",
     description := "Like atto, but faster.",
     publish / skip := false,
-    scalacOptions -= "-Xfatal-warnings"
+    scalacOptions -= "-Xfatal-warnings",
+    libraryDependencies ++= Seq(
+      "org.typelevel" %% "cats-core" % "2.1.1" % "test",
+    ),
   )
 
 lazy val bench = project

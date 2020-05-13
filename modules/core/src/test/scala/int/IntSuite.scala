@@ -2,14 +2,14 @@
 // This software is licensed under the MIT License (MIT).
 // For more information see LICENSE or https://opensource.org/licenses/MIT
 
-package test
-package parser
+package a22o
+package int
 
 import a22o.parser.int._
 import munit.ScalaCheckSuite
 import org.scalacheck.Prop._
 
-class IntegerSuite extends ScalaCheckSuite {
+class IntSuite extends ScalaCheckSuite {
 
   override def scalaCheckTestParameters =
     super.scalaCheckTestParameters
@@ -32,7 +32,7 @@ class IntegerSuite extends ScalaCheckSuite {
     forAll { (n: Long) =>
       val z = int.parse(n.toString)
       z match {
-        case (_, Right(m)) => assert(n == m)
+        case (_, Right(m)) => assertEquals(n.toInt, m)
         case (_, Left(s))  =>
           assert(n < Int.MinValue.toLong || n > Int.MaxValue.toLong)
           assert(s == "Integer over/underflow.")
