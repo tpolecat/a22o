@@ -14,7 +14,7 @@ object CharParser {
 
     /** @group char */
     def accept(p: Char => Boolean): Parser[Char] =
-      new Parser[Char] {
+      new Parser[Char]("accept(...)") {
         val predicateError = s"$this: predicate failed"
         val eofError = s"$this: end of input"
         def mutParse(mutState: MutState): Char = {
@@ -32,18 +32,18 @@ object CharParser {
             dummy
           }
         }
-      } .named("accept(...)", Some("accept(...).void"))
+      }
 
     /** @group char */
-    val digit      = accept(_.isDigit).named("digit", Some("digit.void"))
+    val digit      = accept(_.isDigit).named("digit")
     /** @group char */
-    val letter     = accept(_.isLetter).named("letter", Some("letter.void"))
+    val letter     = accept(_.isLetter).named("letter")
     /** @group char */
-    val whitespace = accept(_.isWhitespace).named("whitespace", Some("whitespace.void"))
+    val whitespace = accept(_.isWhitespace).named("whitespace")
 
     /** @group char */
     def char(c: Char): Parser[Char] =
-      accept(_ == c).named(s"char($c)", Some(s"char($c)"))
+      accept(_ == c).named(s"char($c)")
 
     /** @group char */
     def anyChar: Parser[Char] =
@@ -60,7 +60,7 @@ object CharParser {
       // we can do a binary search
       val csʹ = cs.distinct.sorted[Char].toArray[Char]
       val name = s"charIn(${csʹ.mkString})"
-      accept(Arrays.binarySearch(csʹ, _) >= 0).named(name, Some(s"$name.void"))
+      accept(Arrays.binarySearch(csʹ, _) >= 0).named(name)
     }
 
   }

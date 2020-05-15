@@ -53,7 +53,7 @@ final class AccumBuilder[+A, B](
 
 
   // fold that lets you look at the delimiter
-  def foldSep[T](z: T)(inj: A => T, ind: B => (T, A) => T): Parser[T] =
+  def foldSep[T](z: T)(inj: A => T)(ind: B => (T, A) => T): Parser[T] =
     new Parser[T] {
       override lazy val void: Parser[Unit] = outer.void
       def mutParse(mutState: MutState): T = {
@@ -110,10 +110,10 @@ final class AccumBuilder[+A, B](
     }
 
   def foldSepA[AA >: A](z: AA)(f: B => (AA, A) => AA): Parser[AA] =
-    foldSep(z)(identity, f)
+    foldSep(z)(identity)(f)
 
   def foldLeft[T](z: T)(f: (T, A) => T): Parser[T] =
-    copy(sepBy = sepBy.void).foldSep(z)(f(z, _), _ => f)
+    copy(sepBy = sepBy.void).foldSep(z)(f(z, _))(_ => f)
 
 }
 
@@ -123,7 +123,7 @@ object AccumBuilder {
 
     def reduceSepA(f: B => (A, A) => A): Parser[A] = {
       assert(self.min >= 1, s"reduceSepA requires that min (${self.min}) be positive.")
-      self.foldSep(null.asInstanceOf[A])(identity, f)
+      self.foldSep(null.asInstanceOf[A])(identity)(f)
     }
 
   }

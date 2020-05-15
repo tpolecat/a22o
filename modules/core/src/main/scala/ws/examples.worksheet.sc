@@ -1,6 +1,5 @@
 import a22o._
 import a22o.parser.all._
-import cats.implicits._
 
 anyChar.parse("")
 anyChar.parse("foobar")
@@ -44,10 +43,10 @@ m.parse("35")
 ((digit <~ letter) ~ digit).tupled.parse("1a2")
 ((digit ~> letter) ~ digit).tupled.parse("1a2")
 
-(token(digit) ~ digit).tupled.parse("1 2x")
+(digit.token ~ digit).tupled.parse("1 2x")
 
-parens(digit).parse("(1)abc")
-parens(digit).parse("(  1 )abc")
+digit.parens.parse("(1)abc")
+digit.parens.parse("(  1 )abc")
 
 int.parse("")
 int.parse("x")
@@ -62,11 +61,11 @@ int.parse((Int.MinValue.toLong - 1L).toString)
 // TODO: sepBy, sepBy1
 lazy val expr:   Parser[Int] = ((sumand ~ char('+').token ~ sumand).mapN { (a, _, b) => a + b } | sumand).merge
 lazy val sumand: Parser[Int] = ((factor ~ char('*').token ~ factor).mapN { (a, _, b) => a * b } | factor).merge
-lazy val factor: Parser[Int] = (int.token | parens(expr).token).merge
+lazy val factor: Parser[Int] = (int.token | expr.parens.token).merge
 
 expr.parse("(9 * (8 * (7 + 1))) + 3")
 
-(int.token ~ int).text.parse("42 44")
+(int.token ~ int).inputText.parse("42 44")
 
 int.parse("+")
 int.parse("-")

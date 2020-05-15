@@ -6,6 +6,15 @@ import a22o.arb._
 
 class PeekSuite extends ParserSuite {
 
+  property("p.peek is the same as p but consumes no input") {
+    forAll(parserWithInput) { case (p, s0) =>
+      val ( _, r1) = p.parse(s0)
+      val (s2, r2) = p.peek.parse(s0)
+      assertEquals(r1, r2)
+      assertEquals(s2, s0)
+    }
+  }
+
   property("p.peek <~ string(s) sameParserAs p") {
     forAll(parserWithInput) { case (p, s) =>
       val pʹ = p.peek <~ Parser.string(s)

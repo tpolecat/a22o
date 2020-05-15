@@ -60,7 +60,7 @@ object MetaParser {
      * An equivalent parser that discards its result and instead yields the input that was consumed.
      * @group meta
      */
-    final def inputText: Parser[String] =
+    def inputText: Parser[String] =
       new Parser[String](s"$outer.text") {
         val paʹ = outer.void
         override lazy val void = paʹ

@@ -12,53 +12,53 @@ object BaseParser {
   object Constructors extends Constructors
   trait Constructors {
 
+    /** Const parsers consume no input and never fail. */
+    private final class ConstParser[A](a: A, name: String) extends Parser[A](name) {
+      @inline override def as[B](b: B): Parser[B] = const(b)
+      @inline override def consumed: Parser[Int] = const(0)
+      @inline override def flatMap[B](f: A => Parser[B]): Parser[B] = f(a)
+      @inline override def inputText: Parser[String] = const("")
+      @inline override def map[B](f: A => B): Parser[B] = const(f(a))
+      @inline override def onError[B >: A](b: B): Parser[B] = this
+      @inline override def opt: Parser[Option[A]] = const(Some(a))
+      @inline override def peek: Parser[A] = this
+      @inline override def void: Parser[Unit] = unit
+      @inline override def mutParse(mutState: MutState): A = a
+    }
+
     /** @group base */
     val unit: Parser[Unit] =
-      const(()).named("unit")
+      new ConstParser((), "unit")
 
     /** @group base */
     def const[A](a: A): Parser[A] =
-      new Parser[A](s"const($a)") {
-        override lazy val void: Parser[Unit] = unit
-        override lazy val peek: Parser[A] = this
-        override lazy val consumed: Parser[Int] = const(0)
-        def mutParse(mutState: MutState): A = a
-      }
+      new ConstParser[A](a, s"const($a)")
 
     /** @group base */
     def fail[A](message: String): Parser[A] =
       new Parser[A]("fail(...)") {
-        override lazy val void: Parser[Unit] = fail(message)
-        final override def peek: Parser[A] = this
-        def mutParse(mutState: MutState): A = {
+        @inline def cast[B] = this.asInstanceOf[Parser[B]]
+        @inline override def as[B](b: B): Parser[B] = cast
+        @inline override def consumed: Parser[Int] = cast
+        @inline override def flatMap[B](f: A => Parser[B]): Parser[B] = cast
+        @inline override def inputText: Parser[String] = cast
+        @inline override def map[B](f: A => B): Parser[B] = cast
+        @inline override def onError[B >: A](b: B): Parser[B] = const(b)
+        @inline override def opt: Parser[Option[A]] = cast
+        @inline override def peek: Parser[A] = cast
+        @inline override def void: Parser[Unit] = cast
+        @inline override def mutParse(mutState: MutState): A = {
           mutState.setError(message)
           dummy
         }
       }
 
-    /** @group text */
-    def take(n: Int): Parser[String] =
-      new Parser[String](s"take($n)") {
-        override lazy val void = skip(n)
-        override def consumed: Parser[Int] = void.consumed
-        def mutParse(mutState: MutState): String =
-          if (n < 0) {
-            mutState.setError("take: negative length")
-            dummy
-          } else if (mutState.remaining >= n) {
-            val s = mutState.consume(n)
-            s
-          } else {
-            mutState.setError("take: insufficient input")
-            dummy
-          }
-      }
-
     /** @group base */
     def skip(n: Int): Parser[Unit] =
-      new Parser[Unit](s"skip($n)") {
-        override lazy val void = this
-        def mutParse(mutState: MutState): Unit =
+      if (n == 0) unit
+      else new Parser[Unit](s"skip($n)") {
+        @inline override def void = this
+        @inline override def mutParse(mutState: MutState): Unit =
           if (n < 0) {
             mutState.setError("skip: negative length")
             dummy
@@ -76,15 +76,24 @@ object BaseParser {
   trait Combinators[+A] { outer: Parser[A] =>
 
     /**
+     * An equivalent parser with the given name.
+     * @group meta
+     */
+    def named(name: String): Parser[A] =
+      new Parser[A](name) {
+        @inline override def mutParse(mutState: MutState): A =
+          outer.mutParse(mutState)
+      }
+
+    /**
      * An equivalent parser that discards its result. This is equationally the same as `.map(_ => ())`
      * but is more efficient because implementations can often avoid computing results at all.
      * @group transformation
      */
-    lazy val void: Parser[Unit] =
+    def void: Parser[Unit] =
       new Parser[Unit](s"$outer.void") {
-        override def consumed: Parser[Int] = outer.consumed
-        override lazy val void: Parser[Unit] = this
-        def mutParse(mutState: MutState): Unit = {
+        @inline override def void: Parser[Unit] = this
+        @inline override def mutParse(mutState: MutState): Unit = {
           outer.mutParse(mutState)
           if (mutState.isOk) ()
           else dummy
@@ -97,7 +106,7 @@ object BaseParser {
      * result.
      * @group transformation
      */
-    final def map[B](f: A => B): Parser[B] =
+    def map[B](f: A => B): Parser[B] =
       new Parser[B] {
         override lazy val void = outer.void // we can throw away the map
         def mutParse(mutState: MutState): B = {
@@ -112,7 +121,7 @@ object BaseParser {
      * supplied predicate `f` returns `false`.
      * @group error handling
      */
-    final def filter(f: A => Boolean): Parser[A] =
+    def filter(f: A => Boolean): Parser[A] =
       new Parser[A](s"$this.filter") {
         val err = s"${outer.toString}: filter failed"
         def mutParse(mutState: MutState): A = {
@@ -135,7 +144,7 @@ object BaseParser {
      * result on success.
      * @group error handling
      */
-    final def fold[B](z: => B)(f: A => B): Parser[B] =
+    def fold[B](z: => B)(f: A => B): Parser[B] =
       new Parser[B](s"$outer.fold(...)(...)") {
         lazy val zʹ = z
         override lazy val void: Parser[Unit] = outer.void.fold(())(identity)
@@ -173,7 +182,7 @@ object BaseParser {
      * to construct parsers in the body of `f` if it can be avoided. Prefer `select` when possible.
      * @group branching
      */
-    final def flatMap[B](f: A => Parser[B]): Parser[B] =
+    def flatMap[B](f: A => Parser[B]): Parser[B] =
       new Parser[B] {
         override lazy val void = outer.flatMap(a => f(a).void)
         def mutParse(mutState: MutState): B = {
@@ -189,8 +198,8 @@ object BaseParser {
     /**
      * @group error handling
      */
-    def onError[B >: A](a: => B): Parser[B] =
-      this.fold(a)(identity)
+    def onError[B >: A](b: B): Parser[B] =
+      this.fold(b)(identity)
 
     /** @group sequencing */
     def <~[B](pb: => Parser[B]): Parser[A] =

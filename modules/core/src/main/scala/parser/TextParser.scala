@@ -8,15 +8,32 @@ package parser
 import java.util.Arrays
 
 object TextParser {
-  import char._
+  import base._, char._
 
   trait Constructors {
+
+    /** @group text */
+    def take(n: Int): Parser[String] =
+      new Parser[String](s"take($n)") {
+        @inline override def void = skip(n)
+        @inline override def mutParse(mutState: MutState): String =
+          if (n < 0) {
+            mutState.setError("take: negative length")
+            dummy
+          } else if (mutState.remaining >= n) {
+            val s = mutState.consume(n)
+            s
+          } else {
+            mutState.setError("take: insufficient input")
+            dummy
+          }
+      }
 
     /**
      * @group text
      */
     def string(s: String): Parser[String] =
-      new Parser[String] {
+      new Parser[String](s"string($s)") {
         override lazy val void = base.skip(s.length)
         def mutParse(mutState: MutState): String =
           if (mutState.startsWith(s)) {

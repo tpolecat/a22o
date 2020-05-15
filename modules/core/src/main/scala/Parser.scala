@@ -20,7 +20,8 @@ abstract class Parser[+A] private[a22o] (override val toString: String = "<parse
      with MetaParser.Combinators[A]
      with TextParser.Combinators[A] { outer =>
 
-  final def accept(input: String): Boolean = {
+  // for allocation testing
+  private[a22o] final def accept(input: String): Boolean = {
     val s = new MutState(input)
     mutParse(s)
     s.isOk
@@ -72,20 +73,8 @@ abstract class Parser[+A] private[a22o] (override val toString: String = "<parse
     else throw new ParseException(s.getError, s.getPoint)
   }
 
-  /**
-   * An equivalent parser with the given name (and optionally a given name for its `void`
-   * equivalent).
-   * @group meta
-   */
-  final def named(name: String, voidName: Option[String] = None): Parser[A] =
-    new Parser[A](name) {
-      override lazy val void: Parser[Unit] = voidName.fold(outer.void)(outer.void.named(_))
-      override lazy val peek: Parser[A] = outer.peek
-      def mutParse(mutState: MutState): A = outer.mutParse(mutState)
-    }
-
   // grim
-  protected final val dummy: A =
+  protected[this] final val dummy: A =
     null.asInstanceOf[A]
 
   // the contract is: on entry isError is false, offset is correct
