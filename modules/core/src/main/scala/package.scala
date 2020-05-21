@@ -8,4 +8,6 @@ package object a22o {
   implicit def charToParser(c: Char): Parser[Char] = Parser.char(c)
   implicit def stringToParser(s: String): Parser[String] = Parser.string(s)
 
+  type MutState = ParseState
+
 }

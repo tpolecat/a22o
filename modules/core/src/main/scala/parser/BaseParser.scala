@@ -100,6 +100,16 @@ object BaseParser {
         }
       }
 
+    def orNot: Parser[Unit] =
+      new Parser[Unit](s"$outer.orNot") {
+        @inline override def void: Parser[Unit] = this
+        @inline override def mutParse(mutState: MutState): Unit = {
+          outer.mutParse(mutState)
+          if (mutState.isError)
+            mutState.setError(null)
+        }
+      }
+
     /**
      * An equivalent parser that applies `f` to its computed result. Prefer `.as` for constant
      * functions and `.void` for the unit function as these can often avoid computing the underlying
@@ -210,12 +220,12 @@ object BaseParser {
       (this.void ~ pb).mapN((_, b) => b).named(s"($this ~> ...)")
 
     /** @group repetition */
-    def many: AccumBuilder[A, Unit] =
-      new AccumBuilder(this, 0, Int.MaxValue, Constructors.unit)
+    def many: AccumBuilder0[A] =
+      new AccumBuilder0(this, None, None)
 
     /** @group repetition */
-    def many1: AccumBuilder[A, Unit] =
-      new AccumBuilder(this, 1, Int.MaxValue, Constructors.unit)
+    def many1: AccumBuilder0[A] =
+      new AccumBuilder0(this, Some(1), None)
 
     /** @group sequencing */
     def ~[B](pb: => Parser[B]) =

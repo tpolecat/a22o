@@ -11,7 +11,7 @@ class ApBuilder2[+A, +B](pa: Parser[A], pb: => Parser[B]) {
     new ApBuilder3(pa, pb, pc)
 
   def void: Parser[Unit] =
-    mapN((_, _) => ())
+    new ApBuilder2(pa.void, pb.void).mapN((_, _) => ())
 
   def inputText: Parser[String] =
     void.inputText
@@ -30,8 +30,8 @@ class ApBuilder2[+A, +B](pa: Parser[A], pb: => Parser[B]) {
         pbʹ.void
 
       def mutParse(mutState: MutState): C = {
-        val a = paʹ.mutParse(mutState); if (mutState.isErrored) return dummy
-        val b = pbʹ.mutParse(mutState); if (mutState.isErrored) return dummy
+        val a = paʹ.mutParse(mutState); if (mutState.isError) return dummy
+        val b = pbʹ.mutParse(mutState); if (mutState.isError) return dummy
         f(a, b)
       }
 
@@ -40,6 +40,9 @@ class ApBuilder2[+A, +B](pa: Parser[A], pb: => Parser[B]) {
 }
 
 class ApBuilder3[+A, +B, +C](pa: Parser[A], pb: => Parser[B], pc: => Parser[C]) {
+
+  def void: Parser[Unit] =
+    new ApBuilder3(pa.void, pb.void, pc.void).mapN((_, _, _) => ())
 
   def ~[D](pd: => Parser[D]): ApBuilder4[A, B, C, D] =
     new ApBuilder4(pa, pb, pc, pd)
@@ -60,9 +63,9 @@ class ApBuilder3[+A, +B, +C](pa: Parser[A], pb: => Parser[B], pc: => Parser[C]) 
         pcʹ.void
 
       def mutParse(mutState: MutState): D = {
-        val a = paʹ.mutParse(mutState); if (mutState.isErrored) return dummy
-        val b = pbʹ.mutParse(mutState); if (mutState.isErrored) return dummy
-        val c = pcʹ.mutParse(mutState); if (mutState.isErrored) return dummy
+        val a = paʹ.mutParse(mutState); if (mutState.isError) return dummy
+        val b = pbʹ.mutParse(mutState); if (mutState.isError) return dummy
+        val c = pcʹ.mutParse(mutState); if (mutState.isError) return dummy
         f(a, b, c)
       }
 
@@ -70,6 +73,15 @@ class ApBuilder3[+A, +B, +C](pa: Parser[A], pb: => Parser[B], pc: => Parser[C]) 
 }
 
 class ApBuilder4[+A, +B, +C, +D](pa: Parser[A], pb: => Parser[B], pc: => Parser[C], pd: => Parser[D]) {
+
+  def void: Parser[Unit] =
+    new ApBuilder4(pa.void, pb.void, pc.void, pd.void).mapN((_, _, _, _) => ())
+
+  def ~[E](pe: => Parser[E]): ApBuilder5[A, B, C, D, E] =
+    new ApBuilder5(pa, pb, pc, pd, pe)
+
+  def inputText: Parser[String] =
+    void.inputText
 
   def tupled: Parser[(A, B, C, D)] =
     mapN(Tuple4.apply)
@@ -89,11 +101,51 @@ class ApBuilder4[+A, +B, +C, +D](pa: Parser[A], pb: => Parser[B], pc: => Parser[
         pdʹ.void
 
       def mutParse(mutState: MutState): E = {
-        val a = paʹ.mutParse(mutState); if (mutState.isErrored) return dummy
-        val b = pbʹ.mutParse(mutState); if (mutState.isErrored) return dummy
-        val c = pcʹ.mutParse(mutState); if (mutState.isErrored) return dummy
-        val d = pdʹ.mutParse(mutState); if (mutState.isErrored) return dummy
+        val a = paʹ.mutParse(mutState); if (mutState.isError) return dummy
+        val b = pbʹ.mutParse(mutState); if (mutState.isError) return dummy
+        val c = pcʹ.mutParse(mutState); if (mutState.isError) return dummy
+        val d = pdʹ.mutParse(mutState); if (mutState.isError) return dummy
         f(a, b, c, d)
+      }
+
+    }
+
+}
+
+class ApBuilder5[+A, +B, +C, +D, +E](pa: Parser[A], pb: => Parser[B], pc: => Parser[C], pd: => Parser[D], pe: Parser[E]) {
+
+  def void: Parser[Unit] =
+    new ApBuilder5(pa.void, pb.void, pc.void, pd.void, pe.void).mapN((_, _, _, _, _) => ())
+
+  def inputText: Parser[String] =
+    void.inputText
+
+  def tupled: Parser[(A, B, C, D, E)] =
+    mapN(Tuple5.apply)
+
+  def mapN[F](f: (A, B, C, D, E) => F): Parser[F] =
+    new Parser[F] {
+
+           val paʹ = pa
+      lazy val pbʹ = pb
+      lazy val pcʹ = pc
+      lazy val pdʹ = pd
+      lazy val peʹ = pe
+
+      override lazy val void: Parser[Unit] =
+        paʹ.void ~>
+        pbʹ.void ~>
+        pcʹ.void ~>
+        pdʹ.void ~>
+        peʹ.void
+
+      def mutParse(mutState: MutState): F = {
+        val a = paʹ.mutParse(mutState); if (mutState.isError) return dummy
+        val b = pbʹ.mutParse(mutState); if (mutState.isError) return dummy
+        val c = pcʹ.mutParse(mutState); if (mutState.isError) return dummy
+        val d = pdʹ.mutParse(mutState); if (mutState.isError) return dummy
+        val e = peʹ.mutParse(mutState); if (mutState.isError) return dummy
+        f(a, b, c, d, e)
       }
 
     }

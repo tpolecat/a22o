@@ -3,10 +3,10 @@
 // For more information see LICENSE or https://opensource.org/licenses/MIT
 
 package a22o
+
 package builder
 
 import scala.collection.Factory
-// import cats.Monoid
 
 final class AccumBuilder[+A, B](
   private val pa:    Parser[A],
@@ -35,26 +35,22 @@ final class AccumBuilder[+A, B](
   def sepBy[D](p: Parser[D]): AccumBuilder[A, D] = copy(sepBy = p)
 
   // Eliminators
-  def as[T](fact: Factory[A, T]): Parser[T] =
-    foldLeft(fact.newBuilder)(_ += _).map(_.result)
+  def to[T](fact: Factory[A, T]): Parser[T] = {
+    // This doesn't work because we're capturing the factory and re-using it!
+    // foldLeft(fact.newBuilder)(_ += _).map(_.result)
+    foldLeft(List.empty[A])((t, h) => h :: t).map(as => fact.fromSpecific(as.reverse))
+  }
 
-  def void: Parser[Unit] =
+  @inline def void: Parser[Unit] =
     copy(pa = pa.void).foldLeft(())((_, _) => ())
 
-  def inputText: Parser[String] =
+  @inline def inputText: Parser[String] =
     void.inputText
-
-  // // move to cats module
-  // def foldMap[B](f: A => B)(implicit ev: Monoid[B]): Parser[B] =
-  //   foldLeft(ev.empty)((b, a) => ev.combine(b, f(a)))
-
-  // def fold(implicit ev: Monoid[A]): Parser[A] =
-  //   foldMap(identity)
-
 
   // fold that lets you look at the delimiter
   def foldSep[T](z: T)(inj: A => T)(ind: B => (T, A) => T): Parser[T] =
     new Parser[T] {
+      val atLeastOne = min > 0
       override lazy val void: Parser[Unit] = outer.void
       def mutParse(mutState: MutState): T = {
 
@@ -72,16 +68,16 @@ final class AccumBuilder[+A, B](
         } else {
           mutState.setPoint(p)
           mutState.setError("no matches")
+          if (atLeastOne) return dummy // micro-optimization, really helps!
         }
 
         // TODO: productivity checks
 
         // subsequent sequence of delim + elem
-        while (count < max && mutState.isOk) {
-
+        while (mutState.isOk && count < max) {
           val p = mutState.getPoint
           val b = sepBy.mutParse(mutState)
-          if (mutState.isErrored) {
+          if (mutState.isError) {
             mutState.setPoint(p)
             mutState.setError("expected delimiter")
           } else {
@@ -109,10 +105,10 @@ final class AccumBuilder[+A, B](
       }
     }
 
-  def foldSepA[AA >: A](z: AA)(f: B => (AA, A) => AA): Parser[AA] =
+  @inline def foldSepA[AA >: A](z: AA)(f: B => (AA, A) => AA): Parser[AA] =
     foldSep(z)(identity)(f)
 
-  def foldLeft[T](z: T)(f: (T, A) => T): Parser[T] =
+  @inline def foldLeft[T](z: T)(f: (T, A) => T): Parser[T] =
     copy(sepBy = sepBy.void).foldSep(z)(f(z, _))(_ => f)
 
 }
@@ -121,7 +117,7 @@ object AccumBuilder {
 
   implicit class InvariantOps[A, B](self: AccumBuilder[A, B]) {
 
-    def reduceSepA(f: B => (A, A) => A): Parser[A] = {
+    @inline def reduceSepA(f: B => (A, A) => A): Parser[A] = {
       assert(self.min >= 1, s"reduceSepA requires that min (${self.min}) be positive.")
       self.foldSep(null.asInstanceOf[A])(identity)(f)
     }

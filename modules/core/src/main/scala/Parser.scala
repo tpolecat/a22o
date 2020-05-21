@@ -15,38 +15,29 @@ object Parser
      with MetaParser.Constructors
      with TextParser.Constructors
 
-abstract class Parser[+A] private[a22o] (override val toString: String = "<parser>")
+abstract class Parser[@specialized +A] private[a22o] (override val toString: String = "<parser>")
   extends BaseParser.Combinators[A]
      with MetaParser.Combinators[A]
      with TextParser.Combinators[A] { outer =>
 
-  // for allocation testing
-  private[a22o] final def accept(input: String): Boolean = {
-    val s = new MutState(input)
-    mutParse(s)
-    s.isOk
-  }
-
   /**
-   * Attempt to parse the given input, returning the unconsumed remainder and either an error
-   * or the computed result.
+   * Attempt to parse the given input, returning a result containing the unconsumed remainder and
+   * either an error or the computed result.
    * @group eliminators
    */
-  final def parse(input: String): (String, Either[String, A]) = {
-    val s = new MutState(input)
+  final def parse(input: String): Result[A] = {
+    val s = ParseState(input)
     val a = mutParse(s)
-    val r = s.remainingInput
-    (r, Either.cond(s.isOk, a, s.getError))
+    s.result(a)
   }
+
 
   /**
    * Attempt to parse the given input completely, returning either an error or the computed result.
    * @group eliminators
    */
-  final def parseAll(input: String): Either[String, A] = {
-    val s = new MutState(input)
-    val a = (this <~ endOfInput) mutParse(s)
-    Either.cond(s.isOk, a, s.getError)
+  final def parseAll(input: String): Result[A] = {
+    (this <~ endOfInput).parse(input)
   }
 
   /**
@@ -54,24 +45,19 @@ abstract class Parser[+A] private[a22o] (override val toString: String = "<parse
    * or raising a `ParseException` on failure.
    * @group eliminators
    */
-  final def unsafeParse(input: String): (String, A) = {
-    val s = new MutState(input)
-    val a = mutParse(s)
-    if (s.isOk) (s.remainingInput, a)
-    else throw new ParseException(s.getError, s.getPoint)
-  }
+  final def unsafeParse(input: String): A =
+    parse(input).fold(
+      e => throw new ParseException(e, 0), // TODO: position!
+      identity
+    )
 
   /**
    * Attempt to parse the given input completely, returning the computed result, or raising a
    * `ParseException` ib failure.
    * @group eliminators
    */
-  final def unsafeParseAll(input: String): A = {
-    val s = new MutState(input)
-    val a = (this <~ endOfInput) mutParse(s)
-    if (s.isOk) a
-    else throw new ParseException(s.getError, s.getPoint)
-  }
+  final def unsafeParseAll(input: String): A =
+    (this <~ endOfInput).unsafeParse(input)
 
   // grim
   protected[this] final val dummy: A =

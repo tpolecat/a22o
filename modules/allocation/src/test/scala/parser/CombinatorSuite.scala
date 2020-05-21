@@ -57,7 +57,7 @@ class CombinatorSuite extends AllocationSuite {
   }
 
   test("many (builder + (components + ::) * N)") {
-    val p = digit.many.as(List)
+    val p = digit.many.to(List)
     p.assertAllocation0("12345")(
       "scala/collection/mutable/ListBuffer" -> 1,
       "scala/collection/immutable/$colon$colon" -> 10, // why??

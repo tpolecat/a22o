@@ -11,6 +11,7 @@ object CharParser {
 
   object Constructors extends Constructors
   trait Constructors {
+    import BaseParser.Constructors.fail
 
     /** @group char */
     def accept(p: Char => Boolean): Parser[Char] =
@@ -56,12 +57,22 @@ object CharParser {
 
     // Seq lets us pass a string or sequence
     /** @group char */
-    def charIn(cs: Seq[Char]): Parser[Char] = {
-      // we can do a binary search
-      val csʹ = cs.distinct.sorted[Char].toArray[Char]
-      val name = s"charIn(${csʹ.mkString})"
-      accept(Arrays.binarySearch(csʹ, _) >= 0).named(name)
-    }
+    def charIn(cs: Seq[Char]): Parser[Char] =
+      cs.length match {
+        case 0 => fail("charIn: no characters specified")
+        case 1 => char(cs(0))
+        case 2 => {
+          val c0 = cs(0)
+          val c1 = cs(1)
+          accept(c => c == c0 || c == c1)
+        }
+        case _ =>
+          // we can do a binary search
+          // N.B. specializing small cases doesn't help
+          val csʹ = cs.distinct.sorted[Char].toArray[Char]
+          val name = s"charIn(${csʹ.mkString})"
+          accept(Arrays.binarySearch(csʹ, _) >= 0).named(name)
+      }
 
   }
 

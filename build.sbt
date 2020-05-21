@@ -67,7 +67,14 @@ lazy val core = project
     publish / skip := false,
     scalacOptions -= "-Xfatal-warnings",
     libraryDependencies ++= Seq(
+      "org.apache.directory.studio" % "org.apache.commons.pool" % "1.6",
       "org.typelevel" %% "cats-core" % "2.1.1" % "test",
+    ),
+    scalacOptions ++= Seq(
+      "-opt:l:inline",
+      "-opt-inline-from:<sources>",
+      "-opt:l:method",
+      "-opt-warnings",
     ),
   )
 
@@ -77,6 +84,12 @@ lazy val bench = project
   .enablePlugins(JmhPlugin)
   .dependsOn(core)
   .settings(commonSettings)
+  .settings {
+    libraryDependencies ++= Seq(
+      "org.tpolecat" %% "atto-core" % "0.8.0",
+      "com.lihaoyi"  %% "fastparse" % "2.2.2",
+    )
+  }
 
 
 val allocationInstrumentationModule = "com.google.code.java-allocation-instrumenter" % "java-allocation-instrumenter" % "3.1.0"

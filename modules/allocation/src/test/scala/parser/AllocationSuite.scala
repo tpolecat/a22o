@@ -45,14 +45,19 @@ trait AllocationSuite extends FunSuite {
       parseWithAllocationAssertions(pa.void, successCase, true)()
     }
 
+    def assertAllocation0NoVoid(successCase: String)(alloc: (String, Int)*): Unit = {
+      parseWithAllocationAssertions(pa, successCase, true)(alloc: _*)
+      // parseWithAllocationAssertions(pa.void, successCase, true)()
+    }
+
   }
 
   private def parseWithAllocationAssertions(pa: Parser[_], s: String, success: Boolean)(alloc: (String, Int)*): Unit = {
     val expected = alloc.toList.foldMap { case (k, v) => Map(k -> v) }
     var map: Map[String, Int] =
       Map(
-        // these are always allocated
-        "a22o/MutState" -> -1,
+        // always allocated
+        "a22o/ParseState$ParseStateImpl" -> -1,
         "com/google/monitoring/runtime/instrumentation/Sampler" -> -1,
       )
     val sampler = new Sampler {
@@ -63,9 +68,10 @@ trait AllocationSuite extends FunSuite {
     }
     pa.parse(s) // get classloading out of the way
     AllocationRecorder.addSampler(sampler)
-    val ok = pa.accept(s)
+    val r = pa.parse(s)
     AllocationRecorder.removeSampler(sampler)
-    assertEquals(ok, success)
+    // println(s"map is $map")
+    assertEquals(r.isOk, success)
     assertEquals(map.filter { case (_, v) => v > 0 }, expected)
   }
 

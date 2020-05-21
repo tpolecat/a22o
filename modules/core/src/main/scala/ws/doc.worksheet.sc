@@ -1,4 +1,3 @@
-
 import a22o._, A22o._
 
 
@@ -24,4 +23,7 @@ take(10).void
 
 
 skip(0)
-skip(1).parse("\u0000")
+take(1).parse2("\u0000").toOption
+
+(int ~ take(2)).tupled.parse2("123abc")
+

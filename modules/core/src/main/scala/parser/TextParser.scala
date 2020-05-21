@@ -12,6 +12,31 @@ object TextParser {
 
   trait Constructors {
 
+    def charsInPredicate(cs: Seq[Char]): Char => Boolean =
+       cs.length match {
+        case 0 =>
+          ??? // TODO
+        case 1 =>
+          val c0 = cs(0)
+          c => c == c0
+        case 2 =>
+          val c0 = cs(0)
+          val c1 = cs(1)
+          c => c == c0 || c == c1
+        case 3 =>
+          val c0 = cs(0)
+          val c1 = cs(1)
+          val c2 = cs(2)
+          c => c == c0 || c == c1 || c == c2
+        case _ =>
+          val csʹ = cs.sorted[Char].toArray[Char]
+
+          val x = csʹ.mkString
+          c => x.indexOf(c.toInt) >= 0
+
+          // c => Arrays.binarySearch(csʹ, c) >= 0
+      }
+
     /** @group text */
     def take(n: Int): Parser[String] =
       new Parser[String](s"take($n)") {
@@ -49,10 +74,8 @@ object TextParser {
     /**
      * @group text
      */
-    def stringOf(cs: Seq[Char]): Parser[String] = {
-      val csʹ = cs.sorted[Char].toArray[Char]
-      takeWhile(c => Arrays.binarySearch(csʹ, c) >= 0)
-    }
+    def stringOf(cs: Seq[Char]): Parser[String] =
+      takeWhile(charsInPredicate(cs))
 
     /**
      * @group text
@@ -72,8 +95,9 @@ object TextParser {
           new Parser[Unit] {
             override lazy val void = this
             def mutParse(mutState: MutState): Unit = {
+              val rem = mutState.remaining
               var i = 0
-              while (i < mutState.remaining && p(mutState.charAt(i)))
+              while (i < rem && p(mutState.charAt(i)))
                 i += 1
               mutState.advance(i)
               ()
@@ -99,8 +123,9 @@ object TextParser {
           new Parser[Unit] {
             override lazy val void = this
             def mutParse(mutState: MutState): Unit = {
+              val rem = mutState.remaining
               var i = 0
-              while (i < mutState.remaining && p(mutState.charAt(i)))
+              while (i < rem && p(mutState.charAt(i)))
                 i += 1
               if (i == 0) {
                 mutState.setError("stringOf1: no match")
@@ -113,10 +138,11 @@ object TextParser {
           }
 
         def mutParse(mutState: MutState): String = {
+          val rem = mutState.remaining
           var i = 0
-          while (i < mutState.remaining && p(mutState.charAt(i)))
+          while (i < rem && p(mutState.charAt(i)))
             i += 1
-          if (i == 9) {
+          if (i == 0) {
             mutState.setError("stringOf1: no match")
             dummy
           } else {

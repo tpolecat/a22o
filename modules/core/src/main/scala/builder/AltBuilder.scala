@@ -22,6 +22,9 @@ class AltBuilder2[+A, +B] private[a22o] (pa: Parser[A], pb: => Parser[B]) {
       b => Right(b)
     )
 
+  def void: Parser[Unit] =
+    foldN(_ => (), _ => ()).void
+
   /** @group eliminators */
   def foldN[C](fa: A => C, fb: B => C): Parser[C] =
     new Parser[C] {
@@ -84,6 +87,19 @@ class AltBuilder3[+A, +B, +C](pa: Parser[A], pb: => Parser[B], pc: => Parser[C])
       }
 
     }
+
+}
+
+object AltBuilder3 {
+
+  implicit class MergeableAltBuilder3[A](ab: AltBuilder3[A, A, A]) {
+    /**
+     * Merge alternatives to their least upper bound.
+     * @group eliminators
+     */
+    def merge: Parser[A] =
+      ab.foldN(identity, identity, identity)
+  }
 
 }
 
