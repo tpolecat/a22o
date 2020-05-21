@@ -13,13 +13,13 @@ class SanitySuite extends ScalaCheckSuite {
 
   property("generated parsers and input succeed and fail as expected") {
     forAll(parserWithInputAndExpectation) { case (p, s, b) =>
-      assertEquals(p.parseAll(s).isRight, b)
+      assertEquals(p.parseAll(s).isOk, b)
     }
   }
 
   property("void succeeds/fails the same as the underlying paser") {
     forAll(parserWithInput) { case (p, s) =>
-      assertEquals(p.parseAll(s).map(_ => ()), p.void.parseAll(s))
+      assertEquals(p.parseAll(s).toEither.map(_ => ()), p.void.parseAll(s).toEither)
     }
   }
 

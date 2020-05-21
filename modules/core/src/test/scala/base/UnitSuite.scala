@@ -12,7 +12,7 @@ class UnitSuite extends ScalaCheckSuite {
 
   property("unit consumes no input") {
     forAll { (s: String) =>
-      val r = Parser.unit.parse(s)
+      val r = Parser.unit.parse(s).toRemainingAndEither
       assertEquals(r, (s, Right(())))
     }
   }

@@ -15,7 +15,7 @@ class SkipSuite extends ScalaCheckSuite {
     forAll(alphaNumStr.filter(_.length > 0), posNum[Int]) { (s, n) =>
       val nʹ = n % s.length
       val p = Parser.skip(nʹ)
-      val r = p.parse(s)
+      val r = p.parse(s).toRemainingAndEither
       assertEquals(r, (s drop nʹ, Right(())))
     }
   }
@@ -28,7 +28,7 @@ class SkipSuite extends ScalaCheckSuite {
     forAll(alphaNumStr, posNum[Short]) { (s, n) =>
       val nʹ = -(n.toInt + 1)
       val p = Parser.skip(nʹ)
-      val r = p.parse(s)
+      val r = p.parse(s).toRemainingAndEither
       assertEquals(r, (s, Left("skip: negative length")))
     }
   }

@@ -13,7 +13,7 @@ class ConstSuite extends ScalaCheckSuite {
   property("const consumes no input") {
     forAll { (s: String, n: Int) =>
       val p = Parser.const(n)
-      val r = p.parse(s)
+      val r = p.parse(s).toRemainingAndEither
       assertEquals(r, (s, Right(n)))
     }
   }

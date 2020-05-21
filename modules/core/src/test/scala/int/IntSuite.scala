@@ -17,23 +17,23 @@ class IntSuite extends ScalaCheckSuite {
 
   property("parse any int") {
     forAll { (n: Int) =>
-      assertEquals(int.parse(n.toString), (("", Right(n))))
+      assertEquals(int.parse(n.toString).toRemainingAndEither, (("", Right(n))))
     }
   }
 
   property("parse any int, with suffix") {
     forAll { (n: Int) =>
       val suffix = "abc"
-      assertEquals(int.parse(n.toString + suffix), ((suffix, Right(n))))
+      assertEquals(int.parse(n.toString + suffix).toRemainingAndEither, ((suffix, Right(n))))
     }
   }
 
   property("over/underflow") {
     forAll { (n: Long) =>
-      val z = int.parse(n.toString)
+      val z = int.parse(n.toString).toEither
       z match {
-        case (_, Right(m)) => assertEquals(n.toInt, m)
-        case (_, Left(s))  =>
+        case Right(m) => assertEquals(n.toInt, m)
+        case Left(s)  =>
           assert(n < Int.MinValue.toLong || n > Int.MaxValue.toLong)
           assert(s == "Integer over/underflow.")
       }
@@ -41,21 +41,21 @@ class IntSuite extends ScalaCheckSuite {
   }
 
   test("empty string") {
-    assertEquals(int.parse("")._2, Left("Expected sign or digit."))
+    assertEquals(int.parse("").toEither, Left("Expected sign or digit."))
   }
 
   test("just a sign") {
-    assertEquals(int.parse("+")._2, Left("Expected digit."))
-    assertEquals(int.parse("-")._2, Left("Expected digit."))
-    assertEquals(int.parse("+suffix")._2, Left("Expected digit."))
-    assertEquals(int.parse("-suffix")._2, Left("Expected digit."))
+    assertEquals(int.parse("+").toEither, Left("Expected digit."))
+    assertEquals(int.parse("-").toEither, Left("Expected digit."))
+    assertEquals(int.parse("+suffix").toEither, Left("Expected digit."))
+    assertEquals(int.parse("-suffix").toEither, Left("Expected digit."))
   }
 
   test("boundary cases") {
-    assertEquals(int.parse(Int.MinValue.toString)._2, Right(Int.MinValue))
-    assertEquals(int.parse(Int.MaxValue.toString)._2, Right(Int.MaxValue))
-    assert(int.parse((Int.MinValue.toLong - 1).toString)._2.isLeft)
-    assert(int.parse((Int.MaxValue.toLong + 1).toString)._2.isLeft)
+    assertEquals(int.parse(Int.MinValue.toString).toEither, Right(Int.MinValue))
+    assertEquals(int.parse(Int.MaxValue.toString).toEither, Right(Int.MaxValue))
+    assert(int.parse((Int.MinValue.toLong - 1).toString).toEither.isLeft)
+    assert(int.parse((Int.MaxValue.toLong + 1).toString).toEither.isLeft)
   }
 
 }

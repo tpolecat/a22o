@@ -4,7 +4,6 @@
 
 package a22o
 
-import cats.implicits._
 import munit.ScalaCheckSuite
 import org.scalacheck.Prop._
 import a22o.arb._
@@ -18,7 +17,7 @@ trait ParserSuite extends ScalaCheckSuite {
 
   def assertEquivalentPredicate(f: Parser[Any] => (Parser[Any], Parser[Any])) =
     forAll(parserWithInput.map { case (p, s) => (f(p), s) }) { case ((p1, p2), s) =>
-      assertEquals(p1.parse(s).map(_.isRight), p2.parse(s).map(_.isRight))
+      assertEquals(p1.parse(s).isOk, p2.parse(s).isOk)
   }
 
 }

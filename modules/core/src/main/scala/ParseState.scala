@@ -13,6 +13,7 @@ sealed trait Result[+A] {
   def isOk: Boolean
   // def isError: Boolean
   final def toEither: Either[String, A] = fold(Left(_), Right(_))
+  final def toRemainingAndEither: (String, Either[String, A]) = (remainingInput, toEither)
   final def toOption: Option[A] = fold(_ => None, Some(_))
   final override def toString: String =
     fold(
@@ -51,7 +52,7 @@ object ParseState {
   def apply(inputString: String): ParseState =
     new ParseStateImpl[Nothing](inputString)
 
-  private final class ParseStateImpl[A](input: String) extends ParseState with Result[A] {
+  private final class ParseStateImpl[A](private val input: String) extends ParseState with Result[A] {
 
     var pos: Int = 0
     var error: String = null
@@ -79,6 +80,13 @@ object ParseState {
       r.value = t
       r
     }
+
+    final override def equals(a: Any): Boolean =
+      a match {
+        case r: ParseStateImpl[_] => r.input == input && r.pos == pos && r.remaining == remaining && r.value == value
+        case _ => false
+      }
+
 
   }
 
