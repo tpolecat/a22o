@@ -6,7 +6,7 @@ package a22o
 package allocation
 package parser
 
-import a22o._, A22o._
+import a22o.Parser._
 
 class CombinatorSuite extends AllocationSuite {
 
@@ -15,7 +15,7 @@ class CombinatorSuite extends AllocationSuite {
   }
 
   test("fail (none)") {
-    a22o.parser.base.fail[Int]("foo").assertNoAllocation1("abc")
+    Parser.fail[Int]("foo").assertNoAllocation1("abc")
   }
 
   test("ensure (none)") {
@@ -56,7 +56,7 @@ class CombinatorSuite extends AllocationSuite {
     }
   }
 
-  test("many (builder + (components + ::) * N)") {
+  test("many (builder + (components + ::) * N)".ignore) {
     val p = digit.many.to(List)
     p.assertAllocation0("12345")(
       "scala/collection/mutable/ListBuffer" -> 1,

@@ -19,7 +19,7 @@ object BaseParser {
       @inline override def flatMap[B](f: A => Parser[B]): Parser[B] = f(a)
       @inline override def inputText: Parser[String] = const("")
       @inline override def map[B](f: A => B): Parser[B] = const(f(a))
-      @inline override def onError[B >: A](b: B): Parser[B] = this
+      @inline override def onError[B >: A](b: => B): Parser[B] = this
       @inline override def opt: Parser[Option[A]] = const(Some(a))
       @inline override def peek: Parser[A] = this
       @inline override def void: Parser[Unit] = unit
@@ -43,7 +43,7 @@ object BaseParser {
         @inline override def flatMap[B](f: A => Parser[B]): Parser[B] = cast
         @inline override def inputText: Parser[String] = cast
         @inline override def map[B](f: A => B): Parser[B] = cast
-        @inline override def onError[B >: A](b: B): Parser[B] = const(b)
+        @inline override def onError[B >: A](b: => B): Parser[B] = const(b)
         @inline override def opt: Parser[Option[A]] = cast
         @inline override def peek: Parser[A] = cast
         @inline override def void: Parser[Unit] = cast
@@ -100,6 +100,11 @@ object BaseParser {
         }
       }
 
+    /**
+     * An equivalent parser that discards its result and never fails. Use this combinator to skip
+     * optional input text.
+     * @group error handling
+     */
     def orNot: Parser[Unit] =
       new Parser[Unit](s"$outer.orNot") {
         @inline override def void: Parser[Unit] = this
@@ -206,9 +211,11 @@ object BaseParser {
       }
 
     /**
+     * An equivalent parser that never fails, but instead yields constant value `b` in cases where
+     * parsing would have failed.
      * @group error handling
      */
-    def onError[B >: A](b: B): Parser[B] =
+    def onError[B >: A](b: => B): Parser[B] =
       this.fold(b)(identity)
 
     /** @group sequencing */
@@ -241,6 +248,35 @@ object BaseParser {
      */
     def opt: Parser[Option[A]] =
       this.fold(Option.empty[A])(Some(_)).named(s"$this.opt")
+
+    /**
+     * Alternative name for `opt`.
+     * @group error handling
+     */
+    def option: Parser[Option[A]] = opt
+
+    /**
+     * An equivalent parser that never fails, yielding an error or successful result.
+     * @group error handling
+     */
+    def attempt: Parser[Either[String, A]] =
+      new Parser[Either[String, A]](s"$outer.attempt") {
+        override lazy val void: Parser[Unit] = outer.void.orNot
+        def mutParse(mutState: MutState): Either[String, A] = {
+          val a = outer.mutParse(mutState)
+          if (mutState.isOk) Right(a)
+          else {
+            mutState.setError(null)
+            Left(mutState.getError)
+          }
+        }
+      }
+
+    /**
+     * Alternative name for `attempt`.
+     * @group error handling
+     */
+    def either: Parser[Either[String, A]] = attempt
 
     /**
      * An equivalent parser that replaces its result with the given value. This is equationally the

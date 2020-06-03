@@ -8,7 +8,8 @@ package parser
 import java.util.Arrays
 
 object TextParser {
-  import base._, char._
+  import BaseParser.Constructors.skip
+  import CharParser.Constructors.{ whitespace, char }
 
   trait Constructors {
 
@@ -59,7 +60,7 @@ object TextParser {
      */
     def string(s: String): Parser[String] =
       new Parser[String](s"string($s)") {
-        override lazy val void = base.skip(s.length)
+        override lazy val void = skip(s.length)
         def mutParse(mutState: MutState): String =
           if (mutState.startsWith(s)) {
             mutState.advance(s.length)
@@ -182,34 +183,6 @@ object TextParser {
      * @group text
      */
     def brackets: Parser[A] = bracketed('[', ']')
-
-    /**
-     * @group sequencing
-     */
-    def +(p2: => Parser[String])(
-      implicit ev: A <:< String
-    ): Parser[String] =
-      new Parser[String] {
-        lazy val p1ʹ = self.void
-        lazy val p2ʹ = p2.void
-        override lazy val void: Parser[Unit] = p1ʹ ~> p2ʹ
-        def mutParse(mutState: MutState): String = {
-          val pos0 = mutState.getPoint
-          p1ʹ.mutParse(mutState)
-          if (mutState.isOk) {
-            p2ʹ.mutParse(mutState)
-            if (mutState.isOk) {
-              val pos1 = mutState.getPoint
-              mutState.setPoint(pos0)
-              mutState.consume(pos1 - pos0) // only do the substring operation once
-            } else {
-              dummy
-            }
-          } else {
-            dummy
-          }
-        }
-      }
 
   }
 

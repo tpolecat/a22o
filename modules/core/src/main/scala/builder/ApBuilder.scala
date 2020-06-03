@@ -2,153 +2,174 @@
 // This software is licensed under the MIT License (MIT).
 // For more information see LICENSE or https://opensource.org/licenses/MIT
 
-package a22o
-package builder
+// package a22o
+// package builder
 
-class ApBuilder2[+A, +B](pa: Parser[A], pb: => Parser[B]) {
 
-  def ~[C](pc: => Parser[C]): ApBuilder3[A, B, C] =
-    new ApBuilder3(pa, pb, pc)
+// class ApBuilder2[+A, +B](pa: Parser[A], pb: => Parser[B]) { outer =>
 
-  def void: Parser[Unit] =
-    new ApBuilder2(pa.void, pb.void).mapN((_, _) => ())
+//   def ~[C](pc: => Parser[C]): ApBuilder3[A, B, C] =
+//     new ApBuilder3(pa, pb, pc)
 
-  def inputText: Parser[String] =
-    void.inputText
+//   def void: Parser[Unit] =
+//     new ApBuilder2(pa.void, pb.void).mapN((_, _) => ())
 
-  def tupled: Parser[(A, B)] =
-    mapN(Tuple2.apply)
+//   def inputText: Parser[String] =
+//     void.inputText
 
-  def mapN[C](f: (A, B) => C): Parser[C] =
-    new Parser[C] {
+//   def tupled: Parser[(A, B)] =
+//     mapN(Tuple2.apply)
 
-           val paʹ = pa
-      lazy val pbʹ = pb
+//   def mapN[C](f: (A, B) => C): Parser[C] =
+//     new Parser[C] {
 
-      override lazy val void: Parser[Unit] =
-        paʹ.void ~>
-        pbʹ.void
+//            val paʹ = pa
+//       lazy val pbʹ = pb
 
-      def mutParse(mutState: MutState): C = {
-        val a = paʹ.mutParse(mutState); if (mutState.isError) return dummy
-        val b = pbʹ.mutParse(mutState); if (mutState.isError) return dummy
-        f(a, b)
-      }
+//       override lazy val void: Parser[Unit] =
+//         outer.void
 
-    }
+//       def mutParse(mutState: MutState): C = {
+//         val a = paʹ.mutParse(mutState); if (mutState.isError) return dummy
+//         val b = pbʹ.mutParse(mutState); if (mutState.isError) return dummy
+//         f(a, b)
+//       }
 
-}
+//     }
 
-class ApBuilder3[+A, +B, +C](pa: Parser[A], pb: => Parser[B], pc: => Parser[C]) {
+// }
 
-  def void: Parser[Unit] =
-    new ApBuilder3(pa.void, pb.void, pc.void).mapN((_, _, _) => ())
+// final class ApBuilder3[+A, +B, +C](pa: Parser[A], pb: => Parser[B], pc: => Parser[C]) { outer =>
+//   def ~[D](pd: => Parser[D]): ApBuilder4[A, B, C, D] = new ApBuilder4(pa, pb, pc, pd)
+//   def void: Parser[Unit] = new ApBuilder3(pa.void, pb.void, pc.void).mapN((_, _, _) => ())
+//   def inputText: Parser[String] = void.inputText
+//   def tupled: Parser[(A, B, C)] = mapN(Tuple3.apply)
+//   def mapN[D](f: (A, B, C) => D): Parser[D] = new Parser[D] {
+//     val pa0 = pa
+//     lazy val pb0 = pb
+//     lazy val pc0 = pc
+//     override def void: Parser[Unit] = outer.void
+//     def mutParse(mutState: MutState): D = {
+//       val a = pa0.mutParse(mutState)
+//       if (mutState.isError) return dummy
+//       val b = pb0.mutParse(mutState)
+//       if (mutState.isError) return dummy
+//       val c = pc0.mutParse(mutState)
+//       if (mutState.isError) return dummy
+//       f(a, b, c)
+//     }
+//   }
+// }
+// // class ApBuilder3[+A, +B, +C](pa: Parser[A], pb: => Parser[B], pc: => Parser[C]) {
 
-  def ~[D](pd: => Parser[D]): ApBuilder4[A, B, C, D] =
-    new ApBuilder4(pa, pb, pc, pd)
+// //   def void: Parser[Unit] =
+// //     new ApBuilder3(pa.void, pb.void, pc.void).mapN((_, _, _) => ())
 
-  def tupled: Parser[(A, B, C)] =
-    mapN(Tuple3.apply)
+// //   def ~[D](pd: => Parser[D]): ApBuilder4[A, B, C, D] =
+// //     new ApBuilder4(pa, pb, pc, pd)
 
-  def mapN[D](f: (A, B, C) => D): Parser[D] =
-    new Parser[D] {
+// //   def tupled: Parser[(A, B, C)] =
+// //     mapN(Tuple3.apply)
 
-           val paʹ = pa
-      lazy val pbʹ = pb
-      lazy val pcʹ = pc
+// //   def mapN[D](f: (A, B, C) => D): Parser[D] =
+// //     new Parser[D] {
 
-      override lazy val void: Parser[Unit] =
-        paʹ.void ~>
-        pbʹ.void ~>
-        pcʹ.void
+// //            val paʹ = pa
+// //       lazy val pbʹ = pb
+// //       lazy val pcʹ = pc
 
-      def mutParse(mutState: MutState): D = {
-        val a = paʹ.mutParse(mutState); if (mutState.isError) return dummy
-        val b = pbʹ.mutParse(mutState); if (mutState.isError) return dummy
-        val c = pcʹ.mutParse(mutState); if (mutState.isError) return dummy
-        f(a, b, c)
-      }
+// //       override lazy val void: Parser[Unit] =
+// //         paʹ.void ~>
+// //         pbʹ.void ~>
+// //         pcʹ.void
 
-    }
-}
+// //       def mutParse(mutState: MutState): D = {
+// //         val a = paʹ.mutParse(mutState); if (mutState.isError) return dummy
+// //         val b = pbʹ.mutParse(mutState); if (mutState.isError) return dummy
+// //         val c = pcʹ.mutParse(mutState); if (mutState.isError) return dummy
+// //         f(a, b, c)
+// //       }
 
-class ApBuilder4[+A, +B, +C, +D](pa: Parser[A], pb: => Parser[B], pc: => Parser[C], pd: => Parser[D]) {
+// //     }
+// // }
 
-  def void: Parser[Unit] =
-    new ApBuilder4(pa.void, pb.void, pc.void, pd.void).mapN((_, _, _, _) => ())
+// class ApBuilder4[+A, +B, +C, +D](pa: Parser[A], pb: => Parser[B], pc: => Parser[C], pd: => Parser[D]) {
 
-  def ~[E](pe: => Parser[E]): ApBuilder5[A, B, C, D, E] =
-    new ApBuilder5(pa, pb, pc, pd, pe)
+//   def void: Parser[Unit] =
+//     new ApBuilder4(pa.void, pb.void, pc.void, pd.void).mapN((_, _, _, _) => ())
 
-  def inputText: Parser[String] =
-    void.inputText
+//   def ~[E](pe: => Parser[E]): ApBuilder5[A, B, C, D, E] =
+//     new ApBuilder5(pa, pb, pc, pd, pe)
 
-  def tupled: Parser[(A, B, C, D)] =
-    mapN(Tuple4.apply)
+//   def inputText: Parser[String] =
+//     void.inputText
 
-  def mapN[E](f: (A, B, C, D) => E): Parser[E] =
-    new Parser[E] {
+//   def tupled: Parser[(A, B, C, D)] =
+//     mapN(Tuple4.apply)
 
-           val paʹ = pa
-      lazy val pbʹ = pb
-      lazy val pcʹ = pc
-      lazy val pdʹ = pd
+//   def mapN[E](f: (A, B, C, D) => E): Parser[E] =
+//     new Parser[E] {
 
-      override lazy val void: Parser[Unit] =
-        paʹ.void ~>
-        pbʹ.void ~>
-        pcʹ.void ~>
-        pdʹ.void
+//            val paʹ = pa
+//       lazy val pbʹ = pb
+//       lazy val pcʹ = pc
+//       lazy val pdʹ = pd
 
-      def mutParse(mutState: MutState): E = {
-        val a = paʹ.mutParse(mutState); if (mutState.isError) return dummy
-        val b = pbʹ.mutParse(mutState); if (mutState.isError) return dummy
-        val c = pcʹ.mutParse(mutState); if (mutState.isError) return dummy
-        val d = pdʹ.mutParse(mutState); if (mutState.isError) return dummy
-        f(a, b, c, d)
-      }
+//       override lazy val void: Parser[Unit] =
+//         paʹ.void ~>
+//         pbʹ.void ~>
+//         pcʹ.void ~>
+//         pdʹ.void
 
-    }
+//       def mutParse(mutState: MutState): E = {
+//         val a = paʹ.mutParse(mutState); if (mutState.isError) return dummy
+//         val b = pbʹ.mutParse(mutState); if (mutState.isError) return dummy
+//         val c = pcʹ.mutParse(mutState); if (mutState.isError) return dummy
+//         val d = pdʹ.mutParse(mutState); if (mutState.isError) return dummy
+//         f(a, b, c, d)
+//       }
 
-}
+//     }
 
-class ApBuilder5[+A, +B, +C, +D, +E](pa: Parser[A], pb: => Parser[B], pc: => Parser[C], pd: => Parser[D], pe: Parser[E]) {
+// }
 
-  def void: Parser[Unit] =
-    new ApBuilder5(pa.void, pb.void, pc.void, pd.void, pe.void).mapN((_, _, _, _, _) => ())
+// class ApBuilder5[+A, +B, +C, +D, +E](pa: Parser[A], pb: => Parser[B], pc: => Parser[C], pd: => Parser[D], pe: Parser[E]) {
 
-  def inputText: Parser[String] =
-    void.inputText
+//   def void: Parser[Unit] =
+//     new ApBuilder5(pa.void, pb.void, pc.void, pd.void, pe.void).mapN((_, _, _, _, _) => ())
 
-  def tupled: Parser[(A, B, C, D, E)] =
-    mapN(Tuple5.apply)
+//   def inputText: Parser[String] =
+//     void.inputText
 
-  def mapN[F](f: (A, B, C, D, E) => F): Parser[F] =
-    new Parser[F] {
+//   def tupled: Parser[(A, B, C, D, E)] =
+//     mapN(Tuple5.apply)
 
-           val paʹ = pa
-      lazy val pbʹ = pb
-      lazy val pcʹ = pc
-      lazy val pdʹ = pd
-      lazy val peʹ = pe
+//   def mapN[F](f: (A, B, C, D, E) => F): Parser[F] =
+//     new Parser[F] {
 
-      override lazy val void: Parser[Unit] =
-        paʹ.void ~>
-        pbʹ.void ~>
-        pcʹ.void ~>
-        pdʹ.void ~>
-        peʹ.void
+//            val paʹ = pa
+//       lazy val pbʹ = pb
+//       lazy val pcʹ = pc
+//       lazy val pdʹ = pd
+//       lazy val peʹ = pe
 
-      def mutParse(mutState: MutState): F = {
-        val a = paʹ.mutParse(mutState); if (mutState.isError) return dummy
-        val b = pbʹ.mutParse(mutState); if (mutState.isError) return dummy
-        val c = pcʹ.mutParse(mutState); if (mutState.isError) return dummy
-        val d = pdʹ.mutParse(mutState); if (mutState.isError) return dummy
-        val e = peʹ.mutParse(mutState); if (mutState.isError) return dummy
-        f(a, b, c, d, e)
-      }
+//       override lazy val void: Parser[Unit] =
+//         paʹ.void ~>
+//         pbʹ.void ~>
+//         pcʹ.void ~>
+//         pdʹ.void ~>
+//         peʹ.void
 
-    }
+//       def mutParse(mutState: MutState): F = {
+//         val a = paʹ.mutParse(mutState); if (mutState.isError) return dummy
+//         val b = pbʹ.mutParse(mutState); if (mutState.isError) return dummy
+//         val c = pcʹ.mutParse(mutState); if (mutState.isError) return dummy
+//         val d = pdʹ.mutParse(mutState); if (mutState.isError) return dummy
+//         val e = peʹ.mutParse(mutState); if (mutState.isError) return dummy
+//         f(a, b, c, d, e)
+//       }
 
-}
+//     }
+
+// }
 

@@ -3,11 +3,7 @@
 // For more information see LICENSE or https://opensource.org/licenses/MIT
 
 package object a22o {
-  val A22o = a22o.parser.all
 
-  implicit def charToParser(c: Char): Parser[Char] = Parser.char(c)
-  implicit def stringToParser(s: String): Parser[String] = Parser.string(s)
-
-  type MutState = ParseState
+  private[a22o] type MutState = ParseState
 
 }

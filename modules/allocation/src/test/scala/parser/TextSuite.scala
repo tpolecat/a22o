@@ -6,7 +6,7 @@ package a22o
 package allocation
 package parser
 
-import a22o._, A22o._
+import a22o.Parser._
 
 class TextSuite extends AllocationSuite {
 
@@ -91,7 +91,7 @@ class TextSuite extends AllocationSuite {
   }
 
   test("concat (char[] + String)") {
-    val p = take(1) + take(2) + take(1) + take(1)
+    val p = (take(1) ~  take(2) ~ take(1) ~ take(1)).inputText
     p.assertAllocation("123abcdef", "abc")(
       "char" -> 1,
       "java/lang/String" -> 1

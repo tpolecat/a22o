@@ -6,11 +6,12 @@ package a22o.bench
 
 import org.openjdk.jmh.annotations._
 
+
 object Trivial {
 
   object a22o {
-    import _root_.a22o._
-    import _root_.a22o.parser.all._
+    import _root_.a22o.Parser
+    import _root_.a22o.Parser._
 
     val letterOrDigit: Parser[Char] = (letter | digit).merge
 

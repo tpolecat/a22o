@@ -7,30 +7,81 @@ package a22o
 // By encoding both the mutable parse state and the result as a single value we only end up doing
 // one allocation when we parse (which is mostly a way to juice benchmarks).
 
+/**
+ * Parse result, either an error or a result, plus any unconsumed input.
+ */
 sealed trait Result[+A] {
-  def fold[B](f: String => B, g: A => B): B
+
+  /**
+   * The unconsumed input. Note that this value is not allocated until requested.
+   * @group properties
+   */
   def remainingInput: String
+
+  /**
+   * True if parsing was successful, false otherwise.
+   * @group properties
+   */
   def isOk: Boolean
-  // def isError: Boolean
-  final def toEither: Either[String, A] = fold(Left(_), Right(_))
-  final def toRemainingAndEither: (String, Either[String, A]) = (remainingInput, toEither)
-  final def toOption: Option[A] = fold(_ => None, Some(_))
+
+  /**
+   * True if parsing failed, false otherwise.
+   * @group properties
+   */
+  def isError: Boolean
+
+  /**
+   * Eliminate this `Result` by folding the error and success cases into some type `B`.
+   * @group eliminators
+   */
+  def fold[B](f: String => B, g: A => B): B
+
+  /**
+   * Eliminate this `Result` by yielding an `Either` containing the error or the successful result.
+   * @group eliminators
+   */
+  final def toEither: Either[String, A] =
+    fold(Left(_), Right(_))
+
+  /**
+   * Eliminate this `Result` by yielding the remaining input, as well as an `Either` containing
+   * the error or the successful result.
+   * @group eliminators
+   */
+  final def toRemainingAndEither: (String, Either[String, A]) =
+    (remainingInput, toEither)
+
+  /**
+   * Eliminate this `Result` by yielding the successful result, if any.
+   * @group eliminators
+   */
+  final def toOption: Option[A] =
+    fold(_ => None, Some(_))
+
   final override def toString: String =
     fold(
       e => s"Result.Error($e)",
       a => s"Result.Ok($a)"
     )
+
 }
+
+/** Module of `Result` unapplies. */
 object Result {
+
+  /** Module providing an unapply for successful parse results. */
   object Ok {
     def unapply[A](ra: Result[A]): Option[A] = ra.toOption
   }
+
+  /** Module providing an unapply for failed parse results. */
   object Error {
     def unapply[A](ra: Result[A]): Option[String] = ra.fold(Some(_), _ => None)
   }
+
 }
 
-sealed trait ParseState {
+private[a22o] sealed trait ParseState {
   def getPoint: Int
   def setPoint(point: Int): Unit
   def setError(message: String): Unit
@@ -47,7 +98,7 @@ sealed trait ParseState {
   def result[A](t: A): Result[A]
 }
 
-object ParseState {
+private[a22o] object ParseState {
 
   def apply(inputString: String): ParseState =
     new ParseStateImpl[Nothing](inputString)

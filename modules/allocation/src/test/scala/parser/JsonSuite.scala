@@ -6,7 +6,7 @@ package a22o
 package allocation
 package parser
 
-import a22o._, A22o._
+import a22o.Parser._
 
 object Js {
 

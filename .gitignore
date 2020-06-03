@@ -43,3 +43,4 @@ out/
 .bloop/
 .metals/
 project/metals.sbt
+*.worksheet.sc

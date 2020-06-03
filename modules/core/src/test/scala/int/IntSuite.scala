@@ -5,7 +5,7 @@
 package a22o
 package int
 
-import a22o.parser.int._
+import a22o.Parser.int
 import munit.ScalaCheckSuite
 import org.scalacheck.Prop._
 
