@@ -60,7 +60,6 @@ object TextParser {
      */
     def string(s: String): Parser[String] =
       new Parser[String](s"string($s)") {
-        override lazy val void = skip(s.length)
         def mutParse(mutState: MutState): String =
           if (mutState.startsWith(s)) {
             mutState.advance(s.length)
