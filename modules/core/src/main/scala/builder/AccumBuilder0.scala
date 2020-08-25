@@ -41,7 +41,7 @@ final class AccumBuilder0[+A](
   // Eliminators
   def to[T](fact: Factory[A, T]): Parser[T] = {
     // Use the nonstrict foldLeft so we get a new builder every time we parse!
-    foldLeftʹ(fact.newBuilder)((b, a) => b += a).map(_.result)
+    foldLeftʹ(fact.newBuilder)((b, a) => b += a).map(_.result())
   }
 
   // this is a common-enough case that it's worth specializing
