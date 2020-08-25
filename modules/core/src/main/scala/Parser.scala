@@ -31,10 +31,12 @@ object Parser
 
 }
 
-abstract class Parser[@specialized +A] private[a22o] (override val toString: String = "<parser>")
+abstract class Parser[@specialized +A] private[a22o] (val name: String = "<parser>")
   extends BaseParser.Combinators[A]
      with MetaParser.Combinators[A]
      with TextParser.Combinators[A] { outer =>
+
+  override def toString = name
 
   /**
    * Attempt to parse the given input, returning a result containing the unconsumed remainder and
@@ -101,6 +103,26 @@ abstract class Parser[@specialized +A] private[a22o] (override val toString: Str
   // on exit, offset is advanced on success, untouched on failure
   protected[a22o] def mutParse(mutState: MutState): A
 
+  /**
+   * True if this parser is definitely equivalent to `other` (see `equivalentParser`) *and* has the
+   * same name and failure message; i.e., this parser and `other` can be swapped without any
+   * observable effect. This is intended for testing.
+   */
+  final override def equals(any: Any): Boolean =
+    any match {
+      case other: Parser[_] => equivalentTo(other) && (this.name == other.name)
+      case _ => false
+    }
+
+  /**
+   * True if this parser definitely has the same behavior as `other` up to naming; i.e., this parser
+   * and `other` have the same success/failure behavior, disregarding the parser's name and failure
+   * message. All instances of `fail(s)` are equivalent, for example. This is undecidable in general,
+   * but in some cases it's useful to test static reductions like `const(a).void -> unit`. For const
+   * parsers this assumes sane universal equality. This is intended for testing only.
+   */
+  def equivalentTo[B >: A](other: Parser[B]): Boolean =
+    this eq other
 
 }
 

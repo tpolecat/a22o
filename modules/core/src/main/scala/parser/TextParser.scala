@@ -11,6 +11,27 @@ object TextParser {
   import BaseParser.Constructors.skip
   import CharParser.Constructors.{ whitespace, char }
 
+  private final class Take(val n: Int) extends Parser[String](s"take($n)") {
+    @inline override def void = skip(n)
+    @inline override def mutParse(mutState: MutState): String =
+      if (n < 0) {
+        mutState.setError("take: negative length")
+        dummy
+      } else if (mutState.remaining >= n) {
+        val s = mutState.consume(n)
+        s
+      } else {
+        mutState.setError("take: insufficient input")
+        dummy
+      }
+    override def equivalentTo[B >: String](other: Parser[B]): Boolean =
+      other match {
+        case p: Take => p.n == n
+        case _ => false
+      }
+  }
+
+  object Constructors extends Constructors
   trait Constructors {
 
     def charsInPredicate(cs: Seq[Char]): Char => Boolean =
@@ -40,20 +61,7 @@ object TextParser {
 
     /** @group text */
     def take(n: Int): Parser[String] =
-      new Parser[String](s"take($n)") {
-        @inline override def void = skip(n)
-        @inline override def mutParse(mutState: MutState): String =
-          if (n < 0) {
-            mutState.setError("take: negative length")
-            dummy
-          } else if (mutState.remaining >= n) {
-            val s = mutState.consume(n)
-            s
-          } else {
-            mutState.setError("take: insufficient input")
-            dummy
-          }
-      }
+      if (n == 0) Parser.const("") else new Take(n)
 
     /**
      * @group text

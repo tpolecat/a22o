@@ -20,10 +20,6 @@ class SkipSuite extends ScalaCheckSuite {
     }
   }
 
-  property("skip(0) eq unit") {
-    assertEquals(Parser.skip(0), Parser.unit)
-  }
-
   property("negative skip fails") {
     forAll(alphaNumStr, posNum[Short]) { (s, n) =>
       val nʹ = -(n.toInt + 1)
@@ -31,6 +27,28 @@ class SkipSuite extends ScalaCheckSuite {
       val r = p.parse(s).toRemainingAndEither
       assertEquals(r, (s, Left("skip: negative length")))
     }
+  }
+
+  // TODO: insufficient input
+
+  property("skip(0) == unit") {
+    Parser.skip(0) == Parser.unit
+  }
+
+  property("skip(n).void == skip(n)") {
+    forAll { (n: Int) =>
+      Parser.skip(n).void == Parser.skip(n)
+    }
+  }
+
+  property("skip(n).inputText == take(n)") {
+    forAll { (n: Int) =>
+      Parser.skip(n).inputText == Parser.take(n)
+    }
+  }
+
+  property("skip(0) == unit") {
+    Parser.skip(0) == Parser.unit
   }
 
 }

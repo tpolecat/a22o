@@ -9,12 +9,10 @@ import munit.ScalaCheckSuite
 import org.scalacheck.Prop._
 
 class UnitSuite extends ScalaCheckSuite {
+  import Parser.{ const, unit }
 
-  property("unit consumes no input") {
-    forAll { (s: String) =>
-      val r = Parser.unit.parse(s).toRemainingAndEither
-      assertEquals(r, (s, Right(())))
-    }
+  property("unit == const(())") {
+    unit == const(())
   }
 
 }

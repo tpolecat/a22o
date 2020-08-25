@@ -65,6 +65,7 @@ lazy val core = project
       "-opt:l:method",
       "-opt-warnings",
     ),
+    libraryDependencies += "org.typelevel" %% "cats-free" % "2.1.1",
   )
 
 lazy val gen = project

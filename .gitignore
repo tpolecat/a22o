@@ -44,3 +44,6 @@ out/
 .metals/
 project/metals.sbt
 *.worksheet.sc
+
+# VScode
+.vscode/
