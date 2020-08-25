@@ -45,6 +45,9 @@ lazy val commonSettings = Seq(
   // tell dotty to chill out
   scalacOptions ++= { if (isDotty.value) Seq("-source:3.0-migration") else Nil },
 
+  // Coverage Exclusions
+  coverageExcludedPackages := "a22o\\.bench\\.*;a22o\\.builder\\.(Ap|Alt)Builder[^2];a22o\\.builder\\.(Ap|Alt)Builder\\d\\d;",
+
 )
 
 lazy val a22o = project

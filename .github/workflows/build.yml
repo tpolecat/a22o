@@ -12,6 +12,6 @@ jobs:
       - name: Cache SBT
         uses: coursier/cache-action@v3
       - name: Compile and test
-        run: csbt headerCheck clean test
+        run: csbt headerCheck clean coverage core/test coverageReport
       - name: Upload code coverage data
         run: bash <(curl -s https://codecov.io/bash)
