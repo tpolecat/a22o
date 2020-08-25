@@ -21,7 +21,8 @@ lazy val commonSettings = Seq(
   ),
 
   // Compilation
-  scalaVersion := "2.13.1",
+  scalaVersion := "2.13.3",
+  crossScalaVersions := Seq(scalaVersion.value, "0.26.0-RC1"),
   Compile / doc / scalacOptions --= Seq("-Xfatal-warnings"),
   Compile / doc / scalacOptions ++= Seq(
     "-groups",
@@ -32,14 +33,17 @@ lazy val commonSettings = Seq(
 
   // Let's use MUnit for all tests, and allow Cats in test as well.
   libraryDependencies ++= Seq(
-    "org.scalameta" %% "munit"            % "0.7.6" % Test,
-    "org.scalameta" %% "munit-scalacheck" % "0.7.6" % Test,
-    "org.typelevel" %% "cats-core"        % "2.1.1" % Test,
-  ),
+    "org.scalameta" %% "munit"            % "0.7.11" % Test,
+    "org.scalameta" %% "munit-scalacheck" % "0.7.11" % Test,
+    "org.typelevel" %% "cats-core"        % "2.1.1"  % Test,
+  ).map(_.withDottyCompat(scalaVersion.value)),
   testFrameworks += new TestFramework("munit.Framework"),
 
   // don't publish by default
   publish / skip := true,
+
+  // tell dotty to chill out
+  scalacOptions ++= { if (isDotty.value) Seq("-source:3.0-migration") else Nil },
 
 )
 
@@ -81,12 +85,12 @@ lazy val bench = project
   .settings {
     libraryDependencies ++= Seq(
       "org.tpolecat" %% "atto-core" % "0.8.0",
-      "com.lihaoyi"  %% "fastparse" % "2.2.2",
-    )
+      "com.lihaoyi"  %% "fastparse" % "2.3.0",
+    ).map(_.withDottyCompat(scalaVersion.value))
   }
 
 // the allocation project needs to look up the path to one of its dependneci
-val allocationInstrumentationModule = "com.google.code.java-allocation-instrumenter" % "java-allocation-instrumenter" % "3.1.0"
+val allocationInstrumentationModule = "com.google.code.java-allocation-instrumenter" % "java-allocation-instrumenter" % "3.3.0"
 val allocationInstrumentationJarfile = taskKey[File]("Path to the allocation instrumentation jarfile.")
 
 lazy val allocation = project

@@ -9,67 +9,93 @@ import a22o.builder._
 
 object BaseParser {
 
+  /** Const consumes no input and never fail. */
+  private final class Const[A](val a: A) extends Parser[A](if (a == ()) "unit" else s"const($a)") {
+    @inline override def as[B](b: B): Parser[B] = Constructors.const(b)
+    @inline override def consumed: Parser[Int] = Constructors.const(0)
+    @inline override def flatMap[B](f: A => Parser[B]): Parser[B] = f(a)
+    @inline override def inputText: Parser[String] = Constructors.const("")
+    @inline override def map[B](f: A => B): Parser[B] = Constructors.const(f(a))
+    @inline override def onError[B >: A](b: => B): Parser[B] = this
+    @inline override def opt: Parser[Option[A]] = Constructors.const(Some(a))
+    @inline override def peek: Parser[A] = this
+    @inline override def void: Parser[Unit] = Constructors.unit
+    @inline override def mutParse(mutState: MutState): A = a
+    override def equivalentTo[B >: A](other: Parser[B]): Boolean =
+      other match {
+        case p: Const[_] => p.a == a
+        case _ => false
+      }
+  }
+
+  /**
+   * Fail consumes no input and always fails. All combinators other than error-handling are no-ops.
+   */
+  private final class Fail[A](val message: String) extends Parser[A]("fail(...)") {
+    @inline def coerce[B] = this.asInstanceOf[Parser[B]] // this is sound because `A` is a phantom!
+    @inline override def as[B](b: B): Parser[B] = coerce
+    @inline override def consumed: Parser[Int] = coerce
+    @inline override def flatMap[B](f: A => Parser[B]): Parser[B] = coerce
+    @inline override def inputText: Parser[String] = coerce
+    @inline override def map[B](f: A => B): Parser[B] = coerce
+    @inline override def onError[B >: A](b: => B): Parser[B] = Constructors.const(b)
+    @inline override def opt: Parser[Option[A]] = Constructors.const(None)
+    @inline override def peek: Parser[A] = coerce
+    @inline override def void: Parser[Unit] = coerce
+    @inline override def mutParse(mutState: MutState): A = {
+      mutState.setError(message)
+      dummy
+    }
+    override def equivalentTo[B >: A](other: Parser[B]): Boolean =
+      other match {
+        case p: Fail[_] => p.message == message
+        case _ => false
+      }
+   }
+
+
+  /**
+   * Fail consumes no input and always fails. All combinators other than error-handling are no-ops.
+   */
+  private final class Skip(val n: Int) extends Parser[Unit](s"skip($n)") {
+    @inline override def void = this
+    @inline override def inputText: Parser[String] = TextParser.Constructors.take(n)
+    @inline override def mutParse(mutState: MutState): Unit =
+      if (n < 0) {
+        mutState.setError("skip: negative length")
+        dummy
+      } else if (mutState.remaining >= n) {
+        mutState.advance(n)
+        ()
+      } else {
+        mutState.setError("skip: insufficient input")
+        dummy
+      }
+    override def equivalentTo[B >: Unit](other: Parser[B]): Boolean =
+      other match {
+        case p: Skip => p.n == n
+        case _ => false
+      }
+   }
+
   object Constructors extends Constructors
   trait Constructors {
 
-    /** Const parsers consume no input and never fail. */
-    private final class ConstParser[A](a: A, name: String) extends Parser[A](name) {
-      @inline override def as[B](b: B): Parser[B] = const(b)
-      @inline override def consumed: Parser[Int] = const(0)
-      @inline override def flatMap[B](f: A => Parser[B]): Parser[B] = f(a)
-      @inline override def inputText: Parser[String] = const("")
-      @inline override def map[B](f: A => B): Parser[B] = const(f(a))
-      @inline override def onError[B >: A](b: => B): Parser[B] = this
-      @inline override def opt: Parser[Option[A]] = const(Some(a))
-      @inline override def peek: Parser[A] = this
-      @inline override def void: Parser[Unit] = unit
-      @inline override def mutParse(mutState: MutState): A = a
-    }
-
     /** @group base */
     val unit: Parser[Unit] =
-      new ConstParser((), "unit")
+      new Const(())
 
     /** @group base */
     def const[A](a: A): Parser[A] =
-      new ConstParser[A](a, s"const($a)")
+      new Const[A](a)
 
     /** @group base */
     def fail[A](message: String): Parser[A] =
-      new Parser[A]("fail(...)") {
-        @inline def cast[B] = this.asInstanceOf[Parser[B]]
-        @inline override def as[B](b: B): Parser[B] = cast
-        @inline override def consumed: Parser[Int] = cast
-        @inline override def flatMap[B](f: A => Parser[B]): Parser[B] = cast
-        @inline override def inputText: Parser[String] = cast
-        @inline override def map[B](f: A => B): Parser[B] = cast
-        @inline override def onError[B >: A](b: => B): Parser[B] = const(b)
-        @inline override def opt: Parser[Option[A]] = cast
-        @inline override def peek: Parser[A] = cast
-        @inline override def void: Parser[Unit] = cast
-        @inline override def mutParse(mutState: MutState): A = {
-          mutState.setError(message)
-          dummy
-        }
-      }
+      new Fail(message)
 
     /** @group base */
     def skip(n: Int): Parser[Unit] =
-      if (n == 0) unit
-      else new Parser[Unit](s"skip($n)") {
-        @inline override def void = this
-        @inline override def mutParse(mutState: MutState): Unit =
-          if (n < 0) {
-            mutState.setError("skip: negative length")
-            dummy
-          } else if (mutState.remaining >= n) {
-            mutState.advance(n)
-            ()
-          } else {
-            mutState.setError("skip: insufficient input")
-            dummy
-          }
-      }
+      if (n == 0) unit else new Skip(n)
 
   }
 

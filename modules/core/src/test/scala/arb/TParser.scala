@@ -18,13 +18,23 @@ final case class TParser(
   generators: Ior[Gen[String], Gen[String]]
 ) {
 
-  def matching = generators.left
-  def failing  = generators.right
-  def input    = generators.fold(identity, identity, Gen.oneOf(_, _))
-  def canMatch = generators.isLeft  || generators.isBoth
-  def canFail  = generators.isRight || generators.isBoth
+  /** Generator of matching that should succeed. */
+  def matching: Option[Gen[String]] = generators.left
 
-  def inputWithExpectation =
+  /** Generator of inputs that should fail. */
+  def failing:  Option[Gen[String]] = generators.right
+
+  /** Generator of inputs (possibly failing). */
+  def input: Gen[String] = generators.fold(identity, identity, Gen.oneOf(_, _))
+
+  /** True if `input` generates any values that should succeed. */
+  def canMatch: Boolean = generators.isLeft  || generators.isBoth
+
+  /** True if `input` generates any values that should fail. */
+  def canFail:  Boolean = generators.isRight || generators.isBoth
+
+  /** Generator of an input paired with a boolean indicating whether parsing should succeed. */
+  def inputWithExpectation: Gen[(String, Boolean)] =
     generators.fold(
       s => s.map((_, true)),
       f => f.map((_, false)),

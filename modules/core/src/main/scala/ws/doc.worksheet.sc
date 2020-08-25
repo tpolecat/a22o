@@ -29,3 +29,7 @@ skip(0)
 'c' : Parser[Char]
 
 'x'.void
+
+
+"foo".void
+

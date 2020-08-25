@@ -5,7 +5,6 @@
 package a22o.bench
 
 import org.openjdk.jmh.annotations._
-import a22o.Parser
 
 object Js {
 
